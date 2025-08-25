@@ -33,8 +33,9 @@ a {
 }
 
 a:hover {
-  color: #3e3b2f; /* forest brown */
-  text-decoration: underline;
+  color: #aaffaa; /* lighter green on hover */
+  text-shadow: 0 0 6px #aaffaa;
+  transition: all 0.2s ease-in-out;
 }
 
 p {
@@ -58,9 +59,11 @@ p {
     color: #b0d16f;
   }
 
-  a:hover {
-    color: #dcdacb;
-  }
+a:hover {
+  color: #aaffaa; /* lighter green on hover */
+  text-shadow: 0 0 6px #aaffaa;
+  transition: all 0.2s ease-in-out;
+}
 
   p {
     color: #c2c2a3;
