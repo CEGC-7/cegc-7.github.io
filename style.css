@@ -108,8 +108,9 @@ a:hover {
 }
 
 .sidebar a:hover {
-  color: #3e3b2f;
-  text-decoration: underline;
+  color: #aaffaa; /* lighter green on hover */
+  text-shadow: 0 0 6px #aaffaa;
+  transition: all 0.2s ease-in-out;
 }
 
 .icon {
