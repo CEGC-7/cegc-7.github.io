@@ -77,14 +77,14 @@ p {
   border-left: 2px solid #8f9779;
   padding: 1em;
   font-size: 0.9em;
-  color: #3e3b2f;
+  color: #90ee90;
   box-shadow: -2px 0 6px rgba(0,0,0,0.1);
   overflow-y: auto;
 }
 
 .sidebar h2 {
   margin-top: 0;
-  color: #556b2f;
+  color: #90ee90;
   font-size: 1.2em;
   border-bottom: 1px solid #8f9779;
   padding-bottom: 0.2em;
@@ -100,7 +100,7 @@ p {
 }
 
 .sidebar a {
-  color: #6b8e23;
+  color: #90ee90;
   text-decoration: none;
 }
 
