@@ -1,0 +1,7 @@
+textarea {
+  width: 700px;   /* wider */
+  height: 400px;  /* taller */
+  font-size: 1rem;
+  padding: 0.5em;
+  resize: vertical; /* let user drag to resize if they want */
+}
