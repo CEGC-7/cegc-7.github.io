@@ -8,6 +8,6 @@
         <p>Drag this to your bookmarks bar:</p>
         <a class="bookmarklet" href="${bookmarklet}">📌 Run Bookmarklet</a>
         <p>Or copy the code:</p>
-        <input type="text" value="${bookmarklet}" style="width:100%;" readonly onclick="this.select()">
+        <input type="text" value="${bookmarklet}" style="width:100%;height:1em;" readonly onclick="this.select()">
       `;
     }
