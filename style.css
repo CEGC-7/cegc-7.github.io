@@ -1,7 +1,7 @@
 /* style.css — Forest & Moss Theme */
 
 body {
-  background-color: #6c493a; /* light parchment base */
+  background-color: #f4f1e9; /* light parchment base */
   color: #3e3b2f; /* deep forest brown */
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
@@ -73,18 +73,18 @@ p {
   right: 0;
   height: 100vh; /* full viewport height */
   width: 200px;
-  background-color: #556b2f;
+  background-color: #6c493a;
   border-left: 2px solid #8f9779;
   padding: 1em;
   font-size: 0.9em;
-  color: #6c493a;
+  color: #3e3b2f;
   box-shadow: -2px 0 6px rgba(0,0,0,0.1);
   overflow-y: auto;
 }
 
 .sidebar h2 {
   margin-top: 0;
-  color: #6c493a;
+  color: #3e3b2f;
   font-size: 1.2em;
   border-bottom: 1px solid #8f9779;
   padding-bottom: 0.2em;
