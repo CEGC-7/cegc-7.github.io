@@ -51,6 +51,23 @@ function detectMimeAndConvert(str) {
   outputImage.src = dataUrl;
   outputImage.style.display = 'block';
   info.textContent = `MIME Type: ${mimeType} (${str.startsWith("data:") ? "Data URL" : "Raw Base64"})`;
+  // Show the download button when an image is loaded
+const downloadBtn = document.getElementById('downloadBtn');
+
+outputImage.src = dataUrl;
+outputImage.style.display = 'block';
+info.textContent = `MIME Type: ${mimeType} (${str.startsWith("data:") ? "Data URL" : "Raw Base64"})`;
+
+// Prepare download link
+downloadBtn.style.display = 'inline-block';
+downloadBtn.onclick = () => {
+  const a = document.createElement('a');
+  a.href = dataUrl;
+  a.download = `converted_image.${mimeType.split('/')[1] || 'png'}`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+};
 }
 
 // Convert on input change
