@@ -4,3 +4,8 @@ textarea {
   font-size: 1rem;
   padding: 0.5em;
 }
+
+img {
+  max-width: 150px;
+  margin-top: 1em;
+}
