@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Image to Base64 Converter</title>
   <link rel="stylesheet" href="/style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <h1>Image to Base64 Converter</h1>
@@ -12,23 +13,5 @@
     <img id="previewImage" alt="Preview will appear here">
   </div>
   <textarea id="base64Output" rows="10" placeholder="Base64 output will appear here..."></textarea>
-
-  <script>
-    const imageInput = document.getElementById('imageInput');
-    const previewImage = document.getElementById('previewImage');
-    const base64Output = document.getElementById('base64Output');
-
-    imageInput.addEventListener('change', () => {
-      const file = imageInput.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = () => {
-        previewImage.src = reader.result;
-        base64Output.value = reader.result;
-      };
-      reader.readAsDataURL(file);
-    });
-  </script>
 </body>
 </html>
