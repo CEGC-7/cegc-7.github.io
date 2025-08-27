@@ -53,45 +53,80 @@ function detectMimeAndConvert(str) {
   info.textContent = `MIME Type: ${mimeType} (${str.startsWith("data:") ? "Data URL" : "Raw Base64"})`;
   // Show the download button when an image is loaded
 const downloadBtn = document.getElementById('downloadBtn');
+let lastDataUrl = '';
+let lastMimeType = '';
 
-outputImage.src = dataUrl;
-outputImage.style.display = 'block';
-info.textContent = `MIME Type: ${mimeType} (${str.startsWith("data:") ? "Data URL" : "Raw Base64"})`;
+function detectMimeAndConvert(str) {
+  let mimeType = '';
+  let base64Data = '';
 
-// Map MIME types to desired file extensions
+  if (str.startsWith('data:')) {
+    const matches = str.match(/^data:(.*?);base64,(.*)$/);
+    if (matches) {
+      mimeType = matches[1];
+      base64Data = matches[2];
+    }
+  } else {
+    base64Data = str.trim();
+    try {
+      const binary = atob(base64Data.substring(0, 50));
+      const bytes = Array.from(binary).map(ch => ch.charCodeAt(0));
+      if (bytes[0] === 0xFF && bytes[1] === 0xD8) mimeType = 'image/jpeg';
+      else if (bytes[0] === 0x89 && bytes[1] === 0x50) mimeType = 'image/png';
+      else if (bytes[0] === 0x47 && bytes[1] === 0x49) mimeType = 'image/gif';
+      else if (bytes[0] === 0x42 && bytes[1] === 0x4D) mimeType = 'image/bmp';
+      else mimeType = 'application/octet-stream';
+    } catch {
+      info.textContent = 'Invalid Base64 input.';
+      return;
+    }
+  }
+
+  const dataUrl = `data:${mimeType};base64,${base64Data}`;
+  outputImage.src = dataUrl;
+  outputImage.style.display = 'block';
+  info.textContent = `MIME Type: ${mimeType} (${str.startsWith('data:') ? 'Data URL' : 'Raw Base64'})`;
+
+  // Save for download click
+  lastDataUrl = dataUrl;
+  lastMimeType = mimeType;
+
+  downloadBtn.style.display = 'inline-block';
+}
+
 const mimeToExt = {
-  "image/png": "png",
-  "image/apng": "apng",
-  "image/jpeg": "jpg",
-  "image/jpg": "jpg", // some browsers still return this
-  "image/pjpeg": "jpg", // progressive JPEG
-  "image/gif": "gif",
-  "image/bmp": "bmp",
-  "image/x-bmp": "bmp",
-  "image/x-ms-bmp": "bmp",
-  "image/webp": "webp",
-  "image/avif": "avif",
-  "image/heic": "heic",
-  "image/heif": "heif",
-  "image/tiff": "tif",
-  "image/x-tiff": "tif",
-  "image/svg+xml": "svg",
-  "image/svg": "svg",
-  "image/x-icon": "ico",
-  "image/vnd.microsoft.icon": "ico",
-  "image/vnd.wap.wbmp": "wbmp"
+  'image/png': 'png',
+  'image/apng': 'apng',
+  'image/jpeg': 'jpg',
+  'image/jpg': 'jpg',
+  'image/pjpeg': 'jpg',
+  'image/gif': 'gif',
+  'image/bmp': 'bmp',
+  'image/x-bmp': 'bmp',
+  'image/x-ms-bmp': 'bmp',
+  'image/webp': 'webp',
+  'image/avif': 'avif',
+  'image/heic': 'heic',
+  'image/heif': 'heif',
+  'image/tiff': 'tif',
+  'image/x-tiff': 'tif',
+  'image/svg+xml': 'svg',
+  'image/x-icon': 'ico',
+  'image/vnd.microsoft.icon': 'ico',
+  'image/vnd.wap.wbmp': 'wbmp'
 };
 
-downloadBtn.style.display = 'inline-block';
-downloadBtn.onclick = () => {
-  const ext = mimeToExt[mimeType] || mimeType.split('/')[1] || 'png';
+// Always attached once, outside of detectMimeAndConvert
+downloadBtn.addEventListener('click', () => {
+  if (!lastDataUrl) return;
+  const ext = mimeToExt[lastMimeType?.toLowerCase()] || 'bin';
   const a = document.createElement('a');
-  a.href = dataUrl;
+  a.href = lastDataUrl;
   a.download = `converted-image.${ext}`;
   document.body.appendChild(a);
   a.click();
-  document.body.removeChild(a);
-};
+  a.remove();
+});
 }
 
 // Convert on input change
