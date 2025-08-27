@@ -58,12 +58,36 @@ outputImage.src = dataUrl;
 outputImage.style.display = 'block';
 info.textContent = `MIME Type: ${mimeType} (${str.startsWith("data:") ? "Data URL" : "Raw Base64"})`;
 
-// Prepare download link
+// Map MIME types to desired file extensions
+const mimeToExt = {
+  "image/png": "png",
+  "image/apng": "apng",
+  "image/jpeg": "jpg",
+  "image/jpg": "jpg", // some browsers still return this
+  "image/pjpeg": "jpg", // progressive JPEG
+  "image/gif": "gif",
+  "image/bmp": "bmp",
+  "image/x-bmp": "bmp",
+  "image/x-ms-bmp": "bmp",
+  "image/webp": "webp",
+  "image/avif": "avif",
+  "image/heic": "heic",
+  "image/heif": "heif",
+  "image/tiff": "tif",
+  "image/x-tiff": "tif",
+  "image/svg+xml": "svg",
+  "image/svg": "svg",
+  "image/x-icon": "ico",
+  "image/vnd.microsoft.icon": "ico",
+  "image/vnd.wap.wbmp": "wbmp"
+};
+
 downloadBtn.style.display = 'inline-block';
 downloadBtn.onclick = () => {
+  const ext = mimeToExt[mimeType] || mimeType.split('/')[1] || 'png';
   const a = document.createElement('a');
   a.href = dataUrl;
-  a.download = `converted_image.${mimeType.split('/')[1] || 'png'}`;
+  a.download = `converted-image.${ext}`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
