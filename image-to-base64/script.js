@@ -8,8 +8,9 @@
 
       const reader = new FileReader();
       reader.onload = () => {
-        previewImage.src = reader.result;
-        base64Output.value = reader.result;
-      };
+      previewImage.src = reader.result;
+      previewImage.style.display = 'block';
+      base64Output.value = reader.result;
+    };
       reader.readAsDataURL(file);
     });
