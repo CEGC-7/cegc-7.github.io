@@ -61,8 +61,29 @@
   }
 function resetGame() {
   if (!confirm("Hard reset? This will erase all progress.")) return;
+
+  // Clear localStorage
   localStorage.removeItem("starport_save");
-  location.reload(true); // true forces reload from server in some browsers
+
+  // Reset in-memory state to defaults
+  Object.assign(State, {
+    version: 1,
+    credits: 0,
+    lifetimeCredits: 0,
+    starCred: 0,
+    modules: Object.fromEntries(MODS.map(m => [m.id, 0])),
+    docksBusy: [],
+    log: [],
+    boosts: { traffic: 0, tips: 0, speed: 0 },
+    events: [],
+    sessionStart: now(),
+    lastTick: now(),
+    lastSave: now(),
+    offlineGains: 0
+  });
+
+  // Force a fresh reload (cache-busting)
+  location.href = location.href.split("?")[0] + "?reset=" + Date.now();
 }
 
   // ─── Rendering ────────────────────────────────────────────────────────────────
