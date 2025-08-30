@@ -390,7 +390,6 @@ function spawnInterval() {
     renderStore(); renderDocks(); renderHUD(); renderLog();
     addLog("Welcome aboard. Dock 1 smells like cinnamon rolls.","good");
     el("#saveBtn").onclick    = save;
-    el("#resetBtn").onclick   = reset;
     el("#rebrandBtn").onclick = rebrand;
     setInterval(step,100);
     setInterval(save,30000);
