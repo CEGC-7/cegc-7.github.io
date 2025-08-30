@@ -499,4 +499,77 @@
   function trafficMult() {
     const m = starCredMultipliers();
     return _trafficMult() * m.traffic;
- 
+   }
+
+  const _speedMult = speedMult;
+  function speedMult() {
+    const m = starCredMultipliers();
+    return _speedMult() * m.speed;
+  }
+
+  const _tipsMult = tipsMult;
+  function tipsMult(species) {
+    const m = starCredMultipliers();
+    return _tipsMult(species) * m.tips;
+  }
+
+  // Session time formatting
+  function fmtTime(totalSec) {
+    const h = Math.floor(totalSec / 3600).toString().padStart(2, "0");
+    const m = Math.floor((totalSec % 3600) / 60).toString().padStart(2, "0");
+    const s = Math.floor(totalSec % 60).toString().padStart(2, "0");
+    return `${h}:${m}:${s}`;
+  }
+
+  // Main step loop
+  function step() {
+    const t = now();
+    const dt = Math.min(0.25, (t - State.lastTick) / 1000); // cap dt to avoid huge jumps
+    State.lastTick = t;
+
+    tick(dt);
+    renderDocks();
+    renderHUD();
+    renderEventsBar();
+  }
+
+  // Initialize UI and wire events
+  function init() {
+    load();
+    applyOfflineProgress();
+
+    ensureDockSlots(docks());
+    renderStore();
+    renderDocks();
+    renderHUD();
+    renderLog();
+
+    addLog("Welcome aboard. Dock 1 smells like cinnamon rolls.", "good");
+
+    // Buttons
+    const saveBtn = el("#saveBtn");
+    if (saveBtn) saveBtn.onclick = save;
+    const resetBtn = el("#resetBtn");
+    if (resetBtn) resetBtn.onclick = reset;
+    const rebrandBtn = el("#rebrandBtn");
+    if (rebrandBtn) rebrandBtn.onclick = rebrand;
+
+    // Timers
+    setInterval(step, 100);                 // core loop
+    setInterval(save, 30_000);              // autosave
+    setInterval(() => {                     // session timer
+      el("#sessionTime").textContent = fmtTime((now() - State.sessionStart) / 1000);
+    }, 1000);
+
+    // Save on tab hide as a courtesy
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) save();
+    });
+    window.addEventListener("beforeunload", save);
+
+    flashStatus("All systems nominal. Clear skies and friendly traffic.");
+  }
+
+  // Kick it off
+  init();
+})();
