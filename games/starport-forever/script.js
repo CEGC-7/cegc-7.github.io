@@ -59,11 +59,11 @@
       flashStatus("Save Loaded.");
     } catch {}
   }
-  function reset() {
-    if (!confirm("Hard reset? This erases all progress.")) return;
-    localStorage.removeItem("starport_save");
-    location.reload();
-  }
+function resetGame() {
+  if (!confirm("Hard reset? This will erase all progress.")) return;
+  localStorage.removeItem("starport_save");
+  location.reload(true); // true forces reload from server in some browsers
+}
 
   // ─── Rendering ────────────────────────────────────────────────────────────────
   function renderHUD() {
@@ -400,6 +400,8 @@ function spawnInterval() {
     document.addEventListener("visibilitychange",()=>{ if(document.hidden) save(); });
     window.addEventListener("beforeunload", save);
     flashStatus("All systems nominal. Enjoy your station!");
+    const resetBtn = el("#resetBtn");
+    if (resetBtn) resetBtn.addEventListener("click", resetGame);
   }
 
   init();
