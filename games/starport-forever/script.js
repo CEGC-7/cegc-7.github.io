@@ -282,7 +282,15 @@
     while(State.docksBusy.length>n) State.docksBusy.pop();
   }
   let spawnAccum=0;
-  function spawnInterval(){ return 3.5/trafficMult(); }
+// spawnInterval now scales inversely with dock count
+function spawnInterval() {
+  const baseInterval = 3.5;          // seconds per spawn at 1× traffic and 1 dock
+  const speedFactor  = trafficMult(); 
+  const dockCount    = docks() || 1;  // ensure non-zero
+
+  // More docks → faster spawns
+  return (baseInterval / speedFactor) / dockCount;
+}
   function serviceTimeFor(ship){ return Math.max(1.2, ship.service/speedMult()); }
   function shipPayout(ship,species){
     return ship.baseFee + ship.baseTip[species]*tipsMult(species);
