@@ -16527,7 +16527,7 @@ Game.Launch=function()
 		
 		if (Game.T%(Game.fps*2)==0)
 		{
-			var title='Cookie Clicker';
+			var title='Cookie Clicker Unblocked';
 			if (Game.season=='fools') title='Cookie Baker';
 			document.title=(Game.OnAscend?(EN?'Ascending! ':(loc("Ascending")+' | ')):'')+loc("%1 cookie",LBeautify(Game.cookies))+' - '+title;
 		}
