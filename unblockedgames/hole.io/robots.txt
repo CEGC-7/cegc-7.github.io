@@ -1,0 +1,8 @@
+User-agent: *
+
+Disallow: /play/
+Disallow: /?*
+Disallow: /cdn-cgi/
+Disallow: /index-gd.php
+
+Host: https://holeio.com
