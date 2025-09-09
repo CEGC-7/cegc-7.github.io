@@ -1,88 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-  />
-  <title>Starport Forever — Cozy Idle Station</title>
+  <title>Starport Forever — Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <meta name="color-scheme" content="dark light" />
 </head>
 <body>
-  <div id="app">
-    <header class="hud card">
-      <div class="hud-left">
-        <h1 class="title">🛰️ Starport Forever</h1>
-        <div class="sub">A cozy, upbeat space-station idle</div>
-        <div class="metrics">
-          <span class="metric"><label>Credits</label> <strong id="credits">0</strong></span>
-          <span class="metric"><label>Star Cred</label> <strong id="starCred">0</strong></span>
-          <span class="metric"><label>Docks</label> <strong id="dockCount">1</strong></span>
-          <span class="metric"><label>Traffic</label> <strong id="trafficStat">1.00x</strong></span>
-          <span class="metric"><label>Speed</label> <strong id="speedStat">1.00x</strong></span>
-          <span class="metric"><label>Tips</label> <strong id="tipsStat">1.00x</strong></span>
-        </div>
+  <header>
+    <h1>Starport Forever</h1>
+    <div id="status">
+      <span id="timeCycle">Cycle 1, Day 1</span>
+      <span>•</span>
+      <span id="stability">Stability: 100%</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="resources">
+      <h2>Resources</h2>
+      <div class="row">
+        <div class="res"><strong>Credits:</strong> <span id="r-credits">0</span></div>
+        <div class="res"><strong>Ore:</strong> <span id="r-ore">0</span></div>
+        <div class="res"><strong>Organics:</strong> <span id="r-organics">0</span></div>
+        <div class="res"><strong>Data:</strong> <span id="r-data">0</span></div>
       </div>
-      <div class="hud-right">
-        <div class="buttons">
-          <button id="saveBtn">Save</button>
-          <button id="resetBtn" class="danger" type="button">Hard Reset</button>
-        </div>
-        <div id="eventsBar" class="events-bar"></div>
-        <div id="statusLine" class="status-line">Welcome aboard. Dock 1 smells like cinnamon rolls.</div>
+    </section>
+
+    <section id="dock">
+      <h2>Dock A — Arrivals</h2>
+      <button id="btnManualUnload">Manual unload (+1 Ore)</button>
+      <div id="dockQueue"></div>
+    </section>
+
+    <section id="buildings">
+      <h2>Buildings</h2>
+      <div class="card">
+        <div class="title">Cargo Crane <span id="b-crane-count">0</span></div>
+        <div class="desc">Auto-unloads ships. Produces Ore per tick.</div>
+        <div class="meta">Rate: <span id="b-crane-rate">0</span>/tick</div>
+        <button id="buy-crane">Buy (100 Credits)</button>
       </div>
-    </header>
+    </section>
 
-    <main class="layout">
-      <section class="left col">
-        <div class="card store">
-          <h2>Modules</h2>
-          <div id="storeList" class="store-list"></div>
-        </div>
+    <section id="upgrades">
+      <h2>Upgrades</h2>
+      <button id="upg-crane-motor">Upgrade Crane Motors (+50% rate) — 250 Credits</button>
+    </section>
 
-        <div class="card">
-          <h2>Rebrand (Prestige)</h2>
-          <div id="prestigeBlock">
-            <p id="prestigeInfo">Reach 25,000 credits lifetime to rebrand your station for permanent perks.</p>
-            <div class="prestige-options">
-              <button id="rebrandBtn" disabled>Rebrand Station</button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section id="actions">
+      <h2>Actions</h2>
+      <button id="btnSave">Save</button>
+      <button id="btnWipe">Wipe Save</button>
+    </section>
+  </main>
 
-      <section class="center col">
-        <div class="card docks">
-          <h2>Dock Operations</h2>
-          <div id="dockList" class="dock-list"></div>
-        </div>
-      </section>
+  <footer>
+    <small>Prototype build — offline progress, autosave every 15s.</small>
+  </footer>
 
-      <section class="right col">
-        <div class="card">
-          <h2>Station Feed</h2>
-          <ul id="log" class="log"></ul>
-        </div>
-
-        <div class="card">
-          <h2>Stats</h2>
-          <ul class="stats">
-            <li><label>Lifetime Credits</label><span id="lifetimeCredits">0</span></li>
-            <li><label>Session Time</label><span id="sessionTime">00:00:00</span></li>
-            <li><label>Offline Gains</label><span id="offlineGains">0</span></li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="card foot">
-      <div>Tip: Café + Hydro Garden unlocks “Botanical Brunch” bursts for extra tips.</div>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
