@@ -48,7 +48,7 @@ function checkInspector() {
     } */
 }
 function addRewards() {
-    chrome.tabs.create({ url:'/www/rewards.html' });
+    chrome.tabs.create({ url:'rewards.html' });
 }
 
 //get user token from local storage
@@ -124,12 +124,12 @@ function checkExtension(){
         document.getElementById("id-fullscreen").addEventListener("click", function(){ toggleFullscreen(); });
         document.getElementById("id-fastmode").addEventListener("click", function(){ toggleFastMode(); });
         document.getElementById("id-browse").addEventListener("click", function(){ 
-            chrome.tabs.create({ url:'/www/index.html?browse=true&filter=recent' });
+            chrome.tabs.create({ url:'index.html?browse=true&filter=recent' });
         });
         document.getElementById("id-play").addEventListener("click", function(){ 
             document.getElementById("id-options").style.display = "none";
             if (document.getElementById("id-fullscreen").checked == true){
-                chrome.tabs.create({ url:'/www/index.html?fullscreen=true' });
+                chrome.tabs.create({ url:'index.html?fullscreen=true' });
             }
         });
         document.getElementById("id-social").addEventListener("click", function(){ 
