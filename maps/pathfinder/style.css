@@ -1,0 +1,11 @@
+.gallery img {
+  width: 250px;     /* fixed width */
+  height: auto;     /* proportional height */
+  border: 2px solid #333;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
