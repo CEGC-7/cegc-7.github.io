@@ -1,0 +1,115 @@
+/* General page layout */
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  background-color: #fdfcf9;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Title logo */
+.dd-title {
+  display: block;
+  margin: 2rem auto;
+  max-width: 300px;
+}
+
+/* Byline block */
+.dd-byline {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.dd-byline .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.dd-byline .subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+}
+.dd-byline .author {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Credits section */
+.credit {
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+}
+.Main-Text {
+  font-size: 0.9rem;
+  color: #444;
+}
+.Basic-Text-Frame {
+  border-top: 1px solid #ccc;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+.copyright {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #2a2a2a;
+}
+h1 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.25rem;
+}
+h2 {
+  border-bottom: 1px solid #666;
+  padding-bottom: 0.25rem;
+}
+
+/* Common terms glossary */
+.common-term {
+  font-weight: bold;
+  color: #004466;
+  margin-top: 1rem;
+}
+.common-term + p {
+  margin-left: 1rem;
+}
+
+/* Lists */
+ul {
+  margin-left: 1.5rem;
+  list-style-type: square;
+}
+li {
+  margin: 0.25rem 0;
+}
+
+/* Tables (placeholders for injected tables) */
+div[id^="table"] {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  background-color: #fafafa;
+}
+
+/* Links */
+a {
+  color: #006699;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer logo */
+.ii-logo {
+  display: block;
+  margin: 1rem auto;
+  max-width: 150px;
+}
