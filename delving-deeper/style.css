@@ -5,14 +5,16 @@ body {
   color: #222;
   line-height: 1.6;
   margin: 0;
-  padding: 0;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 /* Title logo */
 .dd-title {
   display: block;
   margin: 2rem auto;
-  max-width: 300px;
+  height: auto;
+  width: auto
 }
 
 /* Byline block */
@@ -122,4 +124,8 @@ a:hover {
 .table-wrapper table {
   width: 100%;
   table-layout: auto; /* or fixed if you want equal column widths */
+}
+
+.table-wrapper table th {
+  text-align: left;
 }
