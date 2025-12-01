@@ -113,3 +113,13 @@ a:hover {
   margin: 1rem auto;
   max-width: 150px;
 }
+
+/* Make all tables fill their parent container */
+.table-wrapper {
+  width: 100%;
+}
+
+.table-wrapper table {
+  width: 100%;
+  table-layout: auto; /* or fixed if you want equal column widths */
+}
