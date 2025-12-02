@@ -291,6 +291,7 @@ a:hover {
     background-color: #edf5ed;
   }
 
+  .table-wrapper table th,
   .table-wrapper table th {
     background-color: #d9e6d9;
     color: #1a2e1a;
@@ -342,6 +343,7 @@ a:hover {
     background-color: #142414;
   }
 
+  .table-wrapper table th,
   .table-wrapper table th {
     background-color: #1a2e1a;
     color: #a3d9a3;
