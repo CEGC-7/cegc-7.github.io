@@ -1,0 +1,354 @@
+/* ============================= */
+/* Base reset and layout frame   */
+/* ============================= */
+
+/* Lock the viewport and let only the layout’s children scroll */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+h5 {
+  display: inline;          /* make it inline instead of block */
+  font-size: 1.05em;
+  font-weight: bold;        /* bold for emphasis */
+  margin: 0;                /* remove default margins */
+  padding-right: 0.5rem;    /* optional spacing before the following text */
+}
+
+h5 + p {
+  display: inline;       /* make the paragraph start inline */
+  margin: 0;             /* remove top margin so it flows */
+}
+
+/* General page typography */
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+/* The two‑column app layout: sidebar + content (no position: fixed, no margins) */
+.layout {
+  display: flex;
+  height: 100vh; /* full viewport height */
+  background: var(--app-bg, #0a140a);
+}
+
+/* Sidebar column */
+#sidebar {
+  background-color: var(--sidebar-bg, #0d1a0d);
+  color: var(--sidebar-text, #e6f2e6);
+  padding: 1rem;
+  overflow-y: auto;           /* sidebar scrolls independently if needed */
+  box-shadow: 2px 0 6px rgba(0,0,0,0.35); /* visible divider shadow */
+}
+
+/* Main content column */
+#page-content-wrapper {
+  flex: 1;                    /* take remaining space */
+  padding: 2rem;              /* replaces old body horizontal padding */
+  overflow-y: auto;           /* content scrolls */
+  background: var(--content-bg, #0f1f0f);
+  color: var(--content-text, #e6f2e6);
+}
+
+/* ============================= */
+/* Title, byline, and footer     */
+/* ============================= */
+
+.dd-title {
+  display: block;
+  margin: 2rem auto;
+  height: auto;
+  width: auto;
+}
+
+.dd-byline {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.dd-byline .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.dd-byline .subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.dd-byline .author {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.credit {
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+}
+.Main-Text {
+  font-size: 0.9rem;
+}
+.Basic-Text-Frame {
+  border-top: 1px solid;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+.copyright {
+  font-size: 0.8rem;
+}
+
+.ii-logo {
+  display: block;
+  margin: 1rem auto;
+  max-width: 150px;
+}
+
+/* ============================= */
+/* Headings, glossary, lists     */
+/* ============================= */
+
+h1, h2, h3, h4, h5 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  border-bottom: 2px solid;
+  padding-bottom: 0.25rem;
+}
+h2 {
+  border-bottom: 1px solid;
+  padding-bottom: 0.25rem;
+}
+
+.common-term {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.common-term + p {
+  margin-left: 1rem;
+}
+
+/* Document lists (inside content) */
+#page-content-wrapper ul {
+  margin-left: 1.5rem;
+  list-style-type: square;
+}
+#page-content-wrapper li {
+  margin: 0.25rem 0;
+}
+
+/* ============================= */
+/* Tables                        */
+/* ============================= */
+
+div[id^="table"] {
+  margin: 1rem 0;
+  border: 1px solid;
+  padding: 0.5rem;
+}
+
+.table-wrapper {
+  width: 100%;
+}
+.table-wrapper table {
+  width: 100%;
+  table-layout: auto;
+}
+.table-wrapper table th {
+  text-align: left;
+}
+
+/* Zebra striping */
+.table-wrapper table tbody tr:nth-child(odd) {
+  background-color: var(--row-odd);
+}
+.table-wrapper table tbody tr:nth-child(even) {
+  background-color: var(--row-even);
+}
+
+/* ============================= */
+/* Links                         */
+/* ============================= */
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* Sidebar TOC behaviors         */
+/* ============================= */
+
+#sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+#sidebar li {
+  margin: 0.25rem 0;
+}
+
+#sidebar a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0;
+}
+
+#sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Submenus are hidden by default; shown when the parent is expanded */
+#sidebar li ul {
+  padding-left: 1rem;
+  margin: 0.25rem 0 0;
+  display: none;
+}
+#sidebar li.expanded > ul {
+  display: block;
+}
+
+/* Toggle arrows only on parents with children */
+#sidebar li > a::after {
+  content: "";
+  float: right;
+}
+#sidebar li:has(ul) > a::after {
+  content: "▶";
+  font-size: 0.8em;
+}
+#sidebar li.expanded > a::after {
+  content: "▼";
+}
+
+/* ============================= */
+/* Scrollbar styling (dark)      */
+/* ============================= */
+
+/* Firefox */
+#sidebar, #page-content-wrapper {
+  scrollbar-color: #3a5c3a #0d1a0d; /* thumb, track */
+  scrollbar-width: thin;
+}
+
+/* WebKit (Chrome/Edge/Safari) */
+#sidebar::-webkit-scrollbar,
+#page-content-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+#sidebar::-webkit-scrollbar-track,
+#page-content-wrapper::-webkit-scrollbar-track {
+  background: #0d1a0d;
+}
+#sidebar::-webkit-scrollbar-thumb,
+#page-content-wrapper::-webkit-scrollbar-thumb {
+  background-color: #3a5c3a;
+  border-radius: 6px;
+  border: 2px solid #0d1a0d;
+}
+#sidebar::-webkit-scrollbar-thumb:hover,
+#page-content-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #4b7a4b;
+}
+
+/* ============================= */
+/* 🌿 Light Forest Theme         */
+/* ============================= */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --app-bg: #f5f9f4;
+    --sidebar-bg: #d9e6d9;
+    --sidebar-text: #1a2e1a;
+    --content-bg: #f5f9f4;
+    --content-text: #1a2e1a;
+    --row-odd: #edf5ed;
+    --row-even: #d9e6d9;
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #2f5d2f;
+    border-color: #4a7a4a;
+  }
+
+  .dd-byline .subtitle { color: #555; }
+  .Main-Text { color: #444; }
+  .Basic-Text-Frame { border-color: #ccc; }
+  .copyright { color: #777; }
+
+  a { color: #2f7a2f; }
+  a:hover { color: #1a4d1a; }
+
+  div[id^="table"] {
+    border-color: #4a7a4a;
+    background-color: #edf5ed;
+  }
+
+  .table-wrapper table,
+  .table-wrapper table th,
+  .table-wrapper table td {
+    color: #000 !important; /* force black text */
+	background-color: #d9e6d9;
+  }
+
+  /* Light scrollbars */
+  #sidebar, #page-content-wrapper {
+    scrollbar-color: #90b890 #e6efe6; /* thumb, track */
+  }
+  #sidebar::-webkit-scrollbar-track,
+  #page-content-wrapper::-webkit-scrollbar-track { background: #e6efe6; }
+  #sidebar::-webkit-scrollbar-thumb,
+  #page-content-wrapper::-webkit-scrollbar-thumb {
+    background-color: #90b890;
+    border-color: #e6efe6;
+  }
+}
+
+/* ============================= */
+/* 🌌 Dark Forest Theme          */
+/* ============================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-bg: #0d1a0d;
+    --sidebar-bg: #0d1a0d;
+    --sidebar-text: #e6f2e6;
+    --content-bg: #0f1f0f;
+    --content-text: #e6f2e6;
+    --row-odd: #142414;
+    --row-even: #1a2e1a;
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #8fc48f;
+    border-color: #4a7a4a;
+  }
+
+  .dd-byline .subtitle { color: #a3d9a3; }
+  .Main-Text { color: #cfe6cf; }
+  .Basic-Text-Frame { border-color: #4a7a4a; }
+  .copyright { color: #a3d9a3; }
+
+  a { color: #a3d9a3; }
+  a:hover { color: #6fbf6f; }
+
+  div[id^="table"] {
+    border-color: #4a7a4a;
+    background-color: #142414;
+  }
+
+  .table-wrapper table,
+  .table-wrapper table th,
+  .table-wrapper table td {
+    color: #fff !important; /* force white text */
+    background-color: #1a2e1a;
+  }
+}
+
