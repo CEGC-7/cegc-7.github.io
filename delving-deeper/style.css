@@ -9,6 +9,19 @@ html, body {
   overflow: hidden;
 }
 
+h5 {
+  display: inline;          /* make it inline instead of block */
+  font-size: 1.05em;
+  font-weight: bold;        /* bold for emphasis */
+  margin: 0;                /* remove default margins */
+  padding-right: 0.5rem;    /* optional spacing before the following text */
+}
+
+h5 + p {
+  display: inline;       /* make the paragraph start inline */
+  margin: 0;             /* remove top margin so it flows */
+}
+
 /* General page typography */
 body {
   font-family: "Georgia", "Times New Roman", serif;
