@@ -22,6 +22,11 @@ h5 + p {
   margin: 0;             /* remove top margin so it flows */
 }
 
+h5::before {
+  content: "\A";       /* line break before heading */
+  white-space: pre;    /* respect the newline */
+}
+
 /* General page typography */
 body {
   font-family: "Georgia", "Times New Roman", serif;
@@ -342,4 +347,3 @@ a:hover {
     background-color: #1a2e1a;
   }
 }
-
