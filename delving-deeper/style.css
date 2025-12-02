@@ -1,8 +1,6 @@
 /* General page layout */
 body {
   font-family: "Georgia", "Times New Roman", serif;
-  background-color: #fdfcf9;
-  color: #222;
   line-height: 1.6;
   margin: 0;
   padding-left: 35px;
@@ -14,7 +12,7 @@ body {
   display: block;
   margin: 2rem auto;
   height: auto;
-  width: auto
+  width: auto;
 }
 
 /* Byline block */
@@ -30,7 +28,6 @@ body {
 .dd-byline .subtitle {
   font-size: 1.2rem;
   font-style: italic;
-  color: #555;
 }
 .dd-byline .author {
   font-size: 1rem;
@@ -44,17 +41,15 @@ body {
 }
 .Main-Text {
   font-size: 0.9rem;
-  color: #444;
 }
 .Basic-Text-Frame {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid;
   margin-top: 1rem;
   padding-top: 0.5rem;
   text-align: center;
 }
 .copyright {
   font-size: 0.8rem;
-  color: #777;
 }
 
 /* Headings */
@@ -62,21 +57,19 @@ h1, h2, h3, h4, h5 {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  color: #2a2a2a;
 }
 h1 {
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid;
   padding-bottom: 0.25rem;
 }
 h2 {
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid;
   padding-bottom: 0.25rem;
 }
 
 /* Common terms glossary */
 .common-term {
   font-weight: bold;
-  color: #004466;
   margin-top: 1rem;
 }
 .common-term + p {
@@ -95,18 +88,8 @@ li {
 /* Tables (placeholders for injected tables) */
 div[id^="table"] {
   margin: 1rem 0;
-  border: 1px solid #ccc;
+  border: 1px solid;
   padding: 0.5rem;
-  background-color: #fafafa;
-}
-
-/* Links */
-a {
-  color: #006699;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
 }
 
 /* Footer logo */
@@ -120,21 +103,134 @@ a:hover {
 .table-wrapper {
   width: 100%;
 }
-
 .table-wrapper table {
   width: 100%;
-  table-layout: auto; /* or fixed if you want equal column widths */
+  table-layout: auto;
 }
-
 .table-wrapper table th {
   text-align: left;
 }
 
-/* Custom zebra striping for table rows */
+/* Zebra striping */
 .table-wrapper table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2; /* light grey */
+  background-color: var(--row-odd);
+}
+.table-wrapper table tbody tr:nth-child(even) {
+  background-color: var(--row-even);
 }
 
-.table-wrapper table tbody tr:nth-child(even) {
-  background-color: #e0e0e0; /* slightly darker grey */
+/* Links */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* 🌿 Light Forest Theme          */
+/* ============================= */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f5f9f4; /* pale green */
+    color: #1a2e1a; /* deep forest text */
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #2f5d2f;
+    border-color: #4a7a4a;
+  }
+
+  .dd-byline .subtitle {
+    color: #555;
+  }
+  .Main-Text {
+    color: #444;
+  }
+  .Basic-Text-Frame {
+    border-color: #ccc;
+  }
+  .copyright {
+    color: #777;
+  }
+
+  a {
+    color: #2f7a2f;
+  }
+  a:hover {
+    color: #1a4d1a;
+  }
+
+  div[id^="table"] {
+    border-color: #4a7a4a;
+    background-color: #edf5ed;
+  }
+
+  .table-wrapper table th {
+    background-color: #d9e6d9;
+    color: #1a2e1a;
+  }
+
+  :root {
+    --row-odd: #edf5ed;
+    --row-even: #d9e6d9;
+  }
+
+  .common-term {
+    color: #2f5d2f;
+  }
+}
+
+/* ============================= */
+/* 🌌 Dark Forest Theme           */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0d1a0d; /* deep forest background */
+    color: #e6f2e6; /* pale green text */
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #8fc48f;
+    border-color: #4a7a4a;
+  }
+
+  .dd-byline .subtitle {
+    color: #a3d9a3;
+  }
+  .Main-Text {
+    color: #cfe6cf;
+  }
+  .Basic-Text-Frame {
+    border-color: #4a7a4a;
+  }
+  .copyright {
+    color: #a3d9a3;
+  }
+
+  a {
+    color: #a3d9a3;
+  }
+  a:hover {
+    color: #6fbf6f;
+  }
+
+  div[id^="table"] {
+    border-color: #4a7a4a;
+    background-color: #142414;
+  }
+
+  .table-wrapper table th {
+    background-color: #1a2e1a;
+    color: #a3d9a3;
+  }
+
+  :root {
+    --row-odd: #142414;
+    --row-even: #1a2e1a;
+  }
+
+  .common-term {
+    color: #8fc48f;
+  }
 }
