@@ -9,22 +9,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Global font variable */
-:root {
-  --app-font: "Georgia", "Times New Roman", serif;
-}
-
-body,
-#page-content-wrapper,
-#sidebar,
-#sidebar h1, #sidebar h2, #sidebar h3, #sidebar h4, #sidebar h5, #sidebar h6,
-#page-content-wrapper h1, #page-content-wrapper h2, #page-content-wrapper h3,
-#page-content-wrapper h4, #page-content-wrapper h5, #page-content-wrapper h6,
-#font-toggle {
-  font-family: var(--app-font);
-  line-height: 1.6;
-}
-
 h5 {
   display: inline;          /* make it inline instead of block */
   font-size: 1.05em;
@@ -43,7 +27,13 @@ h5::before {
   white-space: pre;    /* respect the newline */
 }
 
-/* The two‑column app layout: sidebar + content */
+/* General page typography */
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+/* The two‑column app layout: sidebar + content (no position: fixed, no margins) */
 .layout {
   display: flex;
   height: 100vh; /* full viewport height */
@@ -55,15 +45,15 @@ h5::before {
   background-color: var(--sidebar-bg, #0d1a0d);
   color: var(--sidebar-text, #e6f2e6);
   padding: 1rem;
-  overflow-y: auto;
-  box-shadow: 2px 0 6px rgba(0,0,0,0.35);
+  overflow-y: auto;           /* sidebar scrolls independently if needed */
+  box-shadow: 2px 0 6px rgba(0,0,0,0.35); /* visible divider shadow */
 }
 
 /* Main content column */
 #page-content-wrapper {
-  flex: 1;
-  padding: 2rem;
-  overflow-y: auto;
+  flex: 1;                    /* take remaining space */
+  padding: 2rem;              /* replaces old body horizontal padding */
+  overflow-y: auto;           /* content scrolls */
   background: var(--content-bg, #0f1f0f);
   color: var(--content-text, #e6f2e6);
 }
@@ -116,6 +106,7 @@ h5::before {
 /* ============================= */
 
 h1, h2, h3, h4, h5 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
@@ -239,7 +230,7 @@ a:hover {
 
 /* Firefox */
 #sidebar, #page-content-wrapper {
-  scrollbar-color: #3a5c3a #0d1a0d;
+  scrollbar-color: #3a5c3a #0d1a0d; /* thumb, track */
   scrollbar-width: thin;
 }
 
@@ -263,10 +254,6 @@ a:hover {
   background-color: #4b7a4b;
 }
 
-/* ============================= */
-/* Font toggle button            */
-/* ============================= */
-
 #font-toggle {
   position: absolute;
   bottom: 10px;
@@ -274,9 +261,13 @@ a:hover {
   padding: 6px 12px;
   font-size: 1.2rem;
   cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+/* Comic Sans mode on the target container */
+#page-content-wrapper.font-comic,
+#sidebar.font-comic * { /* include whichever you’re toggling */
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important;
 }
 
 /* ============================= */
@@ -315,12 +306,12 @@ a:hover {
   .table-wrapper table,
   .table-wrapper table th,
   .table-wrapper table td {
-    color: #000 !important;
+    color: #000 !important; /* force black text */
   }
 
   /* Light scrollbars */
   #sidebar, #page-content-wrapper {
-    scrollbar-color: #90b890 #e6efe6;
+    scrollbar-color: #90b890 #e6efe6; /* thumb, track */
   }
   #sidebar::-webkit-scrollbar-track,
   #page-content-wrapper::-webkit-scrollbar-track { background: #e6efe6; }
@@ -329,16 +320,6 @@ a:hover {
     background-color: #90b890;
     border-color: #e6efe6;
   }
-
-  #font-toggle {
-    background-color: #90b890;   /* soft green */
-    color: #1a2e1a;              /* dark text */
-  }
-  #font-toggle:hover {
-    background-color: #6fa86f;   /* darker green on hover */
-  }
-
-
 }
 
 /* ============================= */
@@ -378,12 +359,5 @@ a:hover {
   .table-wrapper table th,
   .table-wrapper table td {
     color: #fff !important;
-  }
-  #font-toggle {
-    background-color: #3a5c3a;   /* deep forest green */
-    color: #e6f2e6;              /* light text */
-  }
-  #font-toggle:hover {
-    background-color: #4b7a4b;   /* lighter green on hover */
   }
 }
