@@ -291,7 +291,6 @@ a:hover {
   .table-wrapper table th,
   .table-wrapper table td {
     color: #000 !important; /* force black text */
-	background-color: #d9e6d9;
   }
 
   /* Light scrollbars */
@@ -344,6 +343,5 @@ a:hover {
   .table-wrapper table th,
   .table-wrapper table td {
     color: #fff !important; /* force white text */
-    background-color: #1a2e1a;
   }
 }
