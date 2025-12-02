@@ -61,7 +61,8 @@ body {
   display: block;
   margin: 2rem auto;
   height: auto;
-  width: auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .dd-byline {
@@ -76,10 +77,6 @@ body {
 .dd-byline .subtitle {
   font-size: 1.2rem;
   font-style: italic;
-}
-.dd-byline .author {
-  font-size: 1rem;
-  margin-top: 0.5rem;
 }
 
 .credit {
@@ -97,12 +94,6 @@ body {
 }
 .copyright {
   font-size: 0.8rem;
-}
-
-.ii-logo {
-  display: block;
-  margin: 1rem auto;
-  max-width: 150px;
 }
 
 /* ============================= */
