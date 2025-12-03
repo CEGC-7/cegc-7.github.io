@@ -9,6 +9,24 @@ html, body {
   overflow: hidden;
 }
 
+/* Global font variable */
+:root {
+  --app-font: "Georgia", "Times New Roman", serif;
+}
+
+/* Apply the app font to main containers, headings, sidebar and the toggle */
+body,
+#page-content-wrapper,
+#sidebar,
+#sidebar h1, #sidebar h2, #sidebar h3, #sidebar h4, #sidebar h5, #sidebar h6,
+#page-content-wrapper h1, #page-content-wrapper h2, #page-content-wrapper h3,
+#page-content-wrapper h4, #page-content-wrapper h5, #page-content-wrapper h6,
+#font-toggle {
+  font-family: var(--app-font);
+  line-height: 1.6;
+}
+
+/* Keep h5 inline flow trick */
 h5 {
   display: inline;          /* make it inline instead of block */
   font-size: 1.05em;
@@ -27,13 +45,7 @@ h5::before {
   white-space: pre;    /* respect the newline */
 }
 
-/* General page typography */
-body {
-  font-family: "Georgia", "Times New Roman", serif;
-  line-height: 1.6;
-}
-
-/* The two‑column app layout: sidebar + content (no position: fixed, no margins) */
+/* The two‑column app layout: sidebar + content */
 .layout {
   display: flex;
   height: 100vh; /* full viewport height */
@@ -45,15 +57,15 @@ body {
   background-color: var(--sidebar-bg, #0d1a0d);
   color: var(--sidebar-text, #e6f2e6);
   padding: 1rem;
-  overflow-y: auto;           /* sidebar scrolls independently if needed */
-  box-shadow: 2px 0 6px rgba(0,0,0,0.35); /* visible divider shadow */
+  overflow-y: auto;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.35);
 }
 
 /* Main content column */
 #page-content-wrapper {
-  flex: 1;                    /* take remaining space */
-  padding: 2rem;              /* replaces old body horizontal padding */
-  overflow-y: auto;           /* content scrolls */
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
   background: var(--content-bg, #0f1f0f);
   color: var(--content-text, #e6f2e6);
 }
@@ -106,7 +118,6 @@ body {
 /* ============================= */
 
 h1, h2, h3, h4, h5 {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
@@ -169,8 +180,10 @@ div[id^="table"] {
 /* Links                         */
 /* ============================= */
 
+/* Preserve original link styling and hover behavior */
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:hover {
   text-decoration: underline;
@@ -230,7 +243,7 @@ a:hover {
 
 /* Firefox */
 #sidebar, #page-content-wrapper {
-  scrollbar-color: #3a5c3a #0d1a0d; /* thumb, track */
+  scrollbar-color: #3a5c3a #0d1a0d;
   scrollbar-width: thin;
 }
 
@@ -254,6 +267,10 @@ a:hover {
   background-color: #4b7a4b;
 }
 
+/* ============================= */
+/* Font toggle button            */
+/* ============================= */
+
 #font-toggle {
   position: absolute;
   bottom: 10px;
@@ -261,13 +278,72 @@ a:hover {
   padding: 6px 12px;
   font-size: 1.2rem;
   cursor: pointer;
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, transform 0.12s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Comic Sans mode on the target container */
-#page-content-wrapper.font-comic,
-#sidebar.font-comic * { /* include whichever you’re toggling */
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important;
+/* Focus/active affordances */
+#font-toggle:focus {
+  outline: 2px solid rgba(255,255,255,0.12);
+  outline-offset: 2px;
+}
+#font-toggle:active {
+  transform: translateY(1px);
+}
+
+/* ============================= */
+/* Font toggle tooltip (custom)  */
+/* ============================= */
+
+/* Base tooltip positioning and hidden state */
+#font-toggle::after {
+  content: "Toggle dyslexic friendly fonts";
+  position: absolute;
+  bottom: 120%; /* above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  z-index: 60;
+  line-height: 1.2;
+}
+
+/* small arrow under tooltip */
+#font-toggle::before {
+  content: "";
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  transform-origin: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 61;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transition: opacity 0.18s ease;
+}
+
+/* Show tooltip on hover/focus */
+#font-toggle:hover::after,
+#font-toggle:focus::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+#font-toggle:hover::before,
+#font-toggle:focus::before {
+  opacity: 1;
 }
 
 /* ============================= */
@@ -306,12 +382,12 @@ a:hover {
   .table-wrapper table,
   .table-wrapper table th,
   .table-wrapper table td {
-    color: #000 !important; /* force black text */
+    color: #000 !important;
   }
 
   /* Light scrollbars */
   #sidebar, #page-content-wrapper {
-    scrollbar-color: #90b890 #e6efe6; /* thumb, track */
+    scrollbar-color: #90b890 #e6efe6;
   }
   #sidebar::-webkit-scrollbar-track,
   #page-content-wrapper::-webkit-scrollbar-track { background: #e6efe6; }
@@ -319,6 +395,25 @@ a:hover {
   #page-content-wrapper::-webkit-scrollbar-thumb {
     background-color: #90b890;
     border-color: #e6efe6;
+  }
+
+  /* Button colors for light theme */
+  #font-toggle {
+    background-color: #90b890;   /* soft green */
+    color: #1a2e1a;              /* dark text */
+  }
+  #font-toggle:hover {
+    background-color: #6fa86f;   /* darker green on hover */
+  }
+
+  /* Tooltip colors for light theme */
+  #font-toggle::after {
+    background-color: #1a2e1a;   /* dark text color as bg for contrast */
+    color: #e6f2e6;             /* light text inside tooltip */
+    box-shadow: 0 6px 18px rgba(26,46,26,0.18);
+  }
+  #font-toggle::before {
+    background-color: #1a2e1a;
   }
 }
 
@@ -360,4 +455,40 @@ a:hover {
   .table-wrapper table td {
     color: #fff !important;
   }
+
+  /* Button colors for dark theme */
+  #font-toggle {
+    background-color: #3a5c3a;   /* deep forest green */
+    color: #e6f2e6;              /* light text */
+  }
+  #font-toggle:hover {
+    background-color: #4b7a4b;   /* lighter green on hover */
+  }
+
+  /* Tooltip colors for dark theme */
+  #font-toggle::after {
+    background-color: #e6f2e6;   /* light tooltip bg */
+    color: #0d1a0d;              /* dark text inside tooltip */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  }
+  #font-toggle::before {
+    background-color: #e6f2e6;
+  }
 }
+
+/* ============================= */
+/* Accessibility helpers         */
+/* ============================= */
+
+/* Ensure tooltip text is readable at small sizes */
+@media (max-width: 420px) {
+  #font-toggle::after {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+}
+
+/* If you need the toggle to be visually distinct when active, you can
+   add a class to the button (e.g., .active) and style it here. Example:
+#font-toggle.active { box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+*/
