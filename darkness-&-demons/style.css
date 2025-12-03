@@ -61,6 +61,7 @@ h5::before {
   overflow-x: visible;       /* prevent tooltip clipping horizontally */
   position: relative;        /* anchor tooltips inside sidebar */
   box-shadow: 2px 0 6px rgba(0,0,0,0.35);
+  width: 300px;
 }
 
 /* Main content column */
