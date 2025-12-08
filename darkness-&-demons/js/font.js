@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Restore prior choice
-  const saved = localStorage.getItem('fontMode');
+  const saved = localStorage.getItem('dndFontMode');
   if (saved === 'comic') {
     document.body.classList.add('font-comic');
     document.documentElement.style.setProperty(
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.addEventListener('click', () => {
     const nowComic = !document.body.classList.contains('font-comic');
     document.body.classList.toggle('font-comic', nowComic);
-    localStorage.setItem('fontMode', nowComic ? 'comic' : 'default');
+    localStorage.setItem('dndFontMode', nowComic ? 'comic' : 'default');
 
     // Update CSS variable for the rest of the page
     document.documentElement.style.setProperty(
