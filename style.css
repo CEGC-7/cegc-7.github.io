@@ -1,8 +1,8 @@
 /* style.css — Forest & Moss Theme */
 
 body {
-  background-color: #f4f1e9; /* light parchment base */
-  color: #3e3b2f; /* deep forest brown */
+  background-color: #1e1e1b;
+  color: #dcdacb;
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
   padding: 2em;
@@ -10,7 +10,8 @@ body {
 }
 
 h1 {
-  color: #556b2f; /* moss green */
+  color: #a9c47f;
+  border-color: #c2c2a3;
   font-size: 2em;
   margin-bottom: 0.5em;
   border-bottom: 2px solid #8f9779;
@@ -27,7 +28,7 @@ li {
 }
 
 a {
-  color: #6b8e23; /* olive green */
+  color: #b0d16f;
   text-decoration: none;
   font-weight: bold;
 }
@@ -41,33 +42,7 @@ a:hover {
 p {
   font-size: 1em;
   line-height: 1.6;
-  color: #4b4532;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1e1e1b;
-    color: #dcdacb;
-  }
-
-  h1 {
-    color: #a9c47f;
-    border-color: #c2c2a3;
-  }
-
-  a {
-    color: #b0d16f;
-  }
-
-a:hover {
-  color: #aaffaa; /* lighter green on hover */
-  text-shadow: 0 0 6px #aaffaa;
-  transition: all 0.2s ease-in-out;
-}
-
-  p {
-    color: #c2c2a3;
-  }
+  color: #c2c2a3;
 }
 
 .sidebar {
