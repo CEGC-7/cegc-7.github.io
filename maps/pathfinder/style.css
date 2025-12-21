@@ -1,6 +1,7 @@
 .gallery img {
-  width: 249px;     /* fixed width */
-  height: auto;     /* proportional height */
+  width: 19.4%;
+  max-width:100%;
+  height: auto;
   border: 2px solid #333;
   border-radius: 8px;
   transition: transform 0.3s ease;
