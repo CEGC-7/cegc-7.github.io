@@ -56,12 +56,7 @@ $(function(){
   $("#table2_27").load("tables/table2_27.html"); 
   $("#table2_28").load("tables/table2_28.html"); 
 
-  $("#table3_1a").load("tables/table3_1a.html"); 
-  $("#table3_1b").load("tables/table3_1b.html"); 
-  $("#table3_1c").load("tables/table3_1c.html"); 
-  $("#table3_1d").load("tables/table3_1d.html"); 
-  $("#table3_1e").load("tables/table3_1e.html"); 
-  $("#table3_1f").load("tables/table3_1f.html"); 
+  $("#table3_1").load("tables/table3_1.html"); 
   $("#table3_2").load("tables/table3_2.html"); 
   $("#table3_3").load("tables/table3_3.html"); 
   $("#table3_4").load("tables/table3_4.html"); 
