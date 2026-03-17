@@ -1,0 +1,14 @@
+Act 1: Episodes 1-10          - Levels 0-1            -- Beginning; ends with sensei's assassination.
+Act 2: Episodes 11-30         - Levels 2-7            -- Dark Archive and such; ends with First World travel.
+Act 3: Episodes 31-45         - Level 8               -- First World; ends with escape.
+Act 4: Episodes 46-60         - Levels 9-11           -- Elemental Planes; ends with leaving the Plane of Fire.
+Act 5: Episodes 61-70         - Level 12              -- Good Planes; ends with arrival in Axis.
+Act 6: Episodes 71-75         - Level 13              -- Axis and the Maelstron; ends with the sentient temple.
+Act 7: Episodes 76-85         - Level 14              -- Evil Planes; ends with the time travel.
+Act 8: Episodes 86-100        - Levels 15-16          -- Starfinder; ends with other time travel.
+Act 9: Episodes 101-110       - PF1E                  -- Ancient Golarion; ends with teleportation to slightly less ancient Golarion.
+Act 10: Episodes 111-120      - Level 17              -- Slightly Less Ancient Golarion; ends with teleportation to Earth.
+Act 11: Episodes 121-125      - Call of Cthulhu       -- Earth, Nazis and Cthulhu; ends with time travel back to Starfinder.
+Act 12: Episodes 126-135      - Level 18              -- Finding Triune; ends with revelation of Rovagug.
+Act 13: Episodes 136-145      - Level 19              -- Rovagug's Spawn; ends with the penetration of the Dead Vault.
+Act 14: Episodes 146-150      - Level 20              -- Aftermath; ends with the end.
