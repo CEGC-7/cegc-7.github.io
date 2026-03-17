@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round">
+
+    <path d="M8 56 A48 48 0 0 1 56 8" />
+
+    <path d="M20 56 A36 36 0 0 1 56 20" />
+
+    <path d="M32 56 A24 24 0 0 1 56 32" />
+
+    <path d="M44 56 A12 12 0 0 1 56 44" />
+
+  </g>
+
+  <circle cx="56" cy="56" r="2" fill="#ffffff" />
+</svg>
+
