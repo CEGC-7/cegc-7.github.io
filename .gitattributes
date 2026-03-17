@@ -1,0 +1,9 @@
+tempshit/bin/drma filter=lfs diff=lfs merge=lfs -text
+tempshit/bin/edge filter=lfs diff=lfs merge=lfs -text
+tempshit/bin/lantern filter=lfs diff=lfs merge=lfs -text
+tempshit/bin/rma filter=lfs diff=lfs merge=lfs -text
+tempshit/bin/cls filter=lfs diff=lfs merge=lfs -text
+tempshit/bin/kingmaker filter=lfs diff=lfs merge=lfs -text
+tempshit/bin/markview filter=lfs diff=lfs merge=lfs -text
+tempshit/bin/rma-gui filter=lfs diff=lfs merge=lfs -text
+tempshit/bin/yt-dlp filter=lfs diff=lfs merge=lfs -text
