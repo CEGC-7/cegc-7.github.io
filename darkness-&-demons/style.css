@@ -486,3 +486,16 @@ a:hover {
     max-width: calc(100vw - 24px); /* clamp inside viewport */
   }
 }
+
+.char-fireball::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url("fireball.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: auto;
+  image-rendering: smooth;
+  image-rendering: high-quality;
+}
