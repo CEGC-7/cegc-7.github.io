@@ -2670,7 +2670,6 @@ Game.Launch=function()
 			Game.attachTooltip(l('topbarRandomgen'),'<div style="padding:8px;width:250px;text-align:center;">A thing we made that lets you write random generators.</div>','this');
 			Game.attachTooltip(l('topbarIGM'),'<div style="padding:8px;width:250px;text-align:center;">A thing we made that lets you create your own idle games using a simple scripting language.</div>','this');
 			l('changeLanguage').innerHTML=loc("Change language");
-			l('topbarOtherVersions').childNodes[0].nodeValue=loc("Other versions");
 			
 			if (!App)
 			{
