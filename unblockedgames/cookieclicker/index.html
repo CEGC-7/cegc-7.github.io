@@ -64,9 +64,34 @@
 		<div><a href="https://orteil42.bsky.social" target="_blank" id="topbarTwitter">bluesky</a></div>
 		<div style="position:relative;"><div style="width:22px;height:32px;background:url(img/discord.png);position:absolute;left:0px;top:0px;pointer-events:none;"></div><a href="https://discordapp.com/invite/cookie" target="_blank" style="padding-left:16px;" id="topbarDiscord">Discord</a></div>
 		<div style="position:relative;"><div style="width:25px;height:32px;background:url(img/weeHoodie.png);position:absolute;left:-2px;top:0px;pointer-events:none;"></div><a class="blueLink" href="https://www.redbubble.com/people/dashnet" target="_blank" style="padding-left:12px;" id="topbarMerch">Merch!</a></div>
-		<div style="position:relative;display:none;font-weight:bold;" id="heralds"><div style="position:absolute;top:-4px;width:31px;height:39px;background:url(img/heraldFlag.png);left:50%;margin-left:-15px;pointer-events:none;"></div><div id="heraldsAmount" style="position:relative;z-index:10;text-shadow:0px 1px 0px #000,0px 0px 6px #ff00e4;color:#fff;">-</div></div>
-		<div><a class="lightblueLink" style="font-weight:bold;" href="https://play.google.com/store/apps/details?id=org.dashnet.cookieclicker" target="_blank" id="topbarMobileCC">Cookie Clicker for Android</a></div>
-		<div><a class="lightblueLink" style="font-weight:bold;" href="https://store.steampowered.com/app/1454400/Cookie_Clicker/" target="_blank" id="topbarSteamCC">Cookie Clicker on Steam</a></div>
+
+<div style="position:relative;display:none;font-weight:bold;" id="heralds"><div style="position:absolute;top:-4px;width:31px;height:39px;background:url(img/heraldFlag.png);left:50%;margin-left:-15px;pointer-events:none;"></div><div id="heraldsAmount" style="position:relative;z-index:10;text-shadow:0px 1px 0px #000,0px 0px 6px #ff00e4;color:#fff;">-</div></div>
+
+<div class="promoLink" style="padding-left:33px;" title="Play Cookie Clicker on Steam!&#10;Featuring music by C418.">
+    <a href="https://store.steampowered.com/app/1454400/Cookie_Clicker/" target="_blank">
+        <img src="img/topbarSteam.png" style="margin-left:7px;"> Steam
+    </a>
+</div>
+
+<div class="promoLink" style="padding-left:20px;" title="Play Cookie Clicker on your phone!">
+    <a href="https://play.google.com/store/apps/details?id=org.dashnet.cookieclicker" target="_blank">
+        <img src="img/topbarMobile.png" style="margin-left:2px;"> Android
+    </a>
+</div>
+
+<div class="promoLink" title="Play Cookie Clicker on Xbox, PlayStation and Nintendo Switch!">
+    <a href="https://cookieclicker.com/" target="_blank">
+        Consoles
+    </a>
+</div>
+
+<div class="promoLink" style="padding-left:40px;" title="Clicky merch by Fangamer!&#10;There's shirts too!">
+    <a href="https://fanga.me/r/cookie-clicker-collection" target="_blank">
+        <img src="img/fangamerClickerPic.png" style="margin-left:2px;margin-top:2px;">
+        Cookie Clicker clicker
+        <div style="position:absolute;right:8px;bottom:3px;font-size:10px;">by Fangamer</div>
+    </a>
+</div>
 		<!--<div><a href="//orteil.dashnet.org/randomgen/" target="_blank" id="topbarRandomgen">RandomGen</a></div>
 		<div><a href="//orteil.dashnet.org/igm/" target="_blank" id="topbarIGM">Idle Game Maker</a></div>-->
 		<div style="float:right;position:relative;"><div id="tinyglobe" style="position:absolute;top:-4px;width:22px;height:22px;background:url(img/tinyglobeSheet.gif);right:4px;top:4px;pointer-events:none;"></div><a id="changeLanguage" style="font-variant:small-caps;padding-right:20px;" onmouseover="INTERVAL_TINYGLOBE=setInterval(function(){var tinyglobe=document.getElementById('tinyglobe');tinyglobe.style.backgroundPosition=(parseInt(tinyglobe.style.backgroundPosition)-22)+'px';},30);" onmouseout="clearInterval(INTERVAL_TINYGLOBE);">Change language</a><script>document.getElementById('tinyglobe').style.backgroundPosition=(-[0,19,27][Math.floor(Math.random()*3)]*22)+'px';</script></div>

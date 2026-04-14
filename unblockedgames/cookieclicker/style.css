@@ -494,6 +494,8 @@ a.orangeLink:hover,#topBar a.orangeLink:hover
 }
 #topBar a:hover,#topBar .hoverer:hover>.hoverheader{opacity:1;text-shadow:0px 0px 6px currentColor !important;}
 
+#topBar .promoLink a{color:#06c;}
+
 .hoverer
 {
 	position:relative;
