@@ -1,4 +1,11 @@
 {
+	"versions":[
+		{"text":"Latest","v":"LIVE","url":"$DIR/cookieclicker"},
+		{"text":"Try the beta!","v":"BETA","url":"$DIR/cookieclicker/beta"},
+		{"text":"v.2.052 <small>(2023)</small>","v":2.052,"url":"$DIR/cookieclicker/v2052"},
+		{"text":"v.1.0466 <small>(2014)</small>","v":1.0466,"url":"$DIR/cookieclicker/v10466"},
+		{"text":"Classic <small>(2013)</small>","v":"CLASSIC","url":"$DIR/experiments/cookie"}
+	],
 	"links":[
 		{"text":"<img src=\"img/topbarSteam.png\" style=\"margin-left:0px;\"> Steam","tooltip":"Play Cookie Clicker on Steam!<br>Featuring music by C418.","style":"padding-left:26px;","class":"promoLink","url":"https://store.steampowered.com/app/1454400/Cookie_Clicker/","remove":"topbarSteamCC+"},
 		{"text":"<img src=\"img/topbarMobile.png\" style=\"margin-left:2px;\"> Android","tooltip":"Play Cookie Clicker on your phone!","style":"padding-left:20px;","class":"promoLink","url":"https://play.google.com/store/apps/details?id=org.dashnet.cookieclicker","remove":"topbarMobileCC+"},
