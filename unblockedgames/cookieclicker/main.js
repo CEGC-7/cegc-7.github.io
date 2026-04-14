@@ -7660,7 +7660,7 @@ Game.Launch=function()
 				else if (loreProgress<=2) list.push(EN?'Your family agrees to try some of your cookies.':loc("Your family accepts to try some of your cookies."));
 				else if (loreProgress<=3) list.push(loc("Your cookies are popular in the neighborhood."),loc("People are starting to talk about your cookies."));
 				else if (loreProgress<=4) list.push(loc("Your cookies are talked about for miles around."),loc("Your cookies are renowned in the whole town!"));
-				else if (loreProgress<=5) list.push(loc("Your cookies bring all the boys to the yard."),loc("Your cookies now have their own website!"));
+				else if (loreProgress<=5) list.push(loc("Your cookies bring all the kids to the yard."),loc("Your cookies now have their own website!"));
 				else if (loreProgress<=6) list.push(loc("Your cookies are worth a lot of money."),loc("Your cookies sell very well in distant countries."));
 				else if (loreProgress<=7) list.push(loc("People come from very far away to get a taste of your cookies."),loc("Kings and queens from all over the world are enjoying your cookies."));
 				else if (loreProgress<=8) list.push(loc("There are now museums dedicated to your cookies."),loc("A national day has been created in honor of your cookies."));
@@ -16925,8 +16925,8 @@ Game.Launch=function()
 		
 		if (Game.T%(Game.fps*2)==0)
 		{
-			var title='Cookie Clicker';
-			if (Game.season=='fools') title='Cookie Baker';
+			var title='Cookie Clicker Unblocked';
+			if (Game.season=='fools') title='Cookie Baker Unblocked FOOL';
 			document.title=(Game.OnAscend?(EN?'Ascending! ':(loc("Ascending")+' | ')):'')+loc("%1 cookie",LBeautify(Game.cookies))+' - '+title;
 		}
 		if (Game.T%15==0)
