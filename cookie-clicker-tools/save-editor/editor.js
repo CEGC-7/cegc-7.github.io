@@ -194,7 +194,7 @@ var document = window.document;
 //#region definitions
 
 var Game = {
-	version: 2.052,
+	version: 2.058,
 	mainJS: "10",
 	beta: window.location.href.indexOf("/beta") > -1,
 	steam: false,
