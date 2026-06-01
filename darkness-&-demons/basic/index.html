@@ -1627,7 +1627,7 @@
 <p><strong>Type (Axe, Bow, Club, Knife, Sling, Spear, Sword)</strong> refers to the variety of weapon to which a particular weapon belongs. Feats may affect specific types of weapons.</p>
 <p><strong>Agile</strong> means that the MAP of the weapon is 4 rather than 5, and Dexterity applies to the hit bonus instead of Strength. See <a href="combat">Combat</a>.</p>
 <p><strong>Range</strong> is always followed by a number of feet, which is the increment from which the weapon can be used. On te second increment, you take a -2 penalty on the attack roll, -4 on the third increment, and it cannot be used beyond that distance.</p>
-<p><strong>Reach</strong> functions as range, but is usually much shorter and only has a single increment, after which the weapon cannot be used.</p>
+<p><strong>Reach</strong> means that the melee weapon can be used to hit creatures within an additional 5 feet. For instance, the meteor hammer can hit creatures 10 feet away instead of 5.</p>
 <p><strong>Reload</strong> means that to use the weapon after it has already been used, you must spend an action to reload it, after which you may fire a single shot before reloading again.</p>
 <p><strong>Two-Handed</strong> self-explanatorily means that the weapon cannot be used with less than two hands.</p>
 
@@ -2716,7 +2716,8 @@
 <h3>Bullhorn</h3>
 <p><strong>Traditions:</strong> Arcane, Primal</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p>You amplify your voice, loud enough for you to be heard easily at a great distance. For the duration, your voice can be heard loudly and clearly by all listeners within 500 feet, even if other ambient noise would otherwise block the sound. Despite the volume, this doesn't make your voice jarring or distacting. This spell lasts for 10 minutes.</p>
+<p><strong>Duration:</strong> 10 Minutes</p>
+<p>You amplify your voice, loud enough for you to be heard easily at a great distance. For the duration, your voice can be heard loudly and clearly by all listeners within 500 feet, even if other ambient noise would otherwise block the sound. Despite the volume, this doesn't make your voice jarring or distacting.</p>
 <p>When heightened to 5th rank, your voice can be heard clearly up to 1200 feet away, and up to a mile at 7th rank.</p>
 
 <h3>Caustic Blast</h3>
@@ -2750,12 +2751,13 @@
 <p><strong>Traditions:</strong> Arcane, Primal</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
 <p><strong>Additional Traits:</strong> Electricity</p>
-<p>An arc of lightning leaps from one target to another. Choose one r two creatures within 30 feet. Each creature takes 2d4 electricity damage with a basic Reflex save.</p>
+<p>An arc of lightning leaps from one target to another. Choose one or two creatures within 30 feet. Each creature takes 2d4 electricity damage with a basic Reflex save.</p>
 <p>Every additional rank at which the spell is cast increases the damage by 1d4.</p>
 
 <h3>Figment</h3>
 <p><strong>Traditions:</strong> Arcane, Primal</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
+<p><strong>Duration:</strong> 1 Hour</p>
 <p><strong>Additional Traits:</strong> Illusion</p>
 <p>You create a simple illusory sound or vision within 30 feet. A sound can't include intelligible words or elaborate music, and a vision can be no larger than a 5-foot cube, and is clearly crude and undetailed if viewed from within 15 feet.</p>
 
@@ -2781,7 +2783,8 @@
 <h3>Light</h3>
 <p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p>You create an orb of light within 120 feet that sheds bright light in a 20-foot radius (and dim light for the next 20 feet) in a color you choose. If you create the light in the same space as a willing creature, you can attach the light to the creature, causing it to float near that creature as it moves. You can Sustain the spell to move the light up to 60 feet; you can attach or detach it from a creature as part of this movement. The spell lasts for 24 hours.</p>
+<p><strong>Duration:</strong> 24 Hours</p>
+<p>You create an orb of light within 120 feet that sheds bright light in a 20-foot radius (and dim light for the next 20 feet) in a color you choose. If you create the light in the same space as a willing creature, you can attach the light to the creature, causing it to float near that creature as it moves. You can spend an action to move the light up to 60 feet, and you can attach or detach it from a creature as part of this movement.</p>
 <p>When cast at 4th rank, the orb sheds light in a 60-foot radius and dim light for the next 60 feet.</p>
 
 <h3>Message</h3>
@@ -2827,7 +2830,7 @@
 <p><strong>Traditions:</strong> Arcane, Primal</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
 <p>You create a floating, magical hand within 30 feet, either invisible or ghostlike, that grasps the target unattended object of 5 pounds or less and levitates it slowly up to 20 feet in any direction. Each round, you can spend one action to move the object an additional 20 feet or less. If you do not do so, the spell ends. If the object is in the air when the spell ends, the object falls.</p>
-<p>When cast at 3rd rank, the hand can carry 15 pounds. When cast at 5th rank, the range increases to 60 feet. When cast at 7th rank, the hand can carry 30 pounds. When cast at 10th rank, the range increases to 100 feet and the hand can carry up to 75 pounds and can be moved 50 feet each round.</p>
+<p>When cast at 3rd rank, the hand can carry 15 pounds. When cast at 5th rank, the range increases to 60 feet. When cast at 7th rank, the hand can carry 30 pounds. When cast at 10th rank, the range increases to 100 feet, and the hand can carry up to 75 pounds and can be moved 50 feet each round.</p>
 
 <h3>Void Warp</h3>
 <p><strong>Traditions:</strong> Divine, Primal</p>
@@ -2863,20 +2866,37 @@
 <h3>Alarm</h3>
 <p><strong>Rank:</strong> 1</p>
 <p><strong>Traditions:</strong> Arcane</p>
-<p>You ward an area to alert you when creatures enter without your permission. When you cast alarm, select a password. Whenever a Small or larger corporeal creature enters the spell's area without speaking the password, alarm sends your choice of a mental alert or an audible alarm with the sound and volume of a hand bell. Either option automatically awakens you, and the bell allows each creature in the area to attempt a DC 15 Perception check to wake up. A creature aware of the alarm must succeed at a Stealth check against your spell DC or trigger the spell when moving into the area.</p>
-<p>When cast at 3rd rank, you can specify a trigger for which types of creatures sound the alarm spell.</p>
+<p><strong>Casting Time:</strong> 10 Minutes</p>
+<p><strong>Duration:</strong> 8 Hours</p>
+<p>You ward an area (a sphere with a radius of up to 20 feet) to alert you when creatures enter without your permission. When you cast alarm, select a password. Whenever a Small or larger corporeal creature enters the spell's area without speaking the password, alarm sends your choice of a mental alert or an audible alarm with the sound and volume of a hand bell. Either option automatically awakens you, and the bell allows each creature in the area to attempt a DC 15 Perception check to wake up. A creature aware of the alarm must succeed at a Stealth check against your spell DC or trigger the spell when moving into the area.</p>
+<p>When cast at 3rd rank, you can specify a trigger for which types of creatures sound the alarm spell (for instance, orcs or masked persons).</p>
 
 <h3>Animal Connection</h3>
 <p><strong>Rank:</strong> 3</p>
+<p><strong>Casting Time:</strong> One Minute</p>
+<p><strong>Duration:</strong> 1 Hour</p>
 <p><strong>Traditions:</strong> Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<p>You can ask questions of, receive answers from, and use the Diplomacy skill with animals. The spell doesn't make them more friendly than normal. Cunning animals are likely to be terse and evasive, while less intelligent ones often make inane comments. You can also choose one animal, and tap into its senses, allowing you to sense whatever it senses for the spell's duration. If the target wishes to prevent you from doing so, it can attempt a Will save, negating the spell on a success, but most animals don't bother to do so. While tapping into the target's senses, you can't use your own body's senses, but you can change back and forth from your body's senses to the target's senses as an action.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<h3>Animal Form</h3>
+<p><strong>Rank:</strong> 2</p>
+<p><strong>Traditions:</strong> Primal</p>
+<p><strong>Duration:</strong> 1 Minute</p>
+<p>You call upon primal energy to transform yourself into a Medium animal battle form. When you Cast this Spell, choose a listed battle form. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form's Size or statistics. You can dismiss the spell as an action.</p>
+<p>You gain the following statistics and abilities regardless of which animal you choose:</p>
+<p>&bull; AC = 16 + your level. Ignore all negative effects from your armor.<br>&bull; 5 temporary Hit Points.<br>&bull; Low-light vision.<br>&bull; Imprecise scent within 30 feet.<br>&bull; One or more unarmed melee attacks specific to your battle form, which are the only attacks with which you can Strike. You are trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.<br>&bull; Athletics modifier of +9, unless your own is higher.</p>
+<p>You also gain specific abilities based on the animal you choose:</p>
+<p>&bull; <strong>Ape:</strong> Speed 25 feet (climb 20 feet)<br><i>Attacks</i>: fist (2d6 bludgeoning)</p>
+<p>&bull; <strong>Bear:</strong> Speed 30 feet<br><i>Attacks</i>: jaws (2d8 piercing), claw (agile, 1d8 slashing)</p>
+<p>&bull; <strong>Bull:</strong> Speed 30 feet<br><i>Attacks</i>: horn (2d8 piercing)</p>
+<p>&bull; <strong>Canine:</strong> Speed 40 feet<br><i>Attacks</i>: jaws (2d8 piercing)</p>
+<p>&bull; <strong>Cat:</strong> Speed 40 feet<br><i>Attacks</i>: horn (2d6 piercing), claw (agile, 1d10 slashing)</p>
+<p>&bull; <strong>Crab:</strong> Speed 25 feet (swim 15 feet)<br><i>Attacks</i>: large claw (2d8 piercing), small claw (agile, 2d4 piercing)<br><i>Can breathe in water and air.</i></p>
+<p>&bull; <strong>Crocodile:</strong> Speed 25 feet (swim 30 feet)<br><i>Attacks</i>: jaws (2d8 piercing), tail (agile, 1d8 bludgeoning)<br><i>Can hold breath for the duration of the transformation.</i></p>
+<p>&bull; <strong>Deer:</strong> Speed 50 feet<br><i>Attacks</i>: antler (2d6 piercing)</p>
+<p>&bull; <strong>Frog:</strong> Speed 25 feet (swim 25 feet)<br><i>Attacks</i>: jaws (2d6 bludgeoning), tongue (reach, 2d4 bludgeoning)</p>
+<p>&bull; <strong>Orca:</strong> Speed 0 feet (swim 35 feet)<br><i>Attacks</i>: jaws (2d8 piercing)<br><i>Can hold breath for the duration of the transformation.</i></p>
+
 
 <h3>Spell</h3>
 <p><strong>Rank:</strong> rank</p>
