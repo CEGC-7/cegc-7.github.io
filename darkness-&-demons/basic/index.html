@@ -208,8 +208,6 @@
 
 <p>Above all, Darkness &amp; Demons Basic is about creativity, cooperation, and adventure. The rules exist to support your imagination, not to limit it. Use them as a foundation, explore boldly, and shape the story together with your group.</p>
 
-<p><i>Additional Note:</i> Deities are either <strong>holy</strong> or <strong>unholy</strong>. If a <a href="#cleric">cleric</a>'s deity is holy, then they gain the healing font, while if their deity is unholy, they gain the harming font.</p>
-
 <h2 id="dice-and-rolls">Dice &amp; Rolls</h2>
 <p>Darkness &amp; Demons Basic uses a small set of polyhedral dice to resolve actions and determine the outcomes of your hero’s choices. These dice are commonly written using the letter “d” followed by a number, such as d4 or d20. Each type of die is used for different purposes, but the twenty‑sided die—the d20—is the heart of the game.</p>
 
@@ -264,7 +262,7 @@
 
 <p><strong>Wisdom (WIS)</strong> represents perception, intuition, willpower, and awareness of the world. Wisdom helps you notice hidden details, resist mental influence, and understand the intentions of others. Clerics and druids use Wisdom as the foundation of their spellcasting.</p>
 
-<p><strong>Charisma (CHA)</strong> reflects presence, confidence, and the ability to influence others. Charisma is used for persuasion, intimidation, leadership, and social interactions. It also fuels certain magical traditions and abilities tied to force of personality.</p>
+<p><strong>Charisma (RIZ)</strong> reflects presence, confidence, and the ability to influence others. Charisma is used for persuasion, intimidation, leadership, and social interactions. It also fuels certain magical traditions and abilities tied to force of personality.</p>
 
 <p>Together, these six attributes form the backbone of your hero’s abilities. They shape how you approach challenges, what your character excels at, and how you grow over time. Many checks and actions in the game will call for one of these attributes, and your modifier plays a key role in determining success.</p>
 
@@ -1580,7 +1578,7 @@
     <tr>
       <td>Meteor Hammer (shoutout to <a href="//youtube.com/@instructor_bensei">Instructor Bensei</a>)</td>
       <td>1d8</td>
-      <td>Reach</td>
+      <td>Reach 10 feet</td>
       <td>15GP</td>
     </tr>
     <tr>
@@ -1610,13 +1608,13 @@
     <tr>
       <td>Spear</td>
       <td>1d6</td>
-      <td>Spear, Reach, Thrown 20 feet</td>
+      <td>Spear, Reach 15 feet, Thrown 20 feet</td>
       <td>7SP</td>
     </tr>
     <tr>
       <td>Staff</td>
       <td>1d4</td>
-      <td>Club, Reach</td>
+      <td>Club, Reach 10 feet</td>
       <td>5CP</td>
     </tr>
   </tbody>
@@ -1626,9 +1624,10 @@
 <h3>Weapon Traits</h3>
 <p><strong>Type (Axe, Bow, Club, Knife, Sling, Spear, Sword)</strong> refers to the variety of weapon to which a particular weapon belongs. Feats may affect specific types of weapons.</p>
 <p><strong>Agile</strong> means that the MAP of the weapon is 4 rather than 5, and Dexterity applies to the hit bonus instead of Strength. See <a href="combat">Combat</a>.</p>
-<p><strong>Range</strong> is always followed by a number of feet, which is the increment from which the weapon can be used. On te second increment, you take a -2 penalty on the attack roll, -4 on the third increment, and it cannot be used beyond that distance.</p>
-<p><strong>Reach</strong> means that the melee weapon can be used to hit creatures within an additional 5 feet. For instance, the meteor hammer can hit creatures 10 feet away instead of 5.</p>
+<p><strong>Range</strong> is always followed by a number of feet, which is the increment from which the weapon can be used. On the second increment, you take a -2 penalty on the attack roll, -4 on the third increment, and it cannot be used beyond that distance.</p>
+<p><strong>Reach</strong> means that the melee weapon can be used to hit creatures within the following distance. For instance, the meteor hammer can hit creatures 10 feet away instead of 5.</p>
 <p><strong>Reload</strong> means that to use the weapon after it has already been used, you must spend an action to reload it, after which you may fire a single shot before reloading again.</p>
+<p><strong>Thrown</strong> is similar to range, but there are only two increments. On the second, it is at a -3 penalty, after which it cannot be used. Thrown weapons also use Strength instead of Dexterity.</p>
 <p><strong>Two-Handed</strong> self-explanatorily means that the weapon cannot be used with less than two hands.</p>
 
 <h2 id="armor">Armor</h2>
@@ -1780,7 +1779,7 @@
 <p>Different classes prepare their spells in different ways. Some spellcasters, such as <strong><a href="#wizard">wizards</a></strong> and <strong><a href="cleric">clerics</a></strong>, keep a <strong>spellbook</strong> or similar collection of known spells. Each day, they choose a limited selection from their resource to prepare, giving them versatility while still rewarding careful planning. Other spellcasters, such as <strong><a href="druid">druids</a></strong>, can prepare spells from their entire spell list each day, selecting any spells from the list. This makes them highly adaptable, able to tailor their magic to the needs of the moment.</p>
 <p>No matter the <a href="classes">class</a>, spell preparation happens after a period of rest, and your choices determine the magical tools you bring into the day’s adventures. Whether you rely on a well‑studied spellbook or the broad blessings of your tradition, spellcasting in Darkness &amp; Demons Basic is designed to be clear, flexible, and exciting at every level of play.</p>
 <p>Many spells can be cast using higher‑rank spell slots, increasing their power or granting improved effects. When you cast a spell this way, its description explains what additional benefits it gains at those higher ranks.</p>
-<p>Your spell attack roll and spell DC are based on your spellcasting proficiency. Your spell attack modifier is <strong>your attribute modifier + your level + 2</strong>, and your spell DC is 10 plus that same total.</p>
+<p>Your spell attack roll and spell DC are based on your spellcasting proficiency. Your spell attack modifier is <strong>your attribute modifier + your level + 2</strong>, and your spell DC is <strong>10 plus that same total</strong>.</p>
 
 <h2 id="arcane-spells">Arcane Spells</h2>
 <h3>Cantrips</h3>
@@ -2724,14 +2723,14 @@
 <p><strong>Traditions:</strong> Arcane, Primal</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
 <p><strong>Additional Traits:</strong> Acid</p>
-<p>You fling a large glob of acid that immediately detonates, spraying nearby creatures. Creatures in the area take 1d8 acid damage with a basic Reflex save. On a critical failure, the creature also takes 1 <a href="#persistent-damage">persistent</a> acid damage.</p>
+<p>You fling a large glob of acid that immediately detonates, spraying nearby creatures. Creatures in a 5-foot burst within 30 feet take 1d8 acid damage with a basic Reflex save. On a critical failure, the creature also takes 1 <a href="#persistent-damage">persistent</a> acid damage.</p>
 <p>Every 2 additional ranks at which the spell is cast increases the initial damage by 1d8 and the crit-fail <a href="#persistent-damage">persistent damage</a> by 1.</p>
 
 <h3>Daze</h3>
 <p><strong>Traditions:</strong> Divine, Primal</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
 <p><strong>Additional Traits:</strong> Mental</p>
-<p>You push into the target's mind and daze it with a mental jolt. The jolt deals 1d6 mental damage, with a basic Will save. If the target critically fails the save, it is also <a href="#stunned">stunned</a>.</p>
+<p>You push into the mind of a target within 60 feet and daze it with a mental jolt. The jolt deals 1d6 mental damage, with a basic Will save. If the target critically fails the save, it is also <a href="#stunned">stunned</a> 2.</p>
 <p>Every 2 additional ranks at which the spell is cast increases the damage by 1d6.</p>
 
 <h3>Detect Magic</h3>
@@ -2743,7 +2742,6 @@
 <h3>Divine Lance</h3>
 <p><strong>Traditions:</strong> Divine</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Additional Traits:</strong> Sanctified</p>
 <p>You unleash a beam of divine energy. Make a ranged spell attack against a single target within 60 feet. On a hit, the target takes 2d4 spirit damage (double damage on a critical hit).</p>
 <p>Every additional rank at which the spell is cast increases the damage by 1d4.</p>
 
@@ -2771,7 +2769,7 @@
 <h3>Guidance</h3>
 <p><strong>Traditions:</strong> Divine, Primal</p>
 <p><strong>Casting Time:</strong> One Action</p>
-<p>You ask for the guidance of supernatural entities, granting the target a +1 status bonus to one attack roll, Perception check, saving throw, or skill check a target within 30 feet attempts before the start of your next turn. The target chooses which roll to use the bonus on before rolling. If the target uses the bonus, the spell ends. Either way, the target is then temporarily immune for 1 hour.</p>
+<p>You ask for the guidance of supernatural entities, granting the target a +1 bonus to one attack roll, Perception check, saving throw, or skill check a target within 30 feet attempts before the start of your next turn. The target chooses which roll to use the bonus on before rolling. If the target uses the bonus, the spell ends. Either way, the target is then temporarily immune for 1 hour.</p>
 
 <h3>Ignition</h3>
 <p><strong>Traditions:</strong> Arcane, Primal</p>
@@ -2852,7 +2850,7 @@
 <p><strong>Traditions:</strong> Arcane, Primal</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
 <p><strong>Additional Traits:</strong> Acid</p>
-<p>An ephemeral, taloned hand grips the target, burning it with magical acid. The target takes 2d8 acid damage plus 1d6 <a href="#persistent-damage">persistent</a> acid damage depending on its Reflex save. A creature taking <a href="#persistent-damage">persistent damage</a> from this spell takes a –10-foot status penalty to its Speeds.</p>
+<p>An ephemeral, taloned hand grips the target, burning it with magical acid. The target takes 2d8 acid damage plus 1d6 <a href="#persistent-damage">persistent</a> acid damage depending on its Reflex save. A creature taking <a href="#persistent-damage">persistent damage</a> from this spell takes a –10-foot penalty to its Speeds.</p>
 <p><strong>Critical Success:</strong> The creature is unaffected.<br><strong>Success:</strong> The creature takes half damage and no <a href="#persistent-damage">persistent damage</a>, and the claw moves it up to 5 feet in a direction of your choice.<br><strong>Failure:</strong> The creature takes full damage and <a href="#persistent-damage">persistent damage</a>, and the claw moves it up to 10 feet in a direction of your choice.<br><strong>Critical Failure:</strong> The creature takes double damage and full <a href="#persistent-damage">persistent damage</a>, and the claw moves it up to 20 feet in a direction of your choice.</p>
 <p>Every 2 additional ranks at which the spell is cast increases the initial damage by 2d8 and the crit-fail <a href="#persistent-damage">persistent damage</a> by 1d6.</p>
 
@@ -2902,45 +2900,47 @@
 <p>&bull; <strong>Snake:</strong> Speed 20 feet (climb 20 feet, swim 20 feet)<br><i>Attacks</i>: fangs (2d4 piercing plus 1d6 poison)</p>
 <p><br>When cast at higher ranks, you gain additional benefits:<br><i>3rd Rank</i>: You instead gain 10 temporary HP, AC = 17 + your level, attack modifier +14, damage bonus +5, and Athletics +14.<br><i>4th Rank</i>: Your battle form is Large and your attacks have 10-foot reach. You instead gain 15 temporary HP, AC = 18 + your level, attack modifier +16, damage bonus +9, and Athletics +16.<br><i>5th Rank</i>: Your battle form is Huge and your attacks have 15-foot reach. You instead gain 20 temporary HP, AC = 18 + your level, attack modifier +18, damage bonus +7 and double the number of damage dice, and Athletics +20.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
+<h3>Arctic Rift</h3>
+<p><strong>Rank:</strong> 8</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Duration:</strong> 1 Hour</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<p><strong>Traditions:</strong> Arcane, Primal</p>
+<p><strong>Additional Traits:</strong> Cold</p>
+<p>A jagged crack opens in the air in a 120-foot line, dealing 12d8 cold damage as it draws away warmth. Each creature along the rift must attempt a Fortitude save.<br>On a critical success, the creature is unaffected. On a success, the creature takes half damage. On a failure, the creature takes full damage and is slowed 1 until the start of your next turn.<br>On a critical failure, the creature takes double damage, is immobilized by a layer of ice, and is slowed 1 as long as it is immobilized. The ice layer has 60 HP, immunity to cold damage, and and weakness 10 to fire.</p>
+<p>Each additional rank at which the spell is cast increases the damage by 1d8 and the ice's Hit Points by 5.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
+<h3>Avatar</h3>
+<p><strong>Rank:</strong> 10</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Duration:</strong> 1 Hour</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<p><strong>Duration:</strong> 1 Minute</p>
+<p><strong>Traditions:</strong> Divine</p>
+<p><strong>Additional Traits:</strong> Polymorph</p>
+<p>You transform into an avatar of your deity, assuming a Huge battle form. You can dismiss this spell as an action.</p>
+<p>You gain the following statistics and abilities:</p>
+<p>&bull; AC = 25 + your level.<br>&bull; 30 temporary Hit Points.<br>&bull; Darkvision.<br>&bull; Athletics modifier of +35, unless your own is higher.<br>&bull; Speed 70 feet.<br>&bull; A melee attack (form depends on your deity, +33 to hit, reach 15 feet, 6d12 spirit damage)<br>&bull; A ranged attack (form depends on your deity, +33 to hit, range 300 feet, 6d8 spirit damage)</p>
+<p>Talk to your GM for deity options, or see <a href="#deities">some examples</a>.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
+<h3>Banishment</h3>
+<p><strong>Rank:</strong> 5</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Duration:</strong> 1 Hour</p>
 <p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<p>You send a target within 30 feet back to its home plane. The target must not currently be on its home plane, and must attempt a Will save. The cost must be a specially gathered object that is anathema to the creature. This spell fails if you aren't on your home plane when you cast it.</p>
+<p>On a critical success, the target resists being banished and you are <a href="#stunned">stunned</a> 1. On a success, the target simply resists being banished. On a failure, the target is banished. On a critical failure, the target is banished and cannot return by any means to the plane from which it is banished for 1 week.</p>
+<p>When cast at 9th rank, you can target up to 10 creatures within 50 feet.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
+<h3>Bind Undead</h3>
+<p><strong>Rank:</strong> 3</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Duration:</strong> 1 Hour</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<p><strong>Duration:</strong> 1 Day</p>
+<p><strong>Traditions:</strong> Divine</p>
+<p><strong>Additional Traits:</strong> Unholy</p>
+<p>You seize control of a mindless undead target creature within 30 feet whose level is no greater than the rank at which you cast this spell. It will take no action unless commanded, and can be commanded to take two actions by using one action, or to take three actions by using two actions. If you or an ally uses any hostile actions against the target, the spell ends.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
+<h3>Bless</h3>
+<p><strong>Rank:</strong> 1</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Duration:</strong> 1 Hour</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<p><strong>Duration:</strong> 1 Minute</p>
+<p><strong>Traditions:</strong> Divine</p>
+<p>Blessings from beyond help your companions strike true. You and your allies gain a +1 bonus to attack rolls while within a 15-foot emanation from you. Once per round on subsequent turns, you can spend an action to increase the emanation's radius by 10 feet.</p>
 
 <h3>Spell</h3>
 <p><strong>Rank:</strong> rank</p>
