@@ -136,6 +136,7 @@
       <ul>
         <li><a href="#off-guard">Off-Guard</a></li>
         <li><a href="#frightened">Frightened</a></li>
+        <li><a href="#blinded">Blinded</a></li>
         <li><a href="#prone">Prone</a></li>
         <li><a href="#slowed">Slowed</a></li>
         <li><a href="#stunned">Stunned</a></li>
@@ -321,7 +322,7 @@
 
 <p><strong>Armor Class (AC)</strong> measures how difficult you are to hit in combat. Your AC is calculated as <strong>10 + your armor’s bonus + your Dexterity modifier</strong> if you are wearing light armor. Medium and heavy armor limit how much Dexterity you can apply, and shields can provide additional bonuses. Your AC represents your ability to avoid or deflect incoming attacks.</p>
 
-<p><strong>Saving throws</strong> represent your hero’s ability to resist harmful effects. Darkness &amp; Demons Basic uses three saves: <strong>Fortitude</strong> is based on Constitution and represents endurance and physical resilience, <strong>Reflex</strong> is based on Dexterity and represents speed and agility, and <strong>Will</strong> is based on Wisdom and represents mental strength and resolve. Each class begins <strong>trained in one saving throw</strong> and <strong>untrained in the other two</strong>. As you advance in level, your proficiency bonus increases, improving your defenses over time.</p>
+<p><strong>Saving throws</strong> represent your hero’s ability to resist harmful effects. Darkness &amp; Demons Basic uses three saves: <strong>Fortitude</strong> is based on Constitution and represents endurance and physical resilience, <strong>Reflex</strong> is based on Dexterity and represents speed and agility, and <strong>Will</strong> is based on Wisdom and represents mental strength and resolve. Each class begins <strong>trained in one saving throw</strong> and <strong>untrained in the other two</strong>. As you advance in level, your proficiency bonus increases, improving your defenses over time.<br>When called for a &quot;basic&quot; save on a damaging effect, this refers to a save with simple results per outcome: <strong>double damage on a critical failure</strong>, <strong>full damage on a failure</strong>, <strong>half damage on a success</strong>, and <strong>no damage on a critical success</strong>. This will often come up in offensive spells and other harmful effects.</p>
 
 
 <!-- ANCESTRIES -->
@@ -2942,36 +2943,35 @@
 <p><strong>Traditions:</strong> Divine</p>
 <p>Blessings from beyond help your companions strike true. You and your allies gain a +1 bonus to attack rolls while within a 15-foot emanation from you. Once per round on subsequent turns, you can spend an action to increase the emanation's radius by 10 feet.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
+<h3>Blindness</h3>
+<p><strong>Rank:</strong> 3</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Duration:</strong> 1 Hour</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<p><strong>Traditions:</strong> Arcane, Primal</p>
+<p>You attempt to blind a target creature within 30 feet. The effect is determined by the target's Fortitude save. The target then becomes temporarily immune for 1 minute.</p>
+<p>On a critical success, the target is unaffected. On a success, the target is <a href=#blinded>blinded</a> until its next turn begins. On a failure, the target is blinded for 1 minute. On a critical failure, the target is blinded permanently.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
-<p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Duration:</strong> 1 Hour</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<h3>Breath of Life</h3>
+<p><strong>Rank:</strong> 5</p>
+<p><strong>Casting Time:</strong> One Action</p>
+<p><strong>Traditions:</strong> Divine</p>
+<p><strong>Additional Traits:</strong> Holy</p>
+<p>Your blessing revives a creature at the moment of its death. Choose a creature within 60 feet which died in the past round. You restore the target to life and it heals 5d8 Hit Points. You can't use breath of life if the triggering effect was an effect that leaves no remains, such as disintegrate.</p>
+<p>Every 2 additional ranks at which the spell is cast increases the healing by 1d8.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
+<h3>Breathe Fire</h3>
+<p><strong>Rank:</strong> 1</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
-<p><strong>Duration:</strong> 1 Hour</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
-<p>Description</p>
+<p><strong>Traditions:</strong> Arcane, Primal</p>
+<p><strong>Additional Traits:</strong> Fire</p>
+<p>A gout of flame sprays from your mouth. You deal 2d6 fire damage to creatures in a 15-foot cone with a basic Reflex save.</p>
+<p>Each additional rank at which the spell is cast increases the damage by 2d6.</p>
 
-<h3>Spell</h3>
-<p><strong>Rank:</strong> rank</p>
+<h3>Calm</h3>
+<p><strong>Rank:</strong> 2</p>
 <p><strong>Casting Time:</strong> Two Actions</p>
 <p><strong>Duration:</strong> 1 Hour</p>
-<p><strong>Traditions:</strong> Arcane, Divine, Primal</p>
-<p><strong>Additional Traits:</strong> Holy, Unholy</p>
+<p><strong>Traditions:</strong> Divine, Primal</p>
+<p><strong>Additional Traits:</strong> Mental</p>
 <p>Description</p>
 
 <h3>Spell</h3>
@@ -3671,6 +3671,9 @@
 <h1 id="conditions">Conditions</h1>
 
 <h2 id="off-guard">Off-Guard</h2>
+<p></p>
+
+<h2 id="blinded">Blinded</h2>
 <p></p>
 
 <h2 id="frightened">Frightened</h2>
