@@ -1,0 +1,96 @@
+/* style.css — Forest & Moss Theme */
+
+body {
+  background-color: #1e1e1b;
+  color: #dcdacb;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 2em;
+  text-align: center;
+}
+
+h1 {
+  color: #a9c47f;
+  border-color: #c2c2a3;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #8f9779;
+  padding-bottom: 0.2em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+a {
+  color: #b0d16f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #aaffaa; /* lighter green on hover */
+  text-shadow: 0 0 6px #aaffaa;
+  transition: all 0.2s ease-in-out;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #c2c2a3;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh; /* full viewport height */
+  width: 200px;
+  background-color: #1e280f;
+  border-left: 2px solid #8f9779;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #90ee90;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  color: #90ee90;
+  font-size: 1.2em;
+  border-bottom: 1px solid #8f9779;
+  padding-bottom: 0.2em;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0.5em 0;
+}
+
+.sidebar a {
+  color: #90ee90;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #aaffaa; /* lighter green on hover */
+  text-shadow: 0 0 6px #aaffaa;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
