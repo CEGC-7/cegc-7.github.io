@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyButtonFont() {
     const isComic = document.body.classList.contains('font-comic');
     btn.style.fontFamily = isComic
-      ? 'Georgia, "Times New Roman", serif'
-      : '"Comic Sans MS", "Comic Sans", cursive, sans-serif';
+      ? 'Georgia, serif'
+      : '"Comic Sans MS", sans-serif';
     btn.setAttribute('aria-pressed', isComic ? 'true' : 'false');
   }
   const saved = localStorage.getItem('dndFontMode');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('font-comic');
     document.documentElement.style.setProperty(
       '--app-font',
-      '"Comic Sans MS", "Comic Sans", cursive, sans-serif'
+      '"Comic Sans MS", sans-serif'
     );
   }
   applyButtonFont();
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.setProperty(
       '--app-font',
       nowComic
-        ? '"Comic Sans MS", "Comic Sans", cursive, sans-serif'
-        : 'Georgia, "Times New Roman", serif'
+        ? '"Comic Sans MS", sans-serif'
+        : 'Georgia, serif'
     );
     applyButtonFont();
   });

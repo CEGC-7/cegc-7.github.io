@@ -2,6 +2,16 @@
 /* Base reset and layout frame   */
 /* ============================= */
 
+@font-face {
+    font-family: 'Georgia';
+    src: url('/fonts/Georgia.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('/fonts/ComicSansMS.ttf') format('truetype');
+}
+
 /* Lock the viewport and let only the layout’s children scroll */
 html, body {
   height: 100%;
@@ -11,7 +21,7 @@ html, body {
 
 /* Global font variable */
 :root {
-  --app-font: "Georgia", "Times New Roman", serif;
+  --app-font: "Georgia", serif;
 }
 
 /* Apply the app font to main containers, headings, sidebar and the toggle */
