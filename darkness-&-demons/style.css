@@ -189,6 +189,10 @@ div[id^="table"] {
   background-color: var(--row-even);
 }
 
+.lpad {
+  padding-left: 2em;
+}
+
 /* ============================= */
 /* Links                         */
 /* ============================= */
