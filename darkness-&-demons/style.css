@@ -104,6 +104,11 @@ h5::before {
   font-weight: bold;
   letter-spacing: 2px;
 }
+.dd-byline .remastered {
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 .dd-byline .subtitle {
   font-size: 1.2rem;
   font-style: italic;
@@ -164,14 +169,11 @@ h2 {
 /* Tables                        */
 /* ============================= */
 
-div[id^="table"] {
+.table-wrapper {
+  width: 100%;
   margin: 1rem 0;
   border: 1px solid;
   padding: 0.5rem;
-}
-
-.table-wrapper {
-  width: 100%;
 }
 .table-wrapper table {
   width: 100%;
@@ -189,7 +191,7 @@ div[id^="table"] {
   background-color: var(--row-even);
 }
 
-.lpad {
+.table-wrapper table tbody tr td .lpad {
   padding-left: 2em;
 }
 
@@ -359,7 +361,7 @@ a:hover {
 }
 
 /* ============================= */
-/* 🌿 Light Forest Theme         */
+/* Light Forest Theme            */
 /* ============================= */
 
 @media (prefers-color-scheme: light) {
@@ -386,7 +388,7 @@ a:hover {
   a { color: #2f7a2f; }
   a:hover { color: #1a4d1a; }
 
-  div[id^="table"] {
+  .table-wrapper {
     border-color: #4a7a4a;
     background-color: #edf5ed;
   }
@@ -430,7 +432,7 @@ a:hover {
 }
 
 /* ============================= */
-/* 🌌 Dark Forest Theme          */
+/* Dark Forest Theme             */
 /* ============================= */
 
 @media (prefers-color-scheme: dark) {
@@ -457,7 +459,7 @@ a:hover {
   a { color: #a3d9a3; }
   a:hover { color: #6fbf6f; }
 
-  div[id^="table"] {
+  .table-wrapper {
     border-color: #4a7a4a;
     background-color: #142414;
   }
