@@ -361,6 +361,131 @@ a:hover {
 }
 
 /* ============================= */
+/* Sidebar collapse button       */
+/* ============================= */
+#sidebar-collapse {
+  position: absolute;
+  bottom: 60px; /* slightly above font toggle */
+  left: 10px;
+  padding: 6px 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, transform 0.12s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+/* Tooltip */
+#sidebar-collapse::after {
+  content: "Collapse sidebar";
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  z-index: 1000;
+  line-height: 1.2;
+}
+
+#sidebar-collapse::before {
+  content: "";
+  position: absolute;
+  bottom: 110%;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1001;
+  transition: opacity 0.18s ease;
+}
+
+/* Show tooltip */
+#sidebar-collapse:hover::after,
+#sidebar-collapse:focus::after {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+#sidebar-collapse:hover::before,
+#sidebar-collapse:focus::before {
+  opacity: 1;
+}
+
+/* Light theme colors */
+@media (prefers-color-scheme: light) {
+  #sidebar-collapse {
+    background-color: #90b890;
+    color: #1a2e1a;
+  }
+  #sidebar-collapse:hover {
+    background-color: #6fa86f;
+  }
+  #sidebar-collapse::after {
+    background-color: #1a2e1a;
+    color: #e6f2e6;
+  }
+  #sidebar-collapse::before {
+    background-color: #1a2e1a;
+  }
+}
+
+/* Dark theme colors */
+@media (prefers-color-scheme: dark) {
+  #sidebar-collapse {
+    background-color: #3a5c3a;
+    color: #e6f2e6;
+  }
+  #sidebar-collapse:hover {
+    background-color: #4b7a4b;
+  }
+  #sidebar-collapse::after {
+    background-color: #e6f2e6;
+    color: #0d1a0d;
+  }
+  #sidebar-collapse::before {
+    background-color: #e6f2e6;
+  }
+}
+
+/* Collapsed sidebar */
+#sidebar.collapsed {
+  width: 48px; /* width of the button */
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#sidebar.collapsed h2,
+#sidebar.collapsed ul,
+#sidebar.collapsed li,
+#sidebar.collapsed a,
+#sidebar.collapsed #font-toggle {
+  display: none;
+}
+
+/* Keep collapse button visible */
+#sidebar.collapsed #sidebar-collapse {
+  display: inline-flex;
+  left: 6px;
+}
+
+/* Arrow flips when collapsed */
+#sidebar.collapsed #sidebar-collapse {
+  content: "▶";
+}
+
+/* ============================= */
 /* Light Forest Theme            */
 /* ============================= */
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,243 +11,42 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="(prefers-color-scheme: dark)">
     <link rel="shortcut icon" type="image/x-icon" href="dark.ico" media="(prefers-color-scheme: light)">
     <link href="style.css" rel="stylesheet">
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/toggle.js"></script>
     <script src="js/scrolling.js"></script>
     <script src="js/font.js" defer></script>
-    <script src="js/sidebar.js" defer></script>
+    <script src="js/sidebar.js"></script>
   </head>
   <body>
     
     <div class="d-flex" id="wrapper">
 	<div class="layout">
-<nav id="sidebar">
-  <h2>Contents</h2>
-  <ul>
-    <li>
-      <a href="#section-i-heroes-and-magic">Section I: Heroes &amp; Magic</a>
-      <ul>
-        <li>
-          <a href="#introduction">Introduction</a>
-          <ul>
-            <li><a href="#about-these-rules">About These Rules</a></li>
-            <li><a href="#common-terms">Common Terms</a></li>
-            <li><a href="#players-supplies">Player’s Supplies</a></li>
-            <li><a href="#preparation-for-play">Preparation for Play</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#player-characters">Player Characters</a>
-          <ul>
-            <li><a href="#alignment">Alignment</a></li>
-            <li><a href="#determination-of-abilities">Determination of Abilities</a></li>
-            <li><a href="#prime-requisite-abilities">Prime Requisite Abilities</a></li>
-            <li><a href="#explanation-of-abilities">Explanation of Abilities</a></li>
-            <li><a href="#classes">Classes</a></li>
-            <li><a href="#the-cleric">The Cleric</a></li>
-            <li><a href="#the-fighting-man">The Fighting-man</a></li>
-            <li><a href="#the-magic-user">The Magic-User</a></li>
-            <li><a href="#the-thief">The Thief</a></li>
-            <li><a href="#changing-class">Changing Class</a></li>
-            <li><a href="#other-classes">Other Classes</a></li>
-            <li><a href="#beyond-level-12">Beyond Level 12</a></li>
-          </ul>
-        </li>
-        <li><a href="#equipment">Equipment</a></li>
-        <li>
-          <a href="#non-player-characters">Non-Player Characters</a>
-          <ul>
-            <li><a href="#hirelings">Hirelings</a></li>
-            <li><a href="#mercenaries">Mercenaries</a></li>
-            <li><a href="#retainers">Retainers</a></li>
-            <li><a href="#enlisting-monsters">Enlisting Monsters</a></li>
-            <li><a href="#reaction-and-morale-checks">Reaction and Morale Checks</a></li>
-            <li><a href="#relatives">Relatives</a></li>
-            <li><a href="#cost-of-upkeep">Cost of Upkeep</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#magic">Magic</a>
-          <ul>
-            <li><a href="#spell-casting-from-memory">Spell Casting from Memory</a></li>
-            <li><a href="#spell-casting-from-scrolls">Spell Casting from Scrolls</a></li>
-            <li><a href="#reversible-spells">Reversible Spells</a></li>
-            <li><a href="#spell-books">Spell Books</a></li>
-            <li><a href="#creating-spell-scrolls">Creating Spell Scrolls</a></li>
-            <li><a href="#researching-new-spells">Researching New Spells</a></li>
-            <li><a href="#cumulative-magic">Cumulative Magic</a></li>
-          </ul>
-        </li>
-        <li><a href="#explanation-of-spells">Explanation of Spells</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="#section-ii-delving-and-exploration">Section II: Delving &amp; Exploration</a>
-      <ul>
-        <li>
-          <a href="#preparation-for-the-campaign">Preparation for the Campaign</a>
-          <ul>
-            <li><a href="#the-referees-supplies">The Referee’s Supplies</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#creating-a-world">Creating a World</a>
-          <ul>
-            <li><a href="#the-start-of-play">The Start of Play</a></li>
-            <li><a href="#the-dice_1">The Dice</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#creating-a-dungeon">Creating a Dungeon</a>
-          <ul>
-            <li><a href="#populating-a-dungeon">Populating a Dungeon</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#underworld-exploration">Underworld Exploration</a>
-          <ul>
-            <li><a href="#underworld-encounters">Underworld Encounters</a></li>
-            <li><a href="#maintaining-freshness">Maintaining Freshness</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#combat">Combat</a>
-          <ul>
-            <li><a href="#melee">Melee</a></li>
-            <li><a href="#overbearing">Overbearing</a></li>
-            <li><a href="#missile-fire">Missile Fire</a></li>
-            <li><a href="#morale">Morale</a></li>
-            <li><a href="#healing">Healing</a></li>
-            <li><a href="#mounted-combat">Mounted Combat</a></li>
-            <li><a href="#saving-throws">Saving Throws</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#wilderness-exploration">Wilderness Exploration</a>
-          <ul>
-            <li><a href="#time-and-movement">Time and Movement</a></li>
-            <li><a href="#weather">Weather</a></li>
-            <li><a href="#becoming-lost">Becoming Lost</a></li>
-            <li><a href="#strongholds">Strongholds</a></li>
-            <li><a href="#fords">Fords</a></li>
-            <li><a href="#settlements">Settlements</a></li>
-            <li><a href="#wilderness-encounters">Wilderness Encounters</a></li>
-            <li><a href="#evasion-and-pursuit">Evasion and Pursuit</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#seafaring-exploration">Seafaring Exploration</a>
-          <ul>
-            <li><a href="#time-and-movement_1">Time and Movement</a></li>
-            <li><a href="#weather_1">Weather</a></li>
-            <li><a href="#becoming-lost_1">Becoming Lost</a></li>
-            <li><a href="#settlements-and-strongholds">Settlements and Strongholds</a></li>
-            <li><a href="#encounters-at-sea">Encounters at Sea</a></li>
-            <li><a href="#evasion-and-pursuit_1">Evasion and Pursuit</a></li>
-            <li><a href="#seafaring-combat">Seafaring Combat</a></li>
-            <li><a href="#swimming">Swimming</a></li>
-            <li><a href="#drowning">Drowning</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#aerial-exploration">Aerial Exploration</a>
-          <ul>
-            <li><a href="#time-and-movement_2">Time and Movement</a></li>
-            <li><a href="#weather_2">Weather</a></li>
-            <li><a href="#becoming-lost_2">Becoming Lost</a></li>
-            <li><a href="#settlements-and-strongholds_1">Settlements and Strongholds</a></li>
-            <li><a href="#aerial-encounters">Aerial Encounters</a></li>
-            <li><a href="#evasion-and-pursuit_2">Evasion and Pursuit</a></li>
-            <li><a href="#aerial-combat">Aerial Combat</a></li>
-            <li><a href="#falling">Falling</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#the-campaign">The Campaign</a>
-          <ul>
-            <li><a href="#specialist-hirelings">Specialist Hirelings</a></li>
-            <li><a href="#constructing-a-stronghold">Constructing a Stronghold</a></li>
-            <li><a href="#mass-battles">Mass Battles</a></li>
-            <li><a href="#artifacts">Artifacts</a></li>
-            <li><a href="#enchanting-magic-items">Enchanting Magic Items</a></li>
-            <li><a href="#other-worlds">Other Worlds</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="#section-iii-monsters-and-treasures">Section III: Monsters &amp; Treasures</a>
-      <ul>
-        <li>
-          <a href="#monsters_2">Monsters</a>
-          <ul>
-            <li><a href="#summary-of-monsters">Summary of Monsters</a></li>
-          </ul>
-        </li>
-        <li><a href="#explanation-of-monsters">Explanation of Monsters</a></li>
-        <li>
-          <a href="#treasures">Treasures</a>
-          <ul>
-            <li><a href="#treasure-types">Treasure Types</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#explanation-of-treasures">Explanation of Treasures</a>
-          <ul>
-            <li><a href="#armor-and-shields">Armor and Shields</a></li>
-            <li><a href="#miscellaneous-magic-items">Miscellaneous Magic Items</a></li>
-            <li><a href="#miscellaneous-weaponry">Miscellaneous Weaponry</a></li>
-            <li><a href="#potions">Potions</a></li>
-            <li><a href="#rings">Rings</a></li>
-            <li><a href="#spellbooks-and-scrolls">Spellbooks and Scrolls</a></li>
-            <li><a href="#staves-and-wands">Staves &amp; Wands</a></li>
-            <li><a href="#magic-swords">Magic Swords</a></li>
-          </ul>
-        </li>
-        <li><a href="#afterword">Afterword</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="pdf/character-record-sheet.pdf">Character Record Sheet</a>
-    </li>
-  </ul>
-</nav>
-  <button id="font-toggle" aria-pressed="false" title="Toggle Font">Aa</button>
-  <button id="sidebar-collapse" aria-pressed="false" title="Collapse Sidebar">◀</button>
+	<nav id="sidebar">
+	  <h2>Contents</h2>
+	  <ul>
+	    <li>
+	      <a href="pdf/character-record-sheet.pdf">Character Record Sheet</a>
+	    </li>
+	  </ul>
+	</nav>
+    <button id="font-toggle" aria-pressed="false" title="Toggle Font">Aa</button>
 		<div id="page-content-wrapper">
           <div class="container">
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="col-12 col-lg-1"></div>
-              <div class="col-11 col-md-10 col-lg-8 col-xl-7">
                 <img class="dd-title" src="img/logo.png" alt="Darkness &amp; Demons">
                 <div class="dd-byline">
                   <p class="title">REFERENCE RULES</p>
                   <p class="remastered">REMASTERED</p>
                   <p class="subtitle">By CEGC</p>
-                </div>
-                  <div class="Basic-Text-Frame">
-                    <p class="copyright">Copyright &#169; 2025-2026 CEGC</p>
-                  </div>
+                  <br><p class="copyright">Copyright &#169; 2025-2026 CEGC</p>
                 </div>
 
-
-
-                <!-- CONTENT -->
-                <h1 id="section-i-heroes-and-magic" data-acc="section-i-contents">Section I: Heroes &amp; Magic</h1>
-
-                <div class="section-i-contents">
+                <h1 id="player-manual">Player Manual</h1>
                   <h2 id="introduction">Introduction</h2>
-                  <p>Darkness &amp; Demons is a gateway to realms where magic works and <a href="#dragons">dragons</a> are real, where <a href="#elves_1">elves</a> and <a href="#dwarfs_1">dwarfs</a> fight alongside <a href="#men">men</a> against <a href="#goblins">goblins</a> and <a href="#giants">giants</a>, and where a strong sword arm can carry the day in battle. All that is needed to play is some basic stationery, a few friends, and a vivid imagination.</p>
-                  <p>One player will referee the fantasy <a href="#creating-a-world">world</a> while the others assume the role of adventurers and explore it. As heroes and wizards they will face its challenges, defeating <a href="#monsters_2">monsters</a> and winning fabulous <a href="#treasures">treasures</a> as they rise to fame or, if they are careless, vanish into obscurity.</p>
-                  <p>Darkness &amp; Demons is based on the ruleset of &quot;<i>OD&amp;D</i>&quot; by E. Gary Gygax and Dave Arneson, which can be found <a href="https://archive.org/details/odnd-white-box-pdf">here</a>.</p>
+                  <p>Darkness &amp; Demons is a gateway to realms where magic works and dragons are real, where elves and dwarves fight alongside men against goblins and giants, and where a strong sword arm can carry the day in battle. All that is needed to play is some basic stationery, a few friends, and a vivid imagination.</p>
+                  <p>One player will referee the fantasy world while the others assume the role of adventurers and explore it. As heroes and wizards they will face its challenges, defeating monsters and winning fabulous <a href="#treasures">treasures</a> as they rise to fame or, if they are careless, vanish into obscurity.</p>
+                  <p>Darkness &amp; Demons is based on the ruleset of &quot;OD&amp;D&quot; by E. Gary Gygax and Dave Arneson, which can be found <a href="https://archive.org/details/odnd-white-box-pdf">here</a>.</p>
                   <h3 id="about-these-rules">About These Rules</h3>
-                  <p>Players should begin with <a href="#section-i-heroes-and-magic">Section I</a> which details characters that can be played, <a href="#equipment">equipment</a> and <a href="#hirelings">hirelings</a> that can be had, and <a href="#explanation-of-spells">spells</a> that are available to magic-using sorts. Players need read no further.</p>
-                  <p>Aspiring referees are advised to continue immediately on to <a href="#section-ii-delving-and-exploration">Section II</a> wherein are guidelines for constructing a <a href="#creating-a-world">campaign world</a> and filling it with <a href="#populating-a-dungeon">dungeons</a>, <a href="#monsters_2">monsters</a>, and <a href="#treasures">treasures</a>, and advice on conducting adventures around these. Finally, <a href="#section-iii-monsters-and-treasures">Section III</a> is intended as a reference for referees; it contains all manner of <a href="#monsters_2">monsters</a>&#8212;from <a href="#androids">androids</a> to <a href="#zombies">zombies</a>&#8212;and <a href="#treasures">treasures</a> including magical <a href="#staves-and-wands">wands</a>, weapons, and a plethora of other items.</p>
+                  <p>Players should begin with the <a href="#player-manual">Player Manual</a> which details characters that can be played, <a href="#equipment">equipment</a> and <a href="#hirelings">hirelings</a> that can be had, and <a href="#spells">spells</a> that are available to magic-using sorts. Players need read no further.</p>
+                  <p>Aspiring referees are advised to continue immediately on to the <a href="#referee-manual">Referee Manual</a> wherein are guidelines for constructing a campaign world and filling it with <a href="#dungeons">dungeons</a>, <a href="#monsters">monsters</a>, and <a href="#treasures">treasures</a>, and advice on conducting adventures around these. Finally, the <a href="#compendium">Compendium</a> is intended as a reference for referees; it contains all manner of <a href="#monsters">monsters</a>&#8212;from <a href="#androids">androids</a> to <a href="#zombies">zombies</a>&#8212;and <a href="#treasures">treasures</a> including magical <a href="#staves-and-wands">wands</a>, weapons, and a plethora of other items.</p>
                   <h3 id="common-terms">Common Terms</h3>
                   <p>Darkness &amp; Demons is a role-playing game in which the players control player characters (PCs) and the referee controls non-player characters (NPCs) including <a href="#monsters_2">monsters</a>. All these have a number of <a href="#the-numbers-of-hit-dice">hit dice</a> (HD) which are six-sided <a href="#the-dice_1">dice</a> thrown to see how many <a href="#the-numbers-of-hit-dice">hit points</a> (hp) can be sustained before being slain. <a href="#melee">Armor class</a> (AC) is a measure of protection against physical attack, while <a href="#saving-throws">saving throws</a> are made to avert fates such as <a href="#poison_1">poisoning</a>, being turned to stone, or being vaporized by <a href="#dragon-breath-weapon">dragon&#8217;s breath</a>. Player characters accumulate <a href="#experience-points">experience points</a> in order to advance to each successive level of <a href="#explanation-of-abilities">ability</a>.</p>
             
@@ -269,7 +68,7 @@
                   <p>Heroic-Types include all <a href="#man-types">man-types</a> of heroic stature and all <a href="#monsters_2">monsters</a> that represent a heroic threat. Collectively these are all creatures with 6 or more <a href="#the-numbers-of-hit-dice">hit dice</a> but fewer than 12 <a href="#the-numbers-of-hit-dice">hit dice</a>.</p>
             
                   <h5 id="man-types" class="common-term">Man-Types</h5><br>
-                  <p>Man-Types are all <a href="#men">men</a> and other creatures of same basic proportions including <a href="#androids">androids</a>, <a href="#cavemen">cavemen</a>, <a href="#dwarfs_1">dwarfs</a>, <a href="#elves_1">elves</a>, <a href="#gnolls">gnolls</a>, <a href="#gnomes">gnomes</a>, <a href="#goblins">goblins</a>, <a href="#halflings_1">halflings</a>, <a href="#hobgoblins">hobgoblins</a>, <a href="#kobolds">kobolds</a>, <a href="#lizardmen">lizardmen</a>, <a href="#mermen">mermen</a>, <a href="#nixies">nixies</a>, <a href="#orcs">orcs</a>, and <a href="#pixies">pixies</a>. The majority of <a href="#men">man</a>-types are also <a href="#normal-types">normal-types</a> but exceptional individuals can be <a href="#heroic-types">heroic</a>- or <a href="#superheroic-types">superheroic-types</a> instead.</p>
+                  <p>Man-Types are all <a href="#men">men</a> and other creatures of same basic proportions including <a href="#androids">androids</a>, <a href="#cavemen">cavemen</a>, <a href="#dwarves_1">dwarves</a>, <a href="#elves_1">elves</a>, <a href="#gnolls">gnolls</a>, <a href="#gnomes">gnomes</a>, <a href="#goblins">goblins</a>, <a href="#halflings_1">halflings</a>, <a href="#hobgoblins">hobgoblins</a>, <a href="#kobolds">kobolds</a>, <a href="#lizardmen">lizardmen</a>, <a href="#mermen">mermen</a>, <a href="#nixies">nixies</a>, <a href="#orcs">orcs</a>, and <a href="#pixies">pixies</a>. The majority of <a href="#men">man</a>-types are also <a href="#normal-types">normal-types</a> but exceptional individuals can be <a href="#heroic-types">heroic</a>- or <a href="#superheroic-types">superheroic-types</a> instead.</p>
             
                   <h5 id="monsters" class="common-term">Monsters</h5><br>
                   <p>Monsters are all creatures controlled by the referee. These include <a href="#dragons">dragons</a>, <a href="#orcs">orcs</a>, <a href="#vampires">vampires</a>, and other genuine horrors of the <a href="#underworld-exploration">underworld</a> as well as the townsfolk, <a href="#hirelings">hirelings</a>, and even non-player heroes of the game <a href="#creating-a-world">world</a>.</p>
@@ -452,10 +251,10 @@
                   <p>can be <a href="#the-fighting-man">fighting-men</a> or <a href="#the-thief">thieves</a> but are limited to 4th level as <a href="#the-fighting-man">fighting-men</a> and to 8th level as <a href="#the-thief">thieves</a>. They are deadly accurate with hurled <a href="#missile-fire">missiles</a> adjusting attack rolls by +3, and will identify noises when <a href="#listening">listening</a> at <a href="#doors">doors</a> with a throw of 5-6 on a six-sided die. They are nearly invisible when they blend into the background and can <a href="#time-and-movement_2">move</a> almost silently. Despite their diminutive stature halflings are surprisingly resilient and make all <a href="#saving-throws">saving throws</a> at four levels higher than their actual level.</p>
                   
                   
-                  <h5 id="dwarfs">Dwarfs</h5>
+                  <h5 id="dwarves">dwarves</h5>
                   <p>dwell underground and see equally well by day or by night. They are limited to 6th level as <a href="#the-fighting-man">fighting-men</a> and to 4th level as <a href="#the-thief">thieves</a> but make all <a href="#saving-throws">saving throws</a> at four levels above their actual level and are the only characters able to employ the +3 <a href="#war-hammers">war hammer</a> to its full potential. They are adept at evading large, clumsy enemies and suffer only half <a href="#damage">damage</a> from foes such as <a href="#ogres">ogres</a> and <a href="#giants">giants</a>.</p>
-                  <p>Dwarfs are expert miners and are able to note any new constructions, <a href="#shifting-walls">shifting walls</a>, slopes, falling slabs, false floors and the like in <a href="#populating-a-dungeon">dungeon</a> stonework. They will identify noises when <a href="#listening">listening</a> at <a href="#doors">doors</a> with a throw of 5-6 on a six-sided die.</p>
-                  <p>Dwarfs are able to speak the <a href="#many-languages">languages</a> of <a href="#gnomes">gnomes</a>, <a href="#goblins">goblins</a>, and <a href="#kobolds">kobolds</a> in addition to their own <a href="#many-languages">language</a>, their <a href="#alignment">alignment</a> tongue, and the common tongue.</p>
+                  <p>dwarves are expert miners and are able to note any new constructions, <a href="#shifting-walls">shifting walls</a>, slopes, falling slabs, false floors and the like in <a href="#populating-a-dungeon">dungeon</a> stonework. They will identify noises when <a href="#listening">listening</a> at <a href="#doors">doors</a> with a throw of 5-6 on a six-sided die.</p>
+                  <p>dwarves are able to speak the <a href="#many-languages">languages</a> of <a href="#gnomes">gnomes</a>, <a href="#goblins">goblins</a>, and <a href="#kobolds">kobolds</a> in addition to their own <a href="#many-languages">language</a>, their <a href="#alignment">alignment</a> tongue, and the common tongue.</p>
                   
                   
                   <h5 id="elves">Elves</h5>
@@ -503,13 +302,13 @@
                   <div id="table1_19"></div>
                   <p>Monthly fees are in addition to the cost of <a href="#cost-of-upkeep">upkeep</a>.</p>
                   <p>Footmen are equipped with leather <a href="#armor-and-shields">armor</a> and <a href="#armor-and-shields">shield</a> and armored footmen with mail <a href="#armor-and-shields">armor</a> and <a href="#armor-and-shields">shield</a>. <a href="#missile-fire">Missile</a> <a href="#men">men</a> have leather <a href="#armor-and-shields">armor</a> only. Horsemen always have mounts in addition.</p>
-                  <p><a href="#elves_1">Elf</a> and <a href="#dwarfs_1">dwarf</a> mercenaries are uncommon and <a href="#orcs">orcs</a> are employable by chaotics only; otherwise, these can be hired at towns or <a href="#strongholds">strongholds</a>, or wherever else they are encamped. With enough gold there is no limit to the number of mercenaries a character can employ.</p>
+                  <p><a href="#elves_1">Elf</a> and <a href="#dwarves_1">dwarf</a> mercenaries are uncommon and <a href="#orcs">orcs</a> are employable by chaotics only; otherwise, these can be hired at towns or <a href="#strongholds">strongholds</a>, or wherever else they are encamped. With enough gold there is no limit to the number of mercenaries a character can employ.</p>
                   
                   <h3 id="retainers">Retainers</h3>
                   <p>More unusual help including <a href="#monsters_2">monsters</a> and player types can also be sought. These are called retainers and the number allowed at any one time is limited by a character&#8217;s
                     <a href="#charisma">charisma</a> score.</p>
                   <p>A character can seek retainers during his adventures or advertise his need by posting notices, hiring heralds, frequenting taverns, or sending emissaries to foreign lands where likely candidates are known to dwell. The cost and effectiveness of these endeavors is left to the referee&#8217;s discretion.</p>
-                  <p>If a prospective retainer is located the character can make an offer of employment. Only the lowest level player types will be seeking employment and these will not be tempted for any offer worth less than 100 gp. <a href="#dwarfs_1">Dwarfs</a> desire especially gold, <a href="#elves_1">elves</a> and <a href="#the-magic-user">magic-users</a> desire <a href="#explanation-of-spells">spells</a> and magic items,
+                  <p>If a prospective retainer is located the character can make an offer of employment. Only the lowest level player types will be seeking employment and these will not be tempted for any offer worth less than 100 gp. <a href="#dwarves_1">dwarves</a> desire especially gold, <a href="#elves_1">elves</a> and <a href="#the-magic-user">magic-users</a> desire <a href="#explanation-of-spells">spells</a> and magic items,
                     <a href="#the-cleric">clerics</a> desire crusades and places to worship, and so on.</p>
                   
                   <h3 id="enlisting-monsters">Enlisting Monsters</h3>
@@ -1113,8 +912,6 @@
                     <h5 id="wall-of-iron">Wall of Iron</h5>
                     <p> (affects: 6&quot; wall, duration: permanent, range: 6&quot;)<br> Conjures a daunting bulkhead of solid iron 1ft thick and up to 6&quot; long and 20ft high (or any equivalent dimensions). It can be plain or featured and straight or curved, as the <a href="#the-magic-user">magic-user</a> desires, including a 10ft high 4&quot; diameter circle. It is impervious to <a href="#explanation-of-spells">spells</a> such as <a href="#sixth-sense">sixth sense</a>, <a href="#passwall">passwall</a>, and <a href="#transmute-rock-to-mud">transmute rock to mud</a> and is largely impenetrable to ordinary means of battery or attack. It can be dismissed by a successful <a href="#dispel-magic">dispel magic</a>.</p>
                   </div>
-                </div>
-                <!-- section-i-contents -->
 
 
 
@@ -1221,7 +1018,7 @@
                   <p>can seal the players in by closing portals or by barring exits with heavy weights. Some will then fill with water, <a href="#green-slime">green slime</a>, or <a href="#monsters_2">monsters</a>. Others will carry the players to a lower <a href="#populating-a-dungeon">dungeon</a> level with no possible recourse&#8212;or seem to while in fact only turning on the same level.</p>
                   
                   <h5 id="sloping-passages">Sloping Passages</h5>
-                  <p>or halls descend gently and will not be noticed by players (other than <a href="#dwarfs_1">dwarfs</a>). These can see the players inadvertently exploring the next deeper <a href="#populating-a-dungeon">dungeon</a> level.</p>
+                  <p>or halls descend gently and will not be noticed by players (other than <a href="#dwarves_1">dwarves</a>). These can see the players inadvertently exploring the next deeper <a href="#populating-a-dungeon">dungeon</a> level.</p>
                   
                   <h5 id="teleportation">Teleportation</h5>
                   <p>will instantly send an individual or a group elsewhere upon touching a gem, skull, or mirror, or upon passing through a portal. Possible destinations include an identical room with nothing to indicate that teleportation has occurred, a <a href="#dragons">dragon&#8217;s</a> lair, a safe haven, another <a href="#populating-a-dungeon">dungeon</a> level, a location thousands of miles away, or even another planet or alternate dimension.</p>
@@ -1253,10 +1050,10 @@
                   <p>is essential underground. Torches, lanterns, and magic <a href="#explanation-of-spells">spells</a> can be used to illuminate the way though the former might be extinguished by sudden gusts of <a href="#strong-winds">wind</a>. Torches and lanterns will light a 30ft radius and burn for 6 and 24 <a href="#turns">turns</a>, respectively. <a href="#populating-a-dungeon">Dungeon</a> denizens are assumed to see well in the dark, however, and carrying light will ruin any possibility of surprising them, except by coming through a <a href="#doors">door</a>.</p>
                   
                   <h5 id="listening">Listening</h5>
-                  <p>A <a href="#populating-a-dungeon">dungeon</a> should be troubled by distant creaks, echoes, and moans, and any player may wish to listen for these, or at a <a href="#doors">door</a> before trying it, as a precautionary measure. In such cases the referee should throw a six-sided die for the player with a result of 6 (or a result of 5-6 for <a href="#dwarfs_1">dwarfs</a>, <a href="#elves_1">elves</a>, and <a href="#halflings_1">halflings</a>) indicating that the character identifies any audible sound. Bickering <a href="#orcs">orcs</a> will be rackety, for example, while the undead will be absolutely silent.</p>
+                  <p>A <a href="#populating-a-dungeon">dungeon</a> should be troubled by distant creaks, echoes, and moans, and any player may wish to listen for these, or at a <a href="#doors">door</a> before trying it, as a precautionary measure. In such cases the referee should throw a six-sided die for the player with a result of 6 (or a result of 5-6 for <a href="#dwarves_1">dwarves</a>, <a href="#elves_1">elves</a>, and <a href="#halflings_1">halflings</a>) indicating that the character identifies any audible sound. Bickering <a href="#orcs">orcs</a> will be rackety, for example, while the undead will be absolutely silent.</p>
                   
                   <h5 id="doors">Doors</h5>
-                  <p>in the <a href="#populating-a-dungeon">dungeon</a> are typically stuck and must be forced by <a href="#strength">strength</a>. <a href="#men">Men</a>, <a href="#dwarfs_1">dwarfs</a>, and <a href="#elves_1">elves</a> can defeat these with a throw of 5-6 on a six-sided die, while <a href="#halflings_1">halflings</a> and other weaklings would usually require a throw of 6. Bursting through a door in this manner might <a href="#surprise">surprise</a> whomever is on the other side, but any failed attempt will automatically ruin this opportunity and might also attract <a href="#wandering-monsters">wandering monsters</a> to the noise. Two characters can simultaneously apply their <a href="#strength">strength</a> to a single door, but they will be unable to <a href="#monster-reaction">react</a> to whatever is lurking on the other side as they burst through.</p>
+                  <p>in the <a href="#populating-a-dungeon">dungeon</a> are typically stuck and must be forced by <a href="#strength">strength</a>. <a href="#men">Men</a>, <a href="#dwarves_1">dwarves</a>, and <a href="#elves_1">elves</a> can defeat these with a throw of 5-6 on a six-sided die, while <a href="#halflings_1">halflings</a> and other weaklings would usually require a throw of 6. Bursting through a door in this manner might <a href="#surprise">surprise</a> whomever is on the other side, but any failed attempt will automatically ruin this opportunity and might also attract <a href="#wandering-monsters">wandering monsters</a> to the noise. Two characters can simultaneously apply their <a href="#strength">strength</a> to a single door, but they will be unable to <a href="#monster-reaction">react</a> to whatever is lurking on the other side as they burst through.</p>
                   <p>Dungeon denizens have the knack of opening each <a href="#populating-a-dungeon">dungeon</a> door and can pass through easily unless a door has been held shut by the characters. Despite the difficulty in opening them, doors will automatically close. Even if a door is wedged open by the characters it will later be found to have been closed if the referee throws a 5-6 on a six-sided die.</p>
                   
                   <h5 id="secret-doors">Secret doors</h5>
@@ -1998,8 +1795,8 @@
                   <h5 id="dryads">Dryads</h5>
                   <p>are shy and reclusive creatures who have exhaustive knowledge of their forest homes. Each is bound to an individual tree and can go no farther than 24&quot; from it. A dryad is non-violent but can employ a powerful charm causing a <a href="#saving-throws">saving throw</a> <a href="#spell">versus spells</a> at &#8722;2. Those who fail will never leave the forest.</p>
                   
-                  <h5 id="dwarfs_1">Dwarfs</h5>
-                  <p>dwell underground and see equally well by day or by night. They are redoubtable <a href="#the-fighting-man">fighting-men</a> and <a href="#ogres">ogres</a>, <a href="#trolls">trolls</a>, and <a href="#giants">giants</a> score only half <a href="#damage">damage</a> against them. Away from the lair a troop of dwarfs is always accompanied by one 1st-6th level <a href="#the-fighting-man">fighting-man</a> for every 40 dwarfs. In their <a href="#strongholds">stronghold</a> lair there will instead be one 3rd-6th level <a href="#the-fighting-man">fighting-man</a> for every 40 dwarfs. A leveled <a href="#the-fighting-man">fighting-man</a> has a 10% chance per level of being equipped with magic <a href="#armor-and-shields">armor</a>, a magic <a href="#armor-and-shields">shield</a>, and a magic <a href="#axes">axe</a> or hammer (check separately for each). A dwarf <a href="#strongholds">stronghold</a> is 50% likely to be additionally defended by domesticated animals such as 1-6 <a href="#bears">bears</a> or 1-8 <a href="#weasels-giant">giant weasels</a> (check separately for each).</p>
+                  <h5 id="dwarves_1">dwarves</h5>
+                  <p>dwell underground and see equally well by day or by night. They are redoubtable <a href="#the-fighting-man">fighting-men</a> and <a href="#ogres">ogres</a>, <a href="#trolls">trolls</a>, and <a href="#giants">giants</a> score only half <a href="#damage">damage</a> against them. Away from the lair a troop of dwarves is always accompanied by one 1st-6th level <a href="#the-fighting-man">fighting-man</a> for every 40 dwarves. In their <a href="#strongholds">stronghold</a> lair there will instead be one 3rd-6th level <a href="#the-fighting-man">fighting-man</a> for every 40 dwarves. A leveled <a href="#the-fighting-man">fighting-man</a> has a 10% chance per level of being equipped with magic <a href="#armor-and-shields">armor</a>, a magic <a href="#armor-and-shields">shield</a>, and a magic <a href="#axes">axe</a> or hammer (check separately for each). A dwarf <a href="#strongholds">stronghold</a> is 50% likely to be additionally defended by domesticated animals such as 1-6 <a href="#bears">bears</a> or 1-8 <a href="#weasels-giant">giant weasels</a> (check separately for each).</p>
                   
                   <h5 id="an-efreeti">An Efreeti</h5>
                   <p>is a creature of fire and an irreconcilable enemy of the <a href="#a-djinni">djinn</a>. They are immensely strong&#8212;being able to bear what eight <a href="#men">men</a> can carry&#8212;and deal 2-12 <a href="#the-numbers-of-hit-dice">hit points</a> of <a href="#damage">damage</a> in <a href="#combat">combat</a>. Efreet can also <a href="#fly">fly</a>, become invisible, and magically create any desired object at will. Soft materials including food, drink, and garments are permanent. Harder materials have a shorter existence; efreet gold lasts only a day, steel but one hour. An efreeti can also create magical <a href="#illusions">illusions</a> on a whim and these are equal to the <a href="#phantasm">phantasm</a> spell except that an efreeti has no need to concentrate to maintain the <a href="#illusions">illusion</a>. Additionally they can cause a <a href="#wall-of-fire">wall of fire</a> to spring up and can themselves become incendiaries. If bound into service an efreeti will grudgingly serve for a year and a day but no longer.</p>
@@ -2065,7 +1862,7 @@
                   <p>fight with +2 <a href="#reaction-and-morale-checks">morale</a>. The lair will contain a chieftain and 1-6 bodyguards who fight as 4 and 3 <a href="#the-numbers-of-hit-dice">hit dice</a> <a href="#monsters_2">monsters</a>, respectively.</p>
                   
                   <h5 id="gnomes">Gnomes</h5>
-                  <p>are found in Arctic climes. They are smaller and more reclusive than their cousins, the <a href="#dwarfs_1">dwarfs</a>, but have longer beards and bigger noses.</p>
+                  <p>are found in Arctic climes. They are smaller and more reclusive than their cousins, the <a href="#dwarves_1">dwarves</a>, but have longer beards and bigger noses.</p>
                   
                   <h5 id="goblins">Goblins</h5>
                   <p>are small, malicious humanoids who operate underground or at night, adjusting attack and <a href="#reaction-and-morale-checks">morale</a> checks by &#8722;1 in full daylight. Each fighting goblin carries coins worth 1-6 gp with him, even outside the lair. The lair will be a cave complex containing as many non-combatants as combatants, as well as a goblin king and 4-24 bodyguards who fight as 2 and 1+1 <a href="#the-numbers-of-hit-dice">hit dice</a> <a href="#monsters_2">monsters</a>, respectively. The lair is 50% likely to contain an additional 3-12 <a href="#wolves-giant">giant wolves</a> and 3-18 <a href="#ogres">ogres</a> (check separately for each).</p>
@@ -2481,7 +2278,7 @@
                   <p>are usable by <a href="#the-fighting-man">fighting-men</a> and <a href="#the-cleric">clerics</a> and the magical adjustment applies to <a href="#damage">damage</a> rolls only. These can be hurled up to 3&quot; as a medium range <a href="#missile-fire">missile</a> attack.</p>
                   
                   <h5 id="war-hammer-3">War Hammer +3</h5>
-                  <p>In the hands of a <a href="#the-fighting-man">fighting-man</a> or <a href="#the-cleric">cleric</a> this weapon adds +3 <a href="#the-numbers-of-hit-dice">hit points</a> to <a href="#damage">damage</a>. In the hands of a <a href="#dwarfs_1">dwarf</a>, however, it causes 2-12 <a href="#the-numbers-of-hit-dice">hit points</a> of <a href="#damage">damage</a> against all foes except <a href="#giants">giants</a>, against which it causes 5-15 <a href="#the-numbers-of-hit-dice">hit points</a> of <a href="#damage">damage</a>. Additionally, a <a href="#dwarfs_1">dwarf</a> can throw the <a href="#war-hammers">war hammer</a> +3 up to 6&quot; and it will automatically <a href="#fly">fly</a> back to his hand.</p>
+                  <p>In the hands of a <a href="#the-fighting-man">fighting-man</a> or <a href="#the-cleric">cleric</a> this weapon adds +3 <a href="#the-numbers-of-hit-dice">hit points</a> to <a href="#damage">damage</a>. In the hands of a <a href="#dwarves_1">dwarf</a>, however, it causes 2-12 <a href="#the-numbers-of-hit-dice">hit points</a> of <a href="#damage">damage</a> against all foes except <a href="#giants">giants</a>, against which it causes 5-15 <a href="#the-numbers-of-hit-dice">hit points</a> of <a href="#damage">damage</a>. Additionally, a <a href="#dwarves_1">dwarf</a> can throw the <a href="#war-hammers">war hammer</a> +3 up to 6&quot; and it will automatically <a href="#fly">fly</a> back to his hand.</p>
                   
                   <h3 id="potions">Potions</h3>
                   <p>A potion flask contains exactly enough fluid to cause the prescribed effect, although a small sip may be tasted without altering its efficacy. The duration of any temporary effect is 7-12 <a href="#turns">turns</a> unless stated otherwise.</p>
@@ -2727,7 +2524,7 @@
                   <p>Subtracts from attack rolls and will always (magically) appear in hand. The player will have great difficulty ridding himself of this weapon.</p>
                   
                   <h5 id="versus-man-types">Versus Man-types</h5>
-                  <p>Causes additional <a href="#damage">damage</a> to one specific <a href="#man-types">man-type</a> including <a href="#men">men</a>, <a href="#elves_1">elves</a>, <a href="#dwarfs_1">dwarfs</a>, and <a href="#halflings_1">halflings</a>.</p>
+                  <p>Causes additional <a href="#damage">damage</a> to one specific <a href="#man-types">man-type</a> including <a href="#men">men</a>, <a href="#elves_1">elves</a>, <a href="#dwarves_1">dwarves</a>, and <a href="#halflings_1">halflings</a>.</p>
                   
                   <h5 id="versus-lycanthropes">Versus Lycanthropes</h5>
                   <p>Causes additional <a href="#damage">damage</a> to <a href="#lycanthropes">lycanthropes</a> and shape-shifters.</p>
