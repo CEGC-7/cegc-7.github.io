@@ -42,7 +42,6 @@ h5 {
   font-size: 1.05em;
   font-weight: bold;        /* bold for emphasis */
   margin: 0;                /* remove default margins */
-  padding-right: 0.5rem;    /* optional spacing before the following text */
 }
 
 h5 + p {
@@ -151,9 +150,6 @@ h2 {
 .common-term {
   font-weight: bold;
   margin-top: 1rem;
-}
-.common-term + p {
-  margin-left: 1rem;
 }
 
 /* Document lists (inside content) */
