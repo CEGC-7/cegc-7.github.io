@@ -31,12 +31,12 @@
     <button id="font-toggle" aria-pressed="false" title="Toggle Font">Aa</button>
 		<div id="page-content-wrapper">
           <div class="container">
-                <img class="dd-title" src="img/logo.png" alt="Darkness &amp; Demons">
-                <div class="dd-byline">
-                  <p class="title">REFERENCE RULES</p>
-                  <p class="remastered">REMASTERED</p>
-                  <p class="subtitle">By CEGC</p>
-                  <br><p class="copyright">Copyright &#169; 2025-2026 CEGC</p>
+              <img class="dd-title" src="img/logo.png" alt="Darkness &amp; Demons">
+              <div class="dd-byline">
+                <p class="title">REFERENCE RULES</p>
+                <p class="remastered">REMASTERED</p>
+                <p class="subtitle">By CEGC</p>
+    			<br><p class="copyright">Copyright &#169; 2025-2026 CEGC</p>
                 </div>
 
                 <h1 id="player-manual">Player Manual</h1>
@@ -217,9 +217,9 @@
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th rowspan="2">Strength <br>Score</th>
-								<th rowspan="2">Damage <br>Adj.&#42;</th>
-								<th rowspan="2">Open <br>Doors</th>
+								<th rowspan="2">Strength<br>Score</th>
+								<th rowspan="2">Damage<br>Adj.&#42;</th>
+								<th rowspan="2">Open<br>Doors</th>
 								<th colspan="4">Movement Rates Allowed by Load</th>
 							</tr>
 							<tr>
@@ -2168,37 +2168,107 @@
                   
                   <h3 id="mercenaries">Mercenaries</h3>
                   <p>While ordinary hirelings can be had for upkeep plus 2 gp per month mercenaries are another matter. These are neutrally aligned soldiers whose monthly fee is commensurate with their function and equipment.</p>
-                  <div id="table1_19"></div>
+				<div class="table-wrapper">
+					<h4>Table 1.19 Mercenaries</h4>
+					<table id="table1_19" class="table table-striped" summary="Darkness & Demons Table 1.19 Mercenaries">
+						<thead>
+							<tr>
+								<th rowspan="2" class="left">Type</th>
+								<th colspan="4">Monthly Fee</th>
+								<th rowspan="2">Vital<br>Statistics*</th>
+							</tr>
+							<tr>
+								<th>Man</th>
+								<th>Dwarf</th>
+								<th>Elf</th>
+								<th>Orc</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="left">Footman</td>
+								<td class="nowrap">4 gp</td>
+								<td class="nowrap">6 gp</td>
+								<td class="nowrap">8 gp</td>
+								<td class="nowrap">2 gp</td>
+								<td class="nowrap">M 12&quot;, AC 6, HD 1+1</td>
+							</tr>
+							<tr>
+								<td class="left">Footman, armored</td>
+								<td class="nowrap">8 gp</td>
+								<td class="nowrap">12 gp</td>
+								<td>.</td>
+								<td class="nowrap">4 gp</td>
+								<td class="nowrap">M 9&quot;, AC 4, HD 1+1</td>
+							</tr>
+							<tr>
+								<td class="left">Footman, missile</td>
+								<td class="nowrap">6 gp</td>
+								<td class="nowrap">9 gp</td>
+								<td class="nowrap">12 gp</td>
+								<td class="nowrap">3 gp</td>
+								<td class="nowrap">M 12&quot;, AC 7, HD 1+1</td>
+							</tr>
+							<tr>
+								<td class="left">Horseman</td>
+								<td class="nowrap">12 gp</td>
+								<td>.</td>
+								<td>.</td>
+								<td>.</td>
+								<td class="nowrap">M 21&quot;, AC 6, HD 1+1</td>
+							</tr>
+							<tr>
+								<td class="left">Horseman, armored</td>
+								<td class="nowrap">18 gp</td>
+								<td>.</td>
+								<td>.</td>
+								<td>.</td>
+								<td class="nowrap">M 18&quot;, AC 4, HD 1+1</td>
+							</tr>
+							<tr>
+								<td class="left">Horsemen, missile</td>
+								<td class="nowrap">15 gp</td>
+								<td>.</td>
+								<td>.</td>
+								<td>.</td>
+								<td class="nowrap">M 24&quot;, AC 7, HD 1+1</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="6">* Dwarfs, elves, and orcs have 1 hit die.</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
                   <p>Monthly fees are in addition to the cost of upkeep.</p>
                   <p>Footmen are equipped with leather armor and shield and armored footmen with mail armor and shield. Missile men have leather armor only. Horsemen always have mounts in addition.</p>
                   <p>Elf and dwarf mercenaries are uncommon and orcs are employable by chaotics only; otherwise, these can be hired at towns or strongholds, or wherever else they are encamped. With enough gold there is no limit to the number of mercenaries a character can employ.</p>
                   
                   <h3 id="retainers">Retainers</h3>
-                  <p>More unusual help including monsters and player types can also be sought. These are called retainers and the number allowed at any one time is limited by a character&apos;s
-                    charisma score.</p>
+                  <p>More unusual help including monsters and player types can also be sought. These are called retainers and the number allowed at any one time is limited by a character&apos;s charisma score.</p>
                   <p>A character can seek retainers during his adventures or advertise his need by posting notices, hiring heralds, frequenting taverns, or sending emissaries to foreign lands where likely candidates are known to dwell. The cost and effectiveness of these endeavors is left to the referee&apos;s discretion.</p>
-                  <p>If a prospective retainer is located the character can make an offer of employment. Only the lowest level player types will be seeking employment and these will not be tempted for any offer worth less than 100 gp. dwarfs desire especially gold, elves and magic-users desire spells and magic items,
-                    clerics desire crusades and places to worship, and so on.</p>
+                  <p>If a prospective retainer is located the character can make an offer of employment. Only the lowest level player types will be seeking employment and these will not be tempted for any offer worth less than 100 gp. Dwarfs desire especially gold, elves and magic-users desire spells and magic items, clerics desire crusades and places to worship, and so on.</p>
                   
                   <h3 id="enlisting-monsters">Enlisting Monsters</h3>
                   <p>Characters can enlist monsters of the same alignment by regular negotiation. Others (including higher level player types) can be pressed into service by coercion with a charm spell or by physical subdual in combat.</p>
                   <p>Magic spells notwithstanding, some incentive must be offered to entice a monster into service. The character should decide what he believes would be useful or valuable to the monster and make his offer (merely sparing its life is insufficient). The monster&apos;s reaction will be determined by the referee and adjusted according to the offer and the character&apos;s charisma. A character can attempt a richer offer only if the monster&apos;s reaction is &quot;uncertain&quot;.</p>
                   
-                  <h4 id="retainer-loyalty">Retainer Loyalty</h4>
+                  <h3 id="loyalty">Retainer Loyalty</h3>
                   <p>When a monster or non-player character enters into a player character&apos;s service the referee will secretly determine his loyalty, which may subsequently be adjusted for excellent or poor treatment. Additional pay, gifts of arms, armor, or magic items, and the rising fame (or infamy) of an employer can increase loyalty. Unjust treatment, poor prospects, or unfit conditions can decrease loyalty.</p>
                   <p>So long as a retainer is treated reasonably, receives the agreed payment, and is not exposed to unnecessary danger his loyalty will not be tested. In extreme circumstances, however, the referee will use reaction checks or morale checks to determine how a retainer will behave.</p>
                   
-                  <h3 id="reaction-and-morale-checks">Reaction and Morale Checks</h3>
+                  <h4>Reaction and Morale Checks</h4>
                   <p>When required, reaction and morale checks are made by the referee with a throw of two six-sided dice and are adjusted for loyalty. A high result indicates a positive reaction or good morale and a low result indicates a negative reaction or poor morale.</p>
                   <p>Retainers will obey orders to the best of their ability so long as their morale holds. A poor morale check can result in refusal to perform; exactly how this plays out is left to the referee&apos;s discretion. It could result in dissension, refusal to undertake a task or join combat, withdrawal from combat, desertion, surrender to the enemy, complete rout, and so on.</p>
                   <p>Excepting unintelligent monsters (who never check morale) most enemies are also subject to failures of morale.</p>
                   
                   <h3 id="relatives">Relatives</h3>
                   <p>Player characters possess arms, armor, and equipment from the outset and&#8212;if they are fortunate&#8212;can accumulate considerable wealth during their adventures. Thus a character is permitted to name an heir to his estate should he meet an untimely end. If he should mysteriously vanish &quot;death&quot; can be declared after 30 days of unexplained absence.</p>
-                  <p>Once death has been established all worldly possessions are passed to the designated heir, if there is one, or else to the realm if there is not. Should there be an heir he takes possession of all properties, goods, and valuables that belonged to the departed less a 10% inheritance tax which is payable to the realm. The realm may also enforce payment of a bond to any hirelings and retainers, guaranteeing the return of their possessions and any accrued pay to their families.</p>
-                  <p>Should the character unexpectedly return to reclaim his estate the inheritance tax will be payable again. The referee will adjudicate the reaction of the disinherited heir who might intrigue to retain control of the estate. In any case, his loyalty will suffer a 0 to &#8722;5 adjustment (one six-sided die &#8722;1) if he is kept on as part of the character&apos;s household or retinue.</p>
+                  <p>Once death has been established all worldly possessions are passed to the designated heir, if there is one, or else to the realm if there is not. Should there be an heir he takes possession of all properties, goods, and valuables that belonged to the departed minus a 10% inheritance tax which is payable to the realm. The realm may also enforce payment of a bond to any hirelings and retainers, guaranteeing the return of their possessions and any accrued pay to their families.</p>
+                  <p>Should the character unexpectedly return to reclaim his estate the inheritance tax will be payable again. The referee will adjudicate the reaction of the disinherited heir who might intrigue to retain control of the estate. In any case, his loyalty will suffer a 0 to &#8722;5 adjustment (one six-sided die &#8722;6) if he is kept on as part of the character&apos;s household or retinue.</p>
                   
-                  <h3 id="cost-of-upkeep">Cost of Upkeep</h3>
+                  <h3 id="upkeep">Cost of Upkeep</h3>
                   <p>While dwelling in a village, town, or city a character must pay upkeep for himself and his entourage. At its simplest the cost of upkeep for middling quarters and fare is 1 gp per month per 100 experience points the character has.</p>
                   <p>A character who desires fine cuisine and luxurious accommodation must consent to pay higher costs, varying with extravagance. Alternatively, the referee may require players to itemize individual expenses.</p>
                   <p>The cost of upkeep is payable only so long as the character maintains urban living arrangements. Living off the land incurs no costs and thus payments cease when the character journeys to a wilderness area. When he builds a stronghold of his own he may collect taxes from its inhabitants to help cover his costs.</p>
@@ -3664,7 +3734,7 @@
                   <h5 id="dryads">Dryads</h5>
                   <p>are shy and reclusive creatures who have exhaustive knowledge of their forest homes. Each is bound to an individual tree and can go no farther than 24&quot; from it. A dryad is non-violent but can employ a powerful charm causing a saving throw versus spells at &#8722;2. Those who fail will never leave the forest.</p>
                   
-                  <h5 id="dwarfs_1">dwarfs</h5>
+                  <h5 id="dwarfs_1">Dwarfs</h5>
                   <p>dwell underground and see equally well by day or by night. They are redoubtable fighting-men and ogres, trolls, and giants score only half damage against them. Away from the lair a troop of dwarfs is always accompanied by one 1st-6th level fighting-man for every 40 dwarfs. In their stronghold lair there will instead be one 3rd-6th level fighting-man for every 40 dwarfs. A leveled fighting-man has a 10% chance per level of being equipped with magic armor, a magic shield, and a magic axe or hammer (check separately for each). A dwarf stronghold is 50% likely to be additionally defended by domesticated animals such as 1-6 bears or 1-8 giant weasels (check separately for each).</p>
                   
                   <h5 id="an-efreeti">An Efreeti</h5>
