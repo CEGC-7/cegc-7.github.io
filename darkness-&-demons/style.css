@@ -22,12 +22,9 @@ html, body {
   --app-font: "Georgia", serif;
 }
 
-body,
-#page-content-wrapper,
-#sidebar,
+body, .page, #sidebar,
 #sidebar h1, #sidebar h2, #sidebar h3, #sidebar h4, #sidebar h5, #sidebar h6,
-#page-content-wrapper h1, #page-content-wrapper h2, #page-content-wrapper h3,
-#page-content-wrapper h4, #page-content-wrapper h5, #page-content-wrapper h6,
+.page h1, .page h2, .page h3, .page h4, .page h5, .page h6,
 #font-toggle {
   font-family: var(--app-font);
   line-height: 1.6;
@@ -50,6 +47,8 @@ h5::before {
   white-space: pre;
 }
 
+.inline-h5 { font-size: 1.05em; }
+
 .layout {
   display: flex;
   height: 100vh;
@@ -68,7 +67,7 @@ h5::before {
   width: 300px;
 }
 
-#page-content-wrapper {
+.page {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
@@ -79,7 +78,11 @@ h5::before {
 .separator {
   height: 1px;
   width: 100%;
+  background-color: #4a7a4a;
 }
+
+.lpad { padding-left: 1em; }
+.lborder { border-left: 1px solid #4a7a4a; }
 
 /* ============================= */
 /* Title, byline, and footer     */
@@ -115,7 +118,6 @@ h5::before {
 .copyright {
   font-size: 0.8rem;
 }
-
 /* ============================= */
 /* Headings, glossary, lists     */
 /* ============================= */
@@ -139,11 +141,11 @@ h2 {
 }
 
 /* Document lists (inside content) */
-#page-content-wrapper ul {
+.page ul {
   margin-left: 1.5rem;
   list-style-type: square;
 }
-#page-content-wrapper li {
+.page li {
   margin: 0.25rem 0;
 }
 
@@ -157,7 +159,7 @@ h2 {
   border: 1px solid;
   padding: 0.5rem;
 }
- table {
+table {
   width: 100%;
   table-layout: auto;
 }
@@ -170,6 +172,18 @@ table th {
   display: table-cell;
 }
 
+.largetable {
+  position: relative;
+}
+.largetable thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: inherit;
+  border-bottom: 1px solid;
+  top: -2rem;
+}
+
 /* Zebra striping */
 table tbody tr:nth-child(odd) {
   background-color: var(--row-odd);
@@ -178,15 +192,10 @@ table tbody tr:nth-child(even) {
   background-color: var(--row-even);
 }
 
-table tbody tr td .lpad {
-  padding-left: 2em;
-}
-
 /* ============================= */
 /* Links                         */
 /* ============================= */
 
-/* Preserve original link styling and hover behavior */
 a {
   text-decoration: none;
   color: inherit;
@@ -236,40 +245,40 @@ a:hover {
   float: right;
 }
 #sidebar li:has(ul) > a::after {
-  content: "▶";
+  content: "\25B6";
   font-size: 0.8em;
 }
 #sidebar li.expanded > a::after {
-  content: "▼";
+  content: "\25BC";
 }
 
 /* ============================= */
-/* Scrollbar styling (dark)      */
+/* Scrollbar styling             */
 /* ============================= */
 
 /* Firefox */
-#sidebar, #page-content-wrapper {
+#sidebar, .page {
   scrollbar-color: #3a5c3a #0d1a0d; /* thumb, track */
   scrollbar-width: thin;
 }
 
 /* WebKit (Chrome/Edge/Safari) */
 #sidebar::-webkit-scrollbar,
-#page-content-wrapper::-webkit-scrollbar {
+.page::-webkit-scrollbar {
   width: 5px;
 }
 #sidebar::-webkit-scrollbar-track,
-#page-content-wrapper::-webkit-scrollbar-track {
+.page::-webkit-scrollbar-track {
   background: #0d1a0d;
 }
 #sidebar::-webkit-scrollbar-thumb,
-#page-content-wrapper::-webkit-scrollbar-thumb {
+.page::-webkit-scrollbar-thumb {
   background-color: #3a5c3a;
   border-radius: 6px;
   border: 2px solid #0d1a0d;
 }
 #sidebar::-webkit-scrollbar-thumb:hover,
-#page-content-wrapper::-webkit-scrollbar-thumb:hover {
+.page::-webkit-scrollbar-thumb:hover {
   background-color: #4b7a4b;
 }
 
@@ -469,7 +478,7 @@ a:hover {
 
 /* Arrow flips when collapsed */
 #sidebar.collapsed #sidebar-collapse {
-  content: "▶";
+  content: "\25B6";
 }
 
 /* ============================= */
@@ -487,13 +496,11 @@ a:hover {
     --row-even: #d9e6d9;
   }
 
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, .inline-h5, .h7 {
     color: #2f5d2f;
     border-color: #4a7a4a;
   }
 
-  .separator { background-color: #4a7a4a }
-  
   .byline .subtitle { color: #555; }
   .copyright { color: #777; }
 
@@ -505,18 +512,19 @@ a:hover {
     background-color: #edf5ed;
   }
 
-  table, table th, table td {
-    color: #000 !important; /* force black text */
+  .largetable thead th {
+    background-color: #edf5ed;
+    border-color: rgba(74,122,74,0.7)
   }
 
   /* Light scrollbars */
-  #sidebar, #page-content-wrapper {
+  #sidebar, .page {
     scrollbar-color: #90b890 #e6efe6; /* thumb, track */
   }
   #sidebar::-webkit-scrollbar-track,
-  #page-content-wrapper::-webkit-scrollbar-track { background: #e6efe6; }
+  .page::-webkit-scrollbar-track { background: #e6efe6; }
   #sidebar::-webkit-scrollbar-thumb,
-  #page-content-wrapper::-webkit-scrollbar-thumb {
+  .page::-webkit-scrollbar-thumb {
     background-color: #90b890;
     border-color: #e6efe6;
   }
@@ -556,12 +564,10 @@ a:hover {
     --row-even: #1a2e1a;
   }
 
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, .inline-h5, .h7 {
     color: #8fc48f;
     border-color: #4a7a4a;
   }
-
-  .separator { background-color: #4a7a4a }
 
   .byline .subtitle { color: #a3d9a3; }
   .copyright { color: #a3d9a3; }
@@ -574,8 +580,9 @@ a:hover {
     background-color: #142414;
   }
 
-  table, table th, table td {
-    color: #fff !important;
+  .largetable thead th {
+    background-color: #142414;
+    border-color: rgba(74,122,74,0.7)
   }
 
   /* Button colors for dark theme */
@@ -623,3 +630,9 @@ a:hover {
   image-rendering: smooth;
   image-rendering: high-quality;
 }
+
+.nomargins { margin: 0; }
+.nomargins-l { margin-left: 0; }
+.nomargins-r { margin-right: 0; }
+.nomargins-b { margin-bottom: 0; }
+.nomargins-t { margin-top: 0; }

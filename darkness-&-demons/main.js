@@ -1,3 +1,4 @@
+//FONT
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('font-toggle');
   function applyButtonFont() {
@@ -27,5 +28,39 @@ document.addEventListener('DOMContentLoaded', () => {
         : 'Georgia, serif'
     );
     applyButtonFont();
+  });
+});
+
+//SCROLLING
+document.addEventListener("DOMContentLoaded", () => {
+  if (location.hash) {
+    const target = document.querySelector(location.hash);
+    if (target) {
+      target.scrollIntoView({behavior: "auto", block: "start"});
+    }
+  }
+});
+
+//SIDEBAR
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.getElementById("sidebar");
+  const collapseBtn = document.getElementById("sidebar-collapse");
+
+  collapseBtn.addEventListener("click", () => {
+    const collapsed = sidebar.classList.toggle("collapsed");
+
+    collapseBtn.textContent = collapsed ? "\u25B6" : "\u25C0";
+    collapseBtn.setAttribute("aria-pressed", collapsed ? "true" : "false");
+  });
+});
+
+//CONTENTS
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("#sidebar li:has(ul) > a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const parent = link.parentElement;
+      parent.classList.toggle("expanded");
+    });
   });
 });
