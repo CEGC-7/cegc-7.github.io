@@ -47,7 +47,7 @@ h5::before {
   white-space: pre;
 }
 
-.inline-h5 { font-size: 1.05em; }
+h4, .inline-h5 { font-size: 1.05em; }
 
 .layout {
   display: flex;
