@@ -30,7 +30,7 @@
 	  <ul>
 	    <li>
 <!--
-	      <a href="#crs">Character Record Sheet</a>
+	      <a href="#character-sheet">Character Record Sheet</a>
 -->
 	    </li>
 	  </ul>
@@ -183,7 +183,7 @@
 			                  
                   <p>While a high score may predispose a player toward a particular class and a low score may dissuade him, ability scores do not preclude the selection of any class. Nor do they determine a character&apos;s success (player strategy being paramount in that).</p>
                   <p>Suppose, for example, an intending player was given these ability scores:</p>
-				<div class="table-wrapper table-align-left">
+				<div class="table-wrapper">
 					<table>
 						<tbody>
 							<tr>
@@ -3932,6 +3932,9 @@
                   <p>If a single attack roll is used a hit will cause 1-6 hit points of damage and be adjusted for strength, magical weaponry, and other factors. Spears set to receive a charge and charging lancers will instead cause 2-12 hit points damage and large monsters can cause more damage. If multiple attack rolls are used versus normal-types, each hit causes exactly 1-6 hit points of damage; all other adjustments are already represented by the multiple attack rolls.</p>
                   <p>Should any character be reduced to zero (or fewer) hit points, he is slain. Whether or not sustaining damage will otherwise affect a character is left to the referee&apos;s discretion. Any unresolved attacks of a slain character are wasted.</p>
                   
+                  <h5 id="helms">Helms</h5>
+                  <p>are not considered to be armor but often have magical properties. They do not adjust armor class and magic-users are not restricted from wearing them. Should these be worn in battle the referee may assume that 1 blow in 6 is aimed at the head. If that blow should connect the helm is struck and requires a successful saving throw to avoid being smashed.</p>
+
                   <h4 id="subduing">Attacking to Subdue</h4>
                   <p>Most intelligent monsters (including man-types) can be subdued and made to surrender if this intent is announced prior to attacks being resolved. Damage from subdual hits is recorded independently of damage from actual hits. After any turn in which damage is suffered the referee must determine the sum of subdual damage sustained as a percentage of actual hit points. Confidence is then checked by throwing a hundred-sided die with any result lower than the percentage of subdual damage sustained indicating the monster is subdued.</p>
                   <p>Subdued monsters will initially obey without reaction checks and can be sold as slaves, pets, or curiosities or brought into service as retainers if an acceptable offer is made.</p>
@@ -9238,97 +9241,537 @@
                   <p>When a monster lair is discovered it will contain the monsters&apos; treasure hoard (if any) according to its stated treasure type. The referee should dice for each category of treasure (copper, silver, gold, etc.) separately, firstly checking to determine if the category of treasure is present in the hoard and secondly, if it is present, to determine quantity.</p>
                   <p>The percentage figures are the chance that the category will be present and the range figures are quantites. For example, orcs have treasure type C so there is a 17&#37; chance their lair will contain 1,000-12,000 cp, a 33&#37; chance their lair will contain 1,000-4,000 sp, a 33&#37; chance their lair will contain 1-4 gems, a 33&#37; chance their lair will contain 1 piece of jewelry, and a 17&#37; chance their lair will contain 2 items from the &quot;Any Treasures&quot; table.</p>
                   <p>Note that monsters do not carry treasure outside their lair unless stated otherwise in the explanation of monsters.</p>
-                  <div id="table3_13"></div>
-                  <div id="table3_14"></div>
-                  <div id="table3_15"></div>
+				<div class="table-wrapper">
+					<h4>Table 3.2 &#8212; Treasure Types</h4>
+					<table>
+						<thead>
+							<tr>
+								<th rowspan="2">Type</th>
+								<th colspan="3">Thousands of Coins</th>
+								<th rowspan="2">Gems</th>
+								<th rowspan="2">Pieces of<br>Jewelry</th>
+								<th rowspan="2">Maps</th>
+								<th rowspan="2">Magic Items</th>
+							</tr>
+							<tr>
+								<th>Copper</th>
+								<th>Silver</th>
+								<th>Gold</th>
+							</tr>
+				    </thead>
+				    <tbody>
+							<tr>
+								<td>A1</td>
+								<td>33&#37;<br>1-4</td>
+								<td>33&#37;<br>1-6</td>
+								<td>33&#37;<br>1-12</td>
+								<td>50&#37;<br>3-36</td>
+								<td>50&#37;<br>1-8</td>
+								<td colspan="2">33&#37;<br>Any 3</td>
+							</tr>
+							<tr>
+								<td>A2</td>
+								<td>33&#37;<br>1-4</td>
+								<td>33&#37;<br>1-4</td>
+								<td>33&#37;<br>1-6</td>
+								<td>50&#37;<br>2-40</td>
+								<td>50&#37;<br>1-10</td>
+								<td>.</td>
+								<td>67&#37;<br>3 magic items</td>
+							</tr>
+							<tr>
+								<td>A3</td>
+								<td>.</td>
+								<td>.</td>
+								<td>67&#37;<br>2-24</td>
+								<td>67&#37;<br>4-48</td>
+								<td>67&#37;<br>1-12</td>
+								<td>50&#37;<br>1 map</td>
+								<td>.</td>
+							</tr>
+							<tr>
+								<td>B</td>
+								<td>50&#37;<br>1-8</td>
+								<td>33&#37;<br>1-4</td>
+								<td>33&#37;<br>1-2</td>
+								<td>33&#37;<br>1-4</td>
+								<td>33&#37;<br>1</td>
+								<td>.</td>
+								<td>17&#37;<br>1 magic weapon or armor</td>
+							</tr>
+							<tr>
+								<td>C</td>
+								<td>17&#37;<br>1-12</td>
+								<td>33&#37;<br>1-4</td>
+								<td>.</td>
+								<td>33&#37;<br>1-4</td>
+								<td>33&#37;<br>1</td>
+								<td colspan="2">17&#37;<br>Any 2</td>
+							</tr>
+							<tr>
+								<td>D</td>
+								<td>17&#37;<br>1-4</td>
+								<td>17&#37;<br>1-10</td>
+								<td>67&#37;<br>1-6</td>
+								<td>33&#37;<br>1-8</td>
+								<td>33&#37;<br>1-2</td>
+								<td colspan="2">17&#37;<br>Any 2, 1 potion</td>
+							</tr>
+							<tr>
+								<td>E</td>
+								<td>.</td>
+								<td>33&#37;<br>1-10</td>
+								<td>33&#37;<br>1-6</td>
+								<td>17&#37;<br>1-6</td>
+								<td>17&#37;<br>1</td>
+								<td colspan="2">33&#37;<br>Any 3, 1 scroll</td>
+							</tr>
+							<tr>
+								<td>F</td>
+								<td>.</td>
+								<td>17&#37;<br>1-12</td>
+								<td>50&#37;<br>1-10</td>
+								<td>17&#37;<br>3-30</td>
+								<td>17&#37;<br>1-6</td>
+								<td colspan="2">33&#37;<br>Any 3 non-weapons, 1 potion, 1 scroll</td>
+							</tr>
+							<tr>
+								<td>G</td>
+								<td>.</td>
+								<td>.</td>
+								<td>83&#37;<br><span class="nowrap">3-36</span></td>
+								<td>33&#37;<br>2-12</td>
+								<td>33&#37;<br>1-8</td>
+								<td colspan="2">33&#37;<br>Any 4, 1 scroll</td>
+							</tr>
+							<tr>
+								<td>H</td>
+								<td>33&#37;<br>1-20</td>
+								<td>50&#37;<br>1-100</td>
+								<td>83&#37;<br><span class="nowrap">4-48</span></td>
+								<td>50&#37;<br>1-100</td>
+								<td>50&#37;<br>2-40</td>
+								<td colspan="2">17&#37;<br>Any 4, 1 potion, 1 scroll</td>
+							</tr>
+							<tr>
+								<td>I</td>
+								<td>.</td>
+								<td>.</td>
+								<td>.</td>
+								<td>50&#37;<br>2-16</td>
+								<td>50&#37;<br>1-4</td>
+								<td colspan="2">17&#37;<br>Any 1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="table-wrapper">
+					<h4>Table 3.3 &#8212; Any Treasure</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-10</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1-7</td>
+								<td>Magic item</td>
+							</tr>
+							<tr>
+								<td>8-9</td>
+								<td>Map</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Magic item &amp; map</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="table-wrapper">
+					<h4>Table 3.4 &#8212; Maps</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-20</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1-10</td>
+								<td>Treasure map</td>
+							</tr>
+							<tr>
+								<td>11-17</td>
+								<td>Magic item map</td>
+							</tr>
+							<tr>
+								<td>18-20</td>
+								<td>Treasure &amp; magic item map</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
                   <p>Where maps or specific types of magic items are indicated the referee should dice on the appropriate treasure tables.</p>
                   <p>Maps reveal the location of a treasure trove which may contain valuables, or magic items, or both. A map will indicate the type and approximate worth of the treasure, which can be determined randomly or by the referee. A map will usually be cryptic or obscured&#8212;requiring the use of a comprehend languages spell or the expertise of a canny thief to decipher. The treasure indicated therein will be guarded by appropriate traps and/or monsters.</p>
                   <p>The value of gems and pieces of jewelry are individually determined.</p>
-                  <div id="table3_16"></div>
-                  <div id="table3_17"></div>
-                  <div id="table3_18"></div>
+				<div class="table-wrapper">
+					<h4>Table 3.5 &#8212; Gem Value</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-100</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01-08</td>
+								<td>10 gp</td>
+							</tr>
+							<tr>
+								<td>09-22</td>
+								<td>30 gp</td>
+							</tr>
+							<tr>
+								<td>23-67</td>
+								<td>100 gp</td>
+							</tr>
+							<tr>
+								<td>68-87</td>
+								<td>300 gp</td>
+							</tr>
+							<tr>
+								<td>88-98</td>
+								<td>1,000 gp</td>
+							</tr>
+							<tr>
+								<td>99</td>
+								<td>3,000 gp</td>
+							</tr>
+							<tr>
+								<td>00</td>
+								<td>10,000 gp</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="table-wrapper">
+					<h4>Table 3.6 &#8212; Jewelery Value</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-8</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>200-1,200 gp</td>
+							</tr>
+							<tr>
+								<td>2-3</td>
+								<td>300-1,800 gp</td>
+							</tr>
+							<tr>
+								<td>4-5</td>
+								<td>400-4,000 gp</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>1,000-6,000 gp</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>2,000-8,000 gp</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>2,000-12,000 gp</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="table-wrapper">
+					<h4>Table 3.7 &#8212; Magic Items</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-20</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1-3</td>
+								<td>Armor</td>
+							</tr>
+							<tr>
+								<td>4-5</td>
+								<td>Miscellaneous magic item</td>
+							</tr>
+							<tr>
+								<td>6-7</td>
+								<td>Miscellaneous weapon</td>
+							</tr>
+							<tr>
+								<td>8-10</td>
+								<td>Potion</td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td>Ring</td>
+							</tr>
+							<tr>
+								<td>12-14</td>
+								<td>Spell book or scroll</td>
+							</tr>
+							<tr>
+								<td>15-16</td>
+								<td>Staff or wand</td>
+							</tr>
+							<tr>
+								<td>17-20</td>
+								<td>Sword</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>                  
                   
-                  
-                  <h2 id="explanation-of-treasures">Explanation of Treasures</h2>
+                  <h2 id="treasures-explanation">Explanation of Treasures</h2>
                   
                   <h3 id="armor-and-shields">Armor and Shields</h3>
                   <p>A suit of magical armor or an enchanted shield will reduce an opponent&apos;s attack rolls by an amount equal to its adjustment. Thus, a suit of plate armor &#43;1 will cause enemies to attack at &#8722;1, a shield &#43;2 will cause enemies to attack at &#8722;2, and so on. If a character wearing magical armor also carries an enchanted shield of greater potency, its greater adjustment is applicable on any turn he throws a 5 or 6 on a six-sided die.</p>
-                  <div id="table3_19"></div>
+				<div class="table-wrapper">
+					<h4>Table 3.8 &#8212; Armor</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-100</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01-30</td>
+								<td>Shield &#43;1</td>
+							</tr>
+							<tr>
+								<td>31-45</td>
+								<td>Shield &#43;2</td>
+							</tr>
+							<tr>
+								<td>46-50</td>
+								<td>Shield &#43;3</td>
+							</tr>
+							<tr>
+								<td>51-75</td>
+								<td>Plate armor &#43;1</td>
+							</tr>
+							<tr>
+								<td>76-85</td>
+								<td>Plate armor &#43;2</td>
+							</tr>
+							<tr>
+								<td>86-95</td>
+								<td>Plate armor &amp; shield &#43;1</td>
+							</tr>
+							<tr>
+								<td>96-00</td>
+								<td>Plate armor &amp; shield &#43;2</td>
+							</tr>
+				    </tbody>
+				    <tfoot>
+							<tr>
+								<td colspan="2">Magic armor is man-sized unless the referee rules otherwise.</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
                   
-                  <h3 id="miscellaneous-magic-items">Miscellaneous Magic Items</h3>
+                  <h3 id="magic-items">Miscellaneous Magic Items</h3>
                   <p>These items are usable by all characters unless noted otherwise.</p>
-                  <div id="table3_20"></div>
+				<div class="table-wrapper">
+					<h4>Table 3.9 &#8212; Miscellaneous Magic Items</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-100</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01-04</td>
+								<td>Amulet of Nondetection</td>
+							</tr>
+							<tr>
+								<td>05-08</td>
+								<td>Bag of Holding</td>
+							</tr>
+							<tr>
+								<td>09-14</td>
+								<td>Boots of Elvenkind</td>
+							</tr>
+							<tr>
+								<td>15-18</td>
+								<td>Boots of Levitation</td>
+							</tr>
+							<tr>
+								<td>19-22</td>
+								<td>Boots of Speed</td>
+							</tr>
+							<tr>
+								<td>23-26</td>
+								<td>Boots of Striding and Springing</td>
+							</tr>
+							<tr>
+								<td>27-30</td>
+								<td>Cloak of Displacement</td>
+							</tr>
+							<tr>
+								<td>31-36</td>
+								<td>Cloak of Elvenkind</td>
+							</tr>
+							<tr>
+								<td>37-42</td>
+								<td>Crystal Ball</td>
+							</tr>
+							<tr>
+								<td>43-44</td>
+								<td>Panic Drums</td>
+							</tr>
+							<tr>
+								<td>45-48</td>
+								<td>Efreet Bottle</td>
+							</tr>
+							<tr>
+								<td>49-52</td>
+								<td>Flying Broomstick</td>
+							</tr>
+							<tr>
+								<td>53-54</td>
+								<td>Flying Carpet</td>
+							</tr>
+							<tr>
+								<td>55-61</td>
+								<td>Gauntlets of Ogre Power</td>
+							</tr>
+							<tr>
+								<td>62-65</td>
+								<td>Girdle of Giant&apos;s Might</td>
+							</tr>
+							<tr>
+								<td>66-72</td>
+								<td>Helm of Alignment Change</td>
+							</tr>
+							<tr>
+								<td>73-76</td>
+								<td>Helm of Comprehension</td>
+							</tr>
+							<tr>
+								<td>77-80</td>
+								<td>Helm of Telepathy</td>
+							</tr>
+							<tr>
+								<td>81-82</td>
+								<td>Helm of Teleportation</td>
+							</tr>
+							<tr>
+								<td>83-84</td>
+								<td>Horn of Blasting</td>
+							</tr>
+							<tr>
+								<td>85-90</td>
+								<td>Medallion of Thoughts</td>
+							</tr>
+							<tr>
+								<td>91-92</td>
+								<td>Mirror of Life Trapping</td>
+							</tr>
+							<tr>
+								<td>93-96</td>
+								<td>Object of Elemental Command</td>
+							</tr>
+							<tr>
+								<td>97-00</td>
+								<td>Scarab of Protection</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
                   
-                  <h5 id="amulet-of-proof-against-detection">Amulet of Proof Against Detection</h5>
+                  <h4 id="amulet-nondetection">Amulet of Nondetection</h4>
                   <p>An amulet that blocks all forms of magical detection including by crystal ball, locate object, detect invisibility, sixth sense, and witch eye. It is ineffective against mundane detection, however.</p>
                   
-                  <h5 id="bag-of-holding">Bag of Holding</h5>
-                  <p>An amazing sack that can hold up to 10,000 coins and appear only partially full and weigh only 50 lb. Anything not wider than 3ft &#215; 3ft can be fit into it.</p>
+                  <h4 id="bag-holding">Bag of Holding</h4>
+                  <p>An amazing sack that can hold up to 500 lb and appear only partially full and weigh only 50 lb. Anything not wider than 3ft &#215; 3ft can be fit into it.</p>
                   
-                  <h5 id="boots-of-elvenkind">Boots of Elvenkind</h5>
+                  <h4 id="boots-elvenkind">Boots of Elvenkind</h4>
                   <p>Elvish footwear that enables the wearer to move almost completely silently.</p>
                   
-                  <h5 id="boots-of-levitation">Boots of Levitation</h5>
+                  <h4 id="boots-levitation">Boots of Levitation</h4>
                   <p>Empowers the wearer to levitate as per the magic-user spell of the same name but with unlimited duration.</p>
                   
-                  <h5 id="boots-of-speed">Boots of Speed</h5>
+                  <h4 id="boots-speed">Boots of Speed</h4>
                   <p>Anyone so shod may run at up to 24&quot; for a full day after which he must rest for a day.</p>
                   
-                  <h5 id="boots-of-striding-and-springing">Boots of Striding and Springing</h5>
+                  <h4 id="boots-striding-springing">Boots of Striding and Springing</h4>
                   <p>The wearer can sustain his full speed indefinitely without need of rest. Furthermore, thrice per day he can make a great leap up to 6&quot; forward or 2&quot; directly upward or backward, landing soundly on his feet.</p>
 
-                  <h5 id="cloak-of-displacement">Cloak of Displacement</h5>
-                  <p>The wearer of this cloak appears slightly displaced in time and space adding &#43;2 to saving throws versus wands and rays and adjusting physical attack rolls by &#8722;2.</p>
+                  <h4 id="cloak-displacement">Cloak of Displacement</h4>
+                  <p>The wearer of this cloak appears slightly displaced in time and space adding &#43;2 to saving throws versus wands and rays and adjusting physical attack rolls against him by &#8722;2.</p>
 
-                  <h5 id="cloak-of-elvenkind">Cloak of Elvenkind</h5>
+                  <h4 id="cloak-elvenkind">Cloak of Elvenkind</h4>
                   <p>A wondrous cloak that renders the wearer nearly invisible.</p>
 
-                  <h5 id="crystal-ball">Crystal Ball</h5>
+                  <h4 id="crystal-ball">Crystal Ball</h4>
                   <p>Employable by magic-users only, these provide vision of a desired place, person, or object. Great distance and unfamiliarity will decrease the chance that the subject can be located, however. Except as noted below, the other senses will remain unsatisfied. Spells such as read magic, darkvision, and detect invisibility will affect what may be seen but no spell or spell-like effect can be cast through a crystal ball. Most crystal balls enable only clairvoyance but 1 in 6 will also permit the magic-user to hear thoughts exactly as does the sixth sense spell. These may be used no more than thrice per day without risk of being feebleminded and each turn of usage requires a turn of rest thereafter.</p>
                   
-                  <h5 id="drums-of-panic">Drums of Panic</h5>
+                  <h4 id="panic-drums">Panic Drums</h4>
                   <p>This pair of great drums are too large to be carried by a man-type but may be transported on a wagon or beast of burden. When beaten these drums will panic all living things at least 2&quot; but not more than 12&quot; away. Heroic-types are allowed a saving throw versus spells to resist; superheroic-types are unaffected. Panicked creatures will flee at their fastest rate for a turn.</p>
                   
-                  <h5 id="efreet-bottle">Efreet Bottle</h5>
+                  <h4 id="efreet-bottle">Efreet Bottle</h4>
                   <p>The efreet trapped in this bottle will grudgingly serve whomever should free him (and no other) for a year and a day.</p>
                   
-                  <h5 id="flying-broomstick">Flying Broomstick</h5>
+                  <h4 id="flying-broomstick">Flying Broomstick</h4>
                   <p>This magical broom is employable by magic-users only and can fly at 24&quot; per turn with one rider, or at 18&quot; per turn with two riders.</p>
 
-                  <h5 id="flying-carpet">Flying Carpet</h5>
+                  <h4 id="flying-carpet">Flying Carpet</h4>
                   <p>Can carry one or two riders at 24&quot; per turn or three riders at 12&quot; per turn.</p>
 
-                  <h5 id="gauntlets-of-ogre-power">Gauntlets of Ogre Power</h5>
-                  <p>The wearer of these gains strength equal to an ogre, enabling him to perform feats of great strength and to deal &#43;2 hit points damage in combat.</p>
+                  <h4 id="gauntlets-ogre-power">Gauntlets of Ogre Power</h4>
+                  <p>The wearer of these gains strength equal to an ogre, enabling him to perform feats of great strength and to deal &#43;2 hit points of damage in combat.</p>
 
-                  <h5 id="girdle-of-giants-might">Girdle of Giant&apos;s Might</h5>
+                  <h4 id="girdle-giants-might">Girdle of Giant&apos;s Might</h4>
                   <p>The wearer of this wide leather girdle gains strength equal to a hill giant. He is capable of mighty feats of strength including hurling rocks and dealing 2-12 hit points of damage in combat.</p>
 
-                  <h5 id="magical-helms">Magical Helms</h5>
-                  <p>are not considered to be armor. They do not adjust armor class and magic-users are not restricted from wearing them. Should these be worn in battle the referee may assume that 1 blow in 6 is aimed at the head. If that blow should connect the helm is struck and requires a successful saving throw to avoid being smashed.</p>
+                  <h4 id="helm-alignment-change">Helm of Alignment Change</h4>
+                  <p>If worn, this helm immediately causes lawful persons to become chaotic and vice versa. Neutral persons are 50&#37; likely to change either way. Removing the helm thereafter will not revert the subject&apos;s alignment; this can only be accomplished by a wish. Of course the affected person will resist such efforts to the utmost of his ability.</p>
 
-                  <h5 id="helm-of-alignment-change">Helm of Alignment Change</h5>
-                  <p>If worn, this helm immediately causes lawful persons to become chaotic and vice versa. Neutral persons are 50&#37; likely to change either way. Removing the helm thereafter will not revert the subject&apos;s alignment&#8212;this can only be accomplished by a wish. Of course the affected person will resist such efforts to the utmost of his ability.</p>
-
-                  <h5 id="helm-of-comprehend-languages-and-magic">Helm of Comprehend Languages and Magic</h5>
+                  <h4 id="helm-comprehension">Helm of Comprehension</h4>
                   <p>The wearer can read any magical inscriptions, treasure maps, and mundane writing.</p>
 
-                  <h5 id="helm-of-telepathy">Helm of Telepathy</h5>
+                  <h4 id="helm-telepathy">Helm of Telepathy</h4>
                   <p>This helm enables the wearer to probe subjects within 9&quot; in exactly the same manner as the sixth sense spell. Additionally, the wearer can implant a mental suggestion in any intelligent subject so sensed. If a suggestion is attempted the referee throws a reaction check for the subject, adjusting the result by &#43;2. A positive or better reaction indicates that the subject will enact any reasonable (according to his alignment) suggestion.</p>
 
-                  <h5 id="helm-of-teleportation">Helm of Teleportation</h5>
+                  <h4 id="helm-teleportation">Helm of Teleportation</h4>
                   <p>This helm grants magic-users only the ability to teleport up to three times per day as per the magic-user spell. If the magic-user also has the teleport spell memorized that spell will not be erased from memory when cast for so long as this helm is worn.</p>
 
-                  <h5 id="horn-of-blasting">Horn of Blasting</h5>
+                  <h4 id="horn-blasting">Horn of Blasting</h4>
                   <p>A blast upon this great horn delivers 2-12 hit points of damage to all living things within a cone-shaped area of effect 10&quot; long and up to 3&quot; wide. Survivors are deafened for a turn and any buildings or fortifications suffer structural damage.</p>
                   
-                  <h5 id="medallion-of-thoughts">Medallion of Thoughts</h5>
+                  <h4 id="medallion-thoughts">Medallion of Thoughts</h4>
                   <p>Grants the wearer use of the sixth sense spell except that there is 1 chance in 6 it will fail to perceive any particular subject.</p>
                   
-                  <h5 id="mirror-of-life-trapping">Mirror of Life Trapping</h5>
-                  <p>A shield-sized mirror that traps any man-type or undead who sees his own reflection at 1&quot; or closer. It is 90&#37; likely that an unwary subject will see his reflection in good light, but only 10&#37; likely if he is wary of the mirror&apos;s power. A magic-user can gaze into a mirror safely with a secret command word or the use of a gazeback spell. The mirror can contain 15-20 prisoners at one time with each being held individually in a private null dimension. Those so imprisoned remain unharmed but are completely powerless therein. A magic-user can call any prisoner to the surface of the mirror to converse, and if desired, can free them from the mirror. Breaking the mirror will free all prisoners simultaneously.</p>
+                  <h4 id="mirror-life-trapping">Mirror of Life Trapping</h4>
+                  <p>A shield-sized mirror that traps any man-type or undead who sees his own reflection at 1&quot; or closer. A magic-user can gaze into a mirror safely with a secret command word or the use of a gazeback spell. The mirror can contain 15-20 prisoners at one time with each being held individually in a private null dimension. Those so imprisoned remain unharmed but are completely powerless therein. A magic-user can call any prisoner to the surface of the mirror to converse, and if desired, can free them from the mirror. Breaking the mirror will free all prisoners simultaneously.</p>
                   
-                  <h5 id="object-of-commanding-elementals">Object of Commanding Elementals</h5>
+                  <h4 id="object-elemental-command">Object of Elemental Command</h4>
                   <p>These four objects are usable by magic-users only, each conjuring an elemental of a particular type. The conjuration requires a full turn of preparation and another of invocation. The elemental brought forth will then have 12 hit dice and be subject to the magic-user&apos;s will exactly as per the invoke elemental spell.</p>
                   <ul>
                     <li>Stone of Controlling Earth Elementals</li>
@@ -9337,126 +9780,378 @@
                     <li>Bowl of Commanding Water Elementals</li>
                   </ul>
                   
-                  <h5 id="scarab-of-protection">Scarab of Protection</h5>
+                  <h4 id="scarab-protection">Scarab of Protection</h4>
                   <p>Affords the wearer absolute immunity from disintegration, finger of death, level drain, vorpal swords, and curses. The scarab will nullify 2-12 such attacks before crumbling to dust.</p>
                   
                   <h3 id="miscellaneous-weaponry">Miscellaneous Weaponry</h3>
-                  <div id="table3_21"></div>
-                  
-                  <h5 id="arrows-and-bolts">Arrows and Bolts</h5>
+				<div class="table-wrapper">
+					<h4>Table 3.10 &#8212; Miscellaneous Weaponry</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-100</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01-13</td>
+								<td>Arrows or bolts &#43;1 (5-30)</td>
+							</tr>
+							<tr>
+								<td>14-20</td>
+								<td>Arrows or bolts &#43;2 (4-24)</td>
+							</tr>
+							<tr>
+								<td>21-30</td>
+								<td>Axe &#43;1</td>
+							</tr>
+							<tr>
+								<td>31-35</td>
+								<td>Axe &#43;2</td>
+							</tr>
+							<tr>
+								<td>36-42</td>
+								<td>Bow &#43;1</td>
+							</tr>
+							<tr>
+								<td>43-47</td>
+								<td>Dagger &#43;1, &#43;2 vs goblins &amp; hobgoblins</td>
+							</tr>
+							<tr>
+								<td>48-52</td>
+								<td>Dagger &#43;1, &#43;2 vs kobolds &amp; lizardmen</td>
+							</tr>
+							<tr>
+								<td>53-57</td>
+								<td>Dagger &#43;1, &#43;2 vs orcs &amp; gnolls</td>
+							</tr>
+							<tr>
+								<td>58-62</td>
+								<td>Dagger &#43;1, &#43;3 vs men</td>
+							</tr>
+							<tr>
+								<td>63-67</td>
+								<td>Flail &#43;1</td>
+							</tr>
+							<tr>
+								<td>68-70</td>
+								<td>Mace &#43;1</td>
+							</tr>
+							<tr>
+								<td>71-72</td>
+								<td>Mace &#43;2</td>
+							</tr>
+							<tr>
+								<td>73-77</td>
+								<td>Morning star &#43;1</td>
+							</tr>
+							<tr>
+								<td>78-82</td>
+								<td>Short sword &#43;1</td>
+							</tr>
+							<tr>
+								<td>83-84</td>
+								<td>Short sword &#43;1, &#43;3 vs man-types</td>
+							</tr>
+							<tr>
+								<td>85-89</td>
+								<td>Spear &#43;1</td>
+							</tr>
+							<tr>
+								<td>90-91</td>
+								<td>Spear &#43;2</td>
+							</tr>
+							<tr>
+								<td>92</td>
+								<td>Spear &#43;3</td>
+							</tr>
+							<tr>
+								<td>93-97</td>
+								<td>War hammer &#43;1</td>
+							</tr>
+							<tr>
+								<td>98-99</td>
+								<td>War hammer &#43;2</td>
+							</tr>
+							<tr>
+								<td>00</td>
+								<td>War hammer &#43;3</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+                  <h5 id="arrows-bolts">Arrows and Bolts</h5>
                   <p>(50&#37; chance of either) are usable by fighting-men only. The magical adjustment applies both to attack and damage rolls. The attack adjustment is cumulative with that of any magical bow so a &#43;1 arrow fired from a &#43;1 longbow would have a total attack adjustment of &#43;2.</p>
 
-                  <h5 id="axes">Axes</h5> 
+                  <br><h5 id="axes">Axes</h5> 
                   <p>(50&#37; chance of either battle axe or hand axe) are usable by fighting-men only. The magical adjustment for battle axes applies to both attack and damage rolls, but that for hand axes applies to attack rolls only. Hand axes can be hurled up to 3&quot; as a medium range missile attack.</p>
                   
-                  <h5 id="bows">Bows</h5>
+                  <br><h5 id="bows">Bows</h5>
                   <p>are equally likely to be crossbows, longbows, or short bows; all are usable by fighting-men only. The magical adjustment of these applies to attack rolls only.</p>
                   
-                  <h5 id="daggers">Daggers</h5>
+                  <br><h5 id="daggers">Daggers</h5>
                   <p>are usable by fighting-men, magic-users, and thieves. The magical adjustment applies to attack rolls only. The second adjustment (if given) is applicable to attack rolls versus a specific type. Daggers can be hurled up to 3&quot; as a medium range missile attack.</p>
 
-                  <h5 id="flails-and-maces">Flails and Maces</h5>
+                  <br><h5 id="flails-maces">Flails and Maces</h5>
                   <p>are usable by fighting-men and clerics. The magical adjustment applies to damage rolls only.</p>
 
-                  <h5 id="morning-stars">Morning Stars</h5>
+                  <br><h5 id="morning-stars">Morning Stars</h5>
                   <p>are usable by fighting-men only. The magical adjustment applies to damage rolls only.</p>
 
-                  <h5 id="short-swords">Short Swords</h5>
+                  <br><h5 id="short-swords">Short Swords</h5>
                   <p>are usable by fighting-men and thieves. The magical adjustment applies to attack rolls only. The second adjustment (if given) is applicable to attack rolls versus a specific type.</p>
 
-                  <h5 id="spears">Spears</h5>
+                  <br><h5 id="spears">Spears</h5>
                   <p>are usable by fighting-men only. The magical adjustment applies to attack rolls only but they can be hurled up to 3&quot; as a medium range missile attack, and three men can fight in a defensive spear wall across a 10ft wide passage. Spears can also be set against a charging foe to cause 2-12 hit points of damage on impact.</p>
                   
-                  <h5 id="war-hammers">War Hammers</h5>
+                  <br><h5 id="war-hammers">War Hammers</h5>
                   <p>are usable by fighting-men and clerics and the magical adjustment applies to damage rolls only. These can be hurled up to 3&quot; as a medium range missile attack.</p>
                   
-                  <h5 id="war-hammer-3">War Hammer &#43;3</h5>
-                  <p>In the hands of a fighting-man or cleric this weapon adds &#43;3 hit points to damage. In the hands of a dwarf, however, it causes 2-12 hit points of damage against all foes except giants, against which it causes 5-15 hit points of damage. Additionally, a dwarf can throw the war hammer &#43;3 up to 6&quot; and it will automatically fly back to his hand.</p>
+                  <h4 id="plus3-war-hammer">War Hammer &#43;3</h4>
+                  <p>In the hands of a fighting-man or cleric this weapon adds &#43;3 hit points to damage. In the hands of a dwarf, however, it causes 2-12 hit points of damage against all foes except giants, against which it causes 5-15 hit points of damage. Additionally, a dwarf can throw the &#43;3 war hammer up to 6&quot; and it will automatically fly back to his hand.</p>
                   
                   <h3 id="potions">Potions</h3>
                   <p>A potion flask contains exactly enough fluid to cause the prescribed effect, although a small sip may be tasted without altering its efficacy. The duration of any temporary effect is 7-12 turns unless stated otherwise.</p>
-                  <div id="table3_22"></div>
+				<div class="table-wrapper">
+					<h4>Table 3.11 &#8212; Potions</h4>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 20%;">1-100</th>
+								<th>Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>01-04</td>
+								<td>Abbreviation</td>
+							</tr>
+							<tr>
+								<td>05-08</td>
+								<td>Animal Mastery</td>
+							</tr>
+							<tr>
+								<td>09-12</td>
+								<td>Curing</td>
+							</tr>
+							<tr>
+								<td>13-16</td>
+								<td>Deception</td>
+							</tr>
+							<tr>
+								<td>17-19</td>
+								<td>Dragon Mastery</td>
+							</tr>
+							<tr>
+								<td>20-23</td>
+								<td>Exaggeration</td>
+							</tr>
+							<tr>
+								<td>24-27</td>
+								<td>Extra Curing</td>
+							</tr>
+							<tr>
+								<td>28-31</td>
+								<td>Flight</td>
+							</tr>
+							<tr>
+								<td>32-35</td>
+								<td>Gaseous Form</td>
+							</tr>
+							<tr>
+								<td>36-38</td>
+								<td>Giant Mastery</td>
+							</tr>
+							<tr>
+								<td>39-42</td>
+								<td>Giant’s Strength</td>
+							</tr>
+							<tr>
+								<td>43-46</td>
+								<td>Haste</td>
+							</tr>
+							<tr>
+								<td>47-49</td>
+								<td>Heroism</td>
+							</tr>
+							<tr>
+								<td>50-53</td>
+								<td>Inviolability</td>
+							</tr>
+							<tr>
+								<td>54-57</td>
+								<td>Invisibility</td>
+							</tr>
+							<tr>
+								<td>58-60</td>
+								<td>Mastery Over Men</td>
+							</tr>
+							<tr>
+								<td>61-63</td>
+								<td>Plant Mastery</td>
+							</tr>
+							<tr>
+								<td>64-67</td>
+								<td>Poison</td>
+							</tr>
+							<tr>
+								<td>68-71</td>
+								<td>Polymorph</td>
+							</tr>
+							<tr>
+								<td>72-75</td>
+								<td>Resistance to Fire</td>
+							</tr>
+							<tr>
+								<td>76-79</td>
+								<td>Sixth Sense</td>
+							</tr>
+							<tr>
+								<td>80-82</td>
+								<td>Treasure Detection</td>
+							</tr>
+							<tr>
+								<td>83-85</td>
+								<td>Undead Mastery</td>
+							</tr>
+							<tr>
+								<td>86-89</td>
+								<td>Water Breathing</td>
+							</tr>
+							<tr>
+								<td>90-93</td>
+								<td>Weightlessness</td>
+							</tr>
+							<tr>
+								<td>94-97</td>
+								<td>X-Ray Vision</td>
+							</tr>
+							<tr>
+								<td>98-00</td>
+								<td>Youthfulness</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
                   
-                  <h5 id="abbreviation">Abbreviation</h5>
-                  <p>Quaffing the full potion will reduce a person to one-twelfth size. Thus, a 6ft tall man-type would shrink to 6in. Consuming a lesser part will have a proportionally lesser effect.</p>
+                  <h4 id="potion-abbreviation">Abbreviation</h4>
+                  <p>Quaffing the full potion will reduce a person to one-twelfth size in all dimensions. Thus, a 6ft tall man-type would shrink to 6in. Consuming a lesser part will have a proportionally lesser effect.</p>
 
-                  <h5 id="animal-mastery">Animal Mastery</h5>
-                  <p>The imbiber gains control over 3-18 small animals, 2-12 medium sized animals, or 1-6 large animals. Only normal animal-types can be controlled.</p>
+                  <h4 id="potion-animal-mastery">Animal Mastery</h4>
+                  <p>The imbiber gains control over 3-18 small animals, 2-12 medium-sized animals, or 1-6 large animals. Only normal animal-types can be controlled.</p>
 
-                  <h5 id="curing">Curing</h5>
+                  <h4 id="potion-curing">Curing</h4>
                   <p>Restores 2-7 lost hit points.</p>
 
-                  <h5 id="deception">Deception</h5>
+                  <h4 id="potion-deception">Deception</h4>
                   <p>Causes the imbiber to believe the effect is whatever he desired it to be or a randomly determined potion effect determined by the referee.</p>
 
-                  <h5 id="dragon-mastery">Dragon Mastery</h5>
+                  <h4 id="potion-dragon-mastery">Dragon Mastery</h4>
                   <p>The imbiber gains control over up to three dragons who fail to save versus spells. Each potion affects one type of dragon as determined by the referee.</p>
 
-                  <h5 id="exaggeration">Exaggeration</h5>
-                  <p>Quaffing the full potion will enlarge a person to four times size. Thus, a 6ft tall man-type would grow to 24ft. Consuming a lesser part will have a proportionally lesser effect.</p>
+                  <h4 id="potion-exaggeration">Exaggeration</h4>
+                  <p>Quaffing the full potion will enlarge a person to four times size in all dimensions. Thus, a 6ft tall man-type would grow to 24ft. Consuming a lesser part will have a proportionally lesser effect.</p>
 
-                  <h5 id="extra-curing">Extra Curing</h5>
+                  <h4 id="potion-extra-curing">Extra Curing</h4>
                   <p>Quaffing the full potion restores 6-21 lost hit points. Taking a one-third part of it will restore 1-6 lost hit points.</p>
 
-                  <h5 id="flight">Flight</h5>
+                  <h4 id="potion-flight">Flight</h4>
                   <p>Consumption of this potion has the same effect as a fly spell except that it lasts for 7-12 turns.</p>
 
-                  <h5 id="gaseous-form">Gaseous Form</h5>
+                  <h4 id="potion-gaseous-form">Gaseous Form</h4>
                   <p>The imbiber becomes a cohesive, mobile cloud of gas that can penetrate any non-airtight space. However, anything worn or carried drops to a heap on the floor.</p>
 
-                  <h5 id="giant-mastery">Giant Mastery</h5>
+                  <h4 id="potion-giant-mastery">Giant Mastery</h4>
                   <p>The imbiber gains control over up to four giants who fail to save versus spells. Each potion affects only one type of giant, as determined by the referee.</p>
 
-                  <h5 id="giants-strength">Giant&apos;s Strength</h5>
-                  <p>Grants strength equal to a hill giant including hurling rocks and causing 2-12 hit points of damage per hit.</p>
+                  <h4 id="potion-giants-strength">Giant&apos;s Strength</h4>
+                  <p>Grants the imbiber strength equal to a hill giant including hurling rocks and causing 2-12 hit points of damage per hit.</p>
                   
-                  <h5 id="haste_1">Haste</h5>
+                  <h4 id="potion-haste">Haste</h4>
                   <p>Imbues the imbiber with the same effect as the haste spell except that it lasts for 2-7 turns.</p>
                   
-                  <h5 id="heroism">Heroism</h5>
-                  <p>Causes an ordinary man-type to function as a heroic fighting-man in all respects. Leveled fighting-men are also temporarily increased as follows:</p>
-                  <div id="table3_23"></div>
+                  <h4 id="potion-heroism">Heroism</h4>
+                  <p>Causes an ordinary man-type to function as a heroic (fifth-level) fighting-man in all respects. Leveled fighting-men are also temporarily increased as follows:</p>
+				<div class="table-wrapper">
+					<h4>Table 3.12 &#8212; Potion of Heroism</h4>
+					<table>
+						<thead>
+							<tr>
+								<th>Fighting-Man Levels</th>
+								<th>Temporarily Added<br>Fighting-Man Levels</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>0-2</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>3-4</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td>5-7</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>9-10</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>11&#43;</td>
+								<td>0</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 
-                  <h5 id="inviolability">Inviolability</h5>
+                  <h4 id="potion-inviolability">Inviolability</h4>
                   <p>Grants invulnerability to normal weaponry and improves saving throws by &#43;2 for 7-12 turns.</p>
 
-                  <h5 id="invisibility_1">Invisibility</h5>
+                  <h4 id="potion-invisibility">Invisibility</h4>
                   <p>Drinking this potion produces the same effect as the magic-user invisibility spell for 7-12 turns.</p>
 
-                  <h5 id="mastery-over-men">Mastery Over Men</h5>
+                  <h4 id="potion-mastery-men">Mastery Over Men</h4>
                   <p>The imbiber gains control over 2-12 normal men, 1-6 heroic men, or 1 superheroic man as per the charm person spell. Saving throws are applicable.</p>
 
-                  <h5 id="plant-mastery">Plant Mastery</h5>
+                  <h4 id="potion-plant-mastery">Plant Mastery</h4>
                   <p>The imbiber gains control over ordinary plants within a 6&quot; diameter or 1-6 ooze-types (including slimes, oozes, and puddings).</p>
 
-                  <h5 id="poison_1">Poison</h5>
+                  <h4 id="poison">Poison</h4>
                   <p>Even a sip is fatal unless a saving throw versus poison is successful. Superheroic-types instead take 4-24 hit points of damage.</p>
 
-                  <h5 id="polymorph_1">Polymorph</h5>
+                  <h4 id="potion-polymorph">Polymorph</h4>
                   <p>Produces the same effect as the magic-user polymorph spell except that it lasts only 7-12 turns.</p>
 
-                  <h5 id="resistance-to-fire">Resistance to Fire</h5>
+                  <h4 id="potion-fire-resistance">Resistance to Fire</h4>
                   <p>Grants invulnerability to ordinary fire and adjusts saving throws versus magical fire, including fireball and red dragon breath, by &#43;2. Any fire damage sustained is reduced by 1 hit point per die regardless.</p>
 
-                  <h5 id="sixth-sense_1">Sixth Sense</h5>
+                  <h4 id="potion-sixth-sense">Sixth Sense</h4>
                   <p>Drinking this potion produces the same effect as the magic-user sixth sense spell for 7-12 turns.</p>
 
-                  <h5 id="treasure-detection">Treasure Detection</h5>
+                  <h4 id="potion-treasure-detection">Treasure Detection</h4>
                   <p>Quaffing this potion enables the detection of any treasure worth 5,000 GP or more within 36&quot;. It is not blocked by lead, stone, or anything else.</p>
 
-                  <h5 id="undead-mastery">Undead Mastery</h5>
-                  <p>The imbiber gains control over 2-12 normal undead or 1-6 heroic undead as per the charm monster spell. The latter are allowed saving throws versus spells.</p>
+                  <h4 id="potion-undead-mastery">Undead Mastery</h4>
+                  <p>The imbiber gains control over 2-12 normal undead or 1-6 heroic undead as per the charm monster spell. The latter are allowed saving throws versus spells. Superheroic undead are not affected.</p>
 
-                  <h5 id="water-breathing_1">Water Breathing</h5>
+                  <h4 id="potion-water-breathing">Water Breathing</h4>
                   <p>The imbiber can breathe comfortably underwater for 7-12 turns.</p>
                   
-                  <h5 id="weightlessness">Weightlessness</h5>
+                  <h4 id="potion-weightlessness">Weightlessness</h4>
                   <p>Imbibing this potion has the same effect as the magic-user levitate spell for 7-12 turns.</p>
                   
-                  <h5 id="x-ray-vision">X-Ray Vision</h5>
+                  <h4 id="potion-x-ray-vision">X-Ray Vision</h4>
                   <p>Enables the imbiber to see through up to 10ft of stone or 6in of iron to a distance of 6&quot; for 7-12 turns. Everything will be revealed including traps and secret places. The magic is obstructed by lead or gold and only a 1&quot; &#215; 1&quot; section of wall can be examined each turn.</p>
 
-                  <h5 id="youthfulness">Youthfulness</h5>
+                  <h4 id="potion-youthfulness">Youthfulness</h4>
                   <p>Reduces the imbiber&apos;s age by 10 years.</p>
 
                   <h3 id="rings">Rings</h3>
